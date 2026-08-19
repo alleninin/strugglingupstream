@@ -1,4 +1,3 @@
-"""Uniformly random baseline agent."""
 import random
 from typing import List
 

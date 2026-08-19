@@ -1,12 +1,11 @@
-"""Sanity demo: play one full deal with random agents and print every move."""
 import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from game.rules import Game  # noqa: E402
-from agents.random_agent import RandomAgent  # noqa: E402
+from game.rules import Game
+from agents.random_agent import RandomAgent
 
 
 def main():
@@ -16,9 +15,8 @@ def main():
 
     print("Initial hands:")
     for i, h in enumerate(g.hands):
-        labels = sorted((c.label for c in h),
-                        key=lambda l: "23456789JQKA".find(l[0]) if l[0] != "1" else 9)
-        print(f"  P{i}: {' '.join(labels)}")
+        labels = " ".join(c.label for c in sorted(h, key=lambda c: c.rank))
+        print(f"  P{i}: {labels}")
 
     turn = 0
     while not g.done:

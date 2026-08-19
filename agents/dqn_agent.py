@@ -1,9 +1,3 @@
-"""Deep Q-network agent (PyTorch).
-
-A small MLP approximates ``Q(state, move)``. Like the Q-learning agent, it
-scores each legal move by feeding ``concat(state, move)`` and picks the best,
-so the variable action set is handled without a flat output layer.
-"""
 import numpy as np
 import torch
 import torch.nn as nn
@@ -13,7 +7,6 @@ from collections import defaultdict
 
 from .base import BaseAgent
 from game.moves import Move
-from env import features
 
 
 class QNetwork(nn.Module):
@@ -62,9 +55,6 @@ class DQNAgent(BaseAgent):
         self.buffer = []
         self.buffer_size = buffer_size
         self.step_count = 0
-
-    def _phi(self, state, move):
-        return features.combined_vector(state, features.move_vector(move)).astype(np.float32)
 
     def _q_batch(self, phis, net):
         if len(phis) == 0:

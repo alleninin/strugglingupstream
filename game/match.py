@@ -1,13 +1,3 @@
-"""Multi-deal match with the "Struggling Upstream" penalty.
-
-After each deal the bottom-2 finishers must hand their single highest card
-(face-up) to the top-2 winners for the next deal:
-
-  * last place       -> 1st place
-  * next-to-last     -> 2nd place
-
-(With 3 players there is only one winner, so both losers give to 1st place.)
-"""
 import random
 from typing import List, Optional
 
@@ -37,35 +27,21 @@ class Match:
         return self.hands
 
     def _apply_penalty(self, finish_order: List[int]) -> None:
-        """Bottom-two finishers hand their highest card to the top winners.
-
-        last place       -> 1st place
-        next-to-last     -> 2nd place (or 1st if there is no 2nd winner,
-                            e.g. in a 3-player game where the bottom two are
-                            2nd and 3rd and only 1st is a winner).
-        """
-        losers = finish_order[-2:]          # [next_to_last, last]
-        winners = finish_order[:-2]         # everyone ranked above the bottom two
+        losers = finish_order[-2:]
+        winners = finish_order[:-2]
         transfers = []
-        # reversed(losers) = [last, next_to_last]; pair worst loser with best winner.
         for i, loser in enumerate(reversed(losers)):
             winner = winners[i] if i < len(winners) else winners[0]
             if not self.hands[loser]:
                 continue
             self.hands[loser].sort(key=lambda c: c.rank)
-            top = self.hands[loser].pop()   # highest card
+            top = self.hands[loser].pop()
             self.hands[winner].append(top)
             transfers.append((loser, winner, top))
         self.last_transfers = transfers
 
     def play_match(self, agents, num_deals: int, starting_player: int = 0):
-        """Play ``num_deals`` consecutive deals, applying penalties between them.
-
-        ``agents`` is a list of agent objects (one per seat) exposing
-        ``act(obs, legal_moves) -> Move``.
-        Returns the list of finish orders, one per deal.
-        """
-        from env import features  # lazy import to avoid a package cycle
+        from env import features
         finish_orders = []
         prev = None
         for _ in range(num_deals):

@@ -1,22 +1,11 @@
-"""Core game state machine for Zheng Shang You."""
 import random
 from typing import List, Optional
 
-from .cards import Card, build_deck
+from .cards import build_deck
 from .moves import Move, generate_moves, beats, PASS_MOVE
 
 
 class Game:
-    """A single deal. Players act in seat order; finished players are skipped.
-
-    Turn / clearing:
-      * If every active player other than the current table owner passes in a
-        row, the table clears and the owner leads a fresh round.
-      * A player who empties their hand is finished and sits out.
-
-    The game ends when only one player still holds cards (that player is last).
-    """
-
     def __init__(self, num_players: int = 3, num_decks: int = 1,
                  hands=None, starting_player: int = 0, rng=None, seed=None):
         self.num_players = num_players
@@ -31,8 +20,6 @@ class Game:
             n = num_players
             base = len(deck) // n
             self.hands = [deck[i * base:(i + 1) * base] for i in range(n)]
-            # Any leftover cards are set aside (unused). With the default
-            # 3 players / 1 deck there are none.
 
         self.initial_hand_size = len(self.hands[0])
         self.current_player = starting_player % num_players
@@ -42,7 +29,6 @@ class Game:
         self.finish_order: List[int] = []
         self.done = False
 
-    # ----- helpers ----------------------------------------------------------
     def _is_active(self, seat: int) -> bool:
         return len(self.hands[seat]) > 0
 
@@ -55,7 +41,7 @@ class Game:
             seat = self.current_player
         all_moves = generate_moves(self.hands[seat])
         if self.table_move is None:
-            return all_moves                      # leading: any combo, no pass
+            return all_moves
         beating = [m for m in all_moves if beats(m, self.table_move)]
         return beating + [PASS_MOVE]
 
@@ -67,7 +53,6 @@ class Game:
                 return nxt
         return seat
 
-    # ----- applying a move --------------------------------------------------
     def apply_move(self, seat: int, move: Move) -> None:
         if self.done:
             raise RuntimeError("game is over")
@@ -78,7 +63,6 @@ class Game:
             self._apply_pass(seat)
             return
 
-        # Play: remove the cards from the hand.
         move_ids = {id(c) for c in move.cards}
         self.hands[seat] = [c for c in self.hands[seat] if id(c) not in move_ids]
         self.table_move = move
@@ -99,7 +83,6 @@ class Game:
         owner_active = self._is_active(self.table_owner)
         others = self.num_active - (1 if owner_active else 0)
         if others <= 0 or self.passes_in_a_row >= others:
-            # Everyone else passed: clear the table, owner leads anew.
             self.table_move = None
             self.passes_in_a_row = 0
             if owner_active:
@@ -111,10 +94,6 @@ class Game:
 
     def _finish_game(self) -> None:
         self.done = True
-        for s in range(self.num_players):
-            if self._is_active(s) and s not in self.finish_order:
-                self.finish_order.append(s)
-        # Safety: ensure every seat is recorded exactly once.
         for s in range(self.num_players):
             if s not in self.finish_order:
                 self.finish_order.append(s)

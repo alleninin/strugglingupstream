@@ -1,9 +1,3 @@
-"""Train one learning seat against fixed (random) opponents.
-
-Usage:
-    python -m training.train --agent dqn --episodes 5000
-    python -m training.train --agent qlearning --episodes 3000
-"""
 import argparse
 import os
 import sys
@@ -11,19 +5,17 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from env import features             # noqa: E402
-from env.env import ZhengShangYouEnv  # noqa: E402
-from agents.random_agent import RandomAgent  # noqa: E402
-from agents.qlearning import QLearningAgent  # noqa: E402
+from env import features
+from env.env import ZhengShangYouEnv
+from agents.random_agent import RandomAgent
+from agents.qlearning import QLearningAgent
 
 
 def make_opponent_policies(num_players, seed):
-    # Seats 1..n-1 are random (fixed) opponents by default.
     return [RandomAgent(seed=seed * 100 + s).act for s in range(1, num_players)]
 
 
 def evaluate_vs_random(agent, num_players, num_decks, seed, n=100):
-    """Return the fraction of deals in which the agent finishes 1st."""
     old_eps = getattr(agent, "epsilon", 0.0)
     agent.epsilon = 0.0
     wins = 0
@@ -53,7 +45,7 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
         agent = QLearningAgent(s_dim, a_dim, alpha=0.05, gamma=0.95, epsilon=0.2,
                                epsilon_decay=0.9995, min_epsilon=0.02, seed=seed)
     else:
-        from agents.dqn_agent import DQNAgent  # lazy: only DQN needs torch
+        from agents.dqn_agent import DQNAgent
         agent = DQNAgent(s_dim, a_dim, lr=1e-3, gamma=0.95, epsilon=0.5,
                          epsilon_decay=0.995, min_epsilon=0.05, seed=seed)
 

@@ -1,16 +1,8 @@
-"""Linear function-approximation Q-learning agent.
-
-Both the state and the move are encoded as fixed vectors; the agent scores
-``Q(s, m) = w . concat(state, move)`` and picks ``argmax`` over the legal moves
-(or a random move with probability ``epsilon``). This naturally handles the
-variable-sized action set of a card game.
-"""
 import numpy as np
 from typing import List
 
 from .base import BaseAgent
 from game.moves import Move
-from env import features
 
 
 class QLearningAgent(BaseAgent):
@@ -26,9 +18,6 @@ class QLearningAgent(BaseAgent):
         self.min_epsilon = min_epsilon
         self.rng = np.random.default_rng(seed)
         self.w = np.zeros(self.dim, dtype=np.float32)
-
-    def _phi(self, state, move):
-        return features.combined_vector(state, features.move_vector(move)).astype(np.float32)
 
     def q(self, phi) -> float:
         return float(np.dot(self.w, phi))

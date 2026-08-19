@@ -1,13 +1,3 @@
-"""Interactive human-vs-AI play.
-
-You are seat 0; opponents are random agents (or a trained DQN if --checkpoint
-is given). Pick a move by number, or 'p' to pass when passing is allowed.
-
-Usage:
-    python3 scripts/play.py                      # you vs 2 random agents
-    python3 scripts/play.py --checkpoint checkpoints/dqn_agent.pt
-    python3 scripts/play.py --num-players 4
-"""
 import argparse
 import os
 import sys
@@ -15,26 +5,16 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from game.rules import Game  # noqa: E402
-from env import features    # noqa: E402
-from game.moves import Move, MoveType, PASS_MOVE  # noqa: E402
-from agents.random_agent import RandomAgent  # noqa: E402
-from agents.dqn_agent import DQNAgent  # noqa: E402
-from agents.qlearning import QLearningAgent  # noqa: E402
-
-
-def _sort_key(label):
-    order = "3456789JQKA2"
-    if label == "10":
-        return order.index("0") if False else 8  # '10' sits between 9 and J
-    if label in order:
-        return order.index(label)
-    return 99  # jokers
+from game.rules import Game
+from env import features
+from game.moves import PASS_MOVE
+from agents.random_agent import RandomAgent
+from agents.dqn_agent import DQNAgent
+from agents.qlearning import QLearningAgent
 
 
 def show_hand(hand):
-    labels = sorted((c.label for c in hand), key=_sort_key)
-    return " ".join(labels)
+    return " ".join(c.label for c in sorted(hand, key=lambda c: c.rank))
 
 
 def human_choose(game: Game, legal):
@@ -69,7 +49,6 @@ def main():
     ap.add_argument("--seed", type=int, default=None)
     args = ap.parse_args()
 
-    # Build opponents (all seats except 0).
     opps = []
     for s in range(1, args.num_players):
         if args.checkpoint:

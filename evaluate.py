@@ -1,12 +1,3 @@
-"""Tournament evaluation across agents.
-
-Runs many full deals; in each deal the seats are rotated so every agent plays
-every position (removing seat-order bias). Reports 1st-place win rate and
-average placement per agent.
-
-Usage:
-    python evaluate.py --games 300
-"""
 import argparse
 import os
 import sys
@@ -14,11 +5,11 @@ import sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
 
-from game.rules import Game  # noqa: E402
-from env import features    # noqa: E402
-from agents.random_agent import RandomAgent  # noqa: E402
-from agents.qlearning import QLearningAgent  # noqa: E402
-from agents.dqn_agent import DQNAgent  # noqa: E402
+from game.rules import Game
+from env import features
+from agents.random_agent import RandomAgent
+from agents.qlearning import QLearningAgent
+from agents.dqn_agent import DQNAgent
 
 
 def simulate_game(agents, num_players, num_decks, seed):
@@ -54,7 +45,6 @@ def main():
     if os.path.exists(args.dqn_path):
         dqn_agent.load(args.dqn_path)
 
-    # Greedy evaluation (no exploration).
     for ag in (q_agent, dqn_agent):
         ag.epsilon = 0.0
 

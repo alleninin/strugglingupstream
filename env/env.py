@@ -1,14 +1,3 @@
-"""Agent-centric RL environment.
-
-The environment controls *one* learning seat (default seat 0) and auto-plays
-the other seats using fixed opponent policies. Each ``step`` applies the
-learning seat's chosen move, then rolls the opponents forward until it is the
-learning seat's turn again (or the deal ends), and returns the next observation
-for the learning seat together with its reward.
-
-Reward is terminal only: ``1 - 2*(rank-1)/(num_players-1)``
-(1st place = +1, last = -1, middle = 0).
-"""
 import numpy as np
 from typing import List, Optional, Callable
 
@@ -23,7 +12,6 @@ class ZhengShangYouEnv:
                  opponent_policies: Optional[List[Callable]] = None, seed=None):
         self.num_players = num_players
         self.num_decks = num_decks
-        # opponent_policies[i] is the policy (callable) for seat i+1.
         self.opponent_policies = opponent_policies
         self.agent_seat = 0
         self.seed = seed
@@ -31,7 +19,6 @@ class ZhengShangYouEnv:
         self._default_random = RandomAgent(seed=seed)
         self.game: Optional[Game] = None
 
-    # ----- opponents --------------------------------------------------------
     def _opponent_policy(self, seat: int) -> Callable:
         if self.opponent_policies is not None and seat - 1 < len(self.opponent_policies):
             pol = self.opponent_policies[seat - 1]
@@ -39,7 +26,6 @@ class ZhengShangYouEnv:
                 return pol
         return self._default_random.act
 
-    # ----- episode control --------------------------------------------------
     def reset(self, seed: Optional[int] = None):
         if seed is not None:
             self.seed = seed
@@ -71,11 +57,8 @@ class ZhengShangYouEnv:
             action = legal[0]
 
         self.game.apply_move(seat, action)
-
-        if self.game.done:
-            return None, self._terminal_reward(seat), True, {"next_legal_moves": []}
-
         self._roll_to_agent()
+
         if self.game.done:
             return None, self._terminal_reward(seat), True, {"next_legal_moves": []}
 

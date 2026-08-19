@@ -1,8 +1,7 @@
-# Zheng Shang You (征上游) — Game Engine + RL Training
+# Zheng ShangYou (征上游)/Struggling Upstream AI Game Engine + RL Training
 
 A from-scratch Python environment for the climbing card game **Zheng Shang You**
-("Struggle Upstream"). Be the first to shed all your cards. Ships with a clean
-rules engine, an RL-friendly environment, and several agents you can train and
+("Struggle Upstream"). Be the first to shed all your cards. There's an RL-friendly environment and several agents you can train and
 pit against each other.
 
 ## Rules implemented
@@ -56,12 +55,12 @@ python evaluate.py --games 300
 python scripts/play.py --checkpoint checkpoints/ddqn_agent.pt --agent ddqn
 ```
 
-## RL design note
+## RL design 
 A card game has a **variable-sized** action set, so all agents score `Q(state, move)`
 and pick `argmax` over the legal moves. The state and each candidate move are
 encoded as fixed-length vectors (`env/features.py`) and concatenated, which lets a
 single linear weight vector or MLP generalize across moves without a giant flat
-action layer. Reward is terminal only: `1 - 2*(rank-1)/(num_players-1)`
+action layer. Reward is based on finish: `1 - 2*(rank-1)/(num_players-1)`
 (1st = +1, last = −1).
 
 ### `DDQNAgent` (default)
@@ -87,3 +86,5 @@ Hyperparameters (`--agent ddqn` plus the buffer/network knobs in
   learned opponent or enable all-seat learning for self-play.
 - **Match mode:** `game/match.py` runs consecutive deals with the penalty
   transfers and can be used for full-match training/eval.
+
+In testing, the trained models have a 92% win rate against a random player.

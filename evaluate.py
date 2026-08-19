@@ -10,6 +10,7 @@ from env import features
 from agents.random_agent import RandomAgent
 from agents.qlearning import QLearningAgent
 from agents.dqn_agent import DQNAgent
+from agents.ddqn_agent import DDQNAgent
 
 
 def simulate_game(agents, num_players, num_decks, seed):
@@ -27,11 +28,12 @@ def simulate_game(agents, num_players, num_decks, seed):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--num-players", type=int, default=3)
-    ap.add_argument("--num-decks", type=int, default=1)
+    ap.add_argument("--num-players", type=int, default=4)
+    ap.add_argument("--num-decks", type=int, default=2)
     ap.add_argument("--games", type=int, default=300)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--dqn-path", default="checkpoints/dqn_agent.pt")
+    ap.add_argument("--ddqn-path", default="checkpoints/ddqn_agent.pt")
     ap.add_argument("--q-path", default="checkpoints/q_agent.npy")
     args = ap.parse_args()
 
@@ -45,10 +47,15 @@ def main():
     if os.path.exists(args.dqn_path):
         dqn_agent.load(args.dqn_path)
 
-    for ag in (q_agent, dqn_agent):
+    ddqn_agent = DDQNAgent(s_dim, a_dim, seed=args.seed)
+    if os.path.exists(args.ddqn_path):
+        ddqn_agent.load(args.ddqn_path)
+
+    for ag in (q_agent, dqn_agent, ddqn_agent):
         ag.epsilon = 0.0
 
-    pool = {"Random": random_agent, "QLearning": q_agent, "DQN": dqn_agent}
+    pool = {"Random": random_agent, "QLearning": q_agent,
+            "DQN": dqn_agent, "DDQN": ddqn_agent}
     names = list(pool.keys())
     placements = {n: [] for n in names}
     wins = {n: 0 for n in names}

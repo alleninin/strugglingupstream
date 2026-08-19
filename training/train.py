@@ -9,6 +9,7 @@ from env import features
 from env.env import ZhengShangYouEnv
 from agents.random_agent import RandomAgent
 from agents.qlearning import QLearningAgent
+from agents.ddqn_agent import DDQNAgent
 
 
 def make_opponent_policies(num_players, seed):
@@ -44,10 +45,13 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
     if agent_kind == "qlearning":
         agent = QLearningAgent(s_dim, a_dim, alpha=0.05, gamma=0.95, epsilon=0.2,
                                epsilon_decay=0.9995, min_epsilon=0.02, seed=seed)
-    else:
+    elif agent_kind == "dqn":
         from agents.dqn_agent import DQNAgent
         agent = DQNAgent(s_dim, a_dim, lr=1e-3, gamma=0.95, epsilon=0.5,
                          epsilon_decay=0.995, min_epsilon=0.05, seed=seed)
+    else:  # ddqn
+        agent = DDQNAgent(s_dim, a_dim, lr=1e-3, gamma=0.95, epsilon=0.5,
+                          epsilon_decay=0.995, min_epsilon=0.05, seed=seed)
 
     opp = make_opponent_policies(num_players, seed)
     env = ZhengShangYouEnv(num_players=num_players, num_decks=num_decks,
@@ -61,8 +65,12 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
             legal = env.get_legal_moves()
             action = agent.act(state, legal)
             next_state, reward, done, info = env.step(action)
-            agent.observe((state, action, reward, next_state, done,
-                           info["next_legal_moves"]))
+            if agent_kind == "ddqn":
+                agent.observe((state, action, reward, next_state, done,
+                               info["next_legal_moves"], legal))
+            else:
+                agent.observe((state, action, reward, next_state, done,
+                               info["next_legal_moves"]))
             state = next_state
 
         if eval_every and (ep + 1) % eval_every == 0:
@@ -77,12 +85,12 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--agent", choices=["qlearning", "dqn"], default="dqn")
+    ap.add_argument("--agent", choices=["qlearning", "dqn", "ddqn"], default="ddqn")
     ap.add_argument("--episodes", type=int, default=5000)
-    ap.add_argument("--num-players", type=int, default=3)
-    ap.add_argument("--num-decks", type=int, default=1)
+    ap.add_argument("--num-players", type=int, default=4)
+    ap.add_argument("--num-decks", type=int, default=2)
     ap.add_argument("--seed", type=int, default=0)
-    ap.add_argument("--save-path", default="checkpoints/dqn_agent.pt")
+    ap.add_argument("--save-path", default="checkpoints/ddqn_agent.pt")
     ap.add_argument("--eval-every", type=int, default=500)
     args = ap.parse_args()
 

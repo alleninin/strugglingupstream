@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from enum import IntEnum
+from itertools import combinations
 from typing import List, Tuple
 
 from .cards import Card
@@ -12,6 +13,7 @@ class MoveType(IntEnum):
     FULL_HOUSE = 4
     STRAIGHT = 5
     BOMB = 6
+    AIRPLANE = 7
 
 STRAIGHT_MIN = 3
 STRAIGHT_MAX = 14
@@ -74,6 +76,22 @@ def generate_moves(hand: List[Card]) -> List[Move]:
                 MoveType.FULL_HOUSE,
                 tuple(groups[t][:3] + groups[p][:2]),
                 t, 5,
+            ))
+
+    # Airplane: two triples (any ranks, not necessarily consecutive) plus two
+    # pairs (any ranks) = exactly 10 cards. Ranked by the higher triple rank;
+    # all airplanes share length 10 so they only compare against each other.
+    triple_ranks = [r for r in triples if r <= 14]   # 2s cap at 2 copies, jokers can't triple
+    pair_ranks = [r for r in pairs if r <= 15]       # jokers do not form pairs
+    for r1, r2 in combinations(sorted(triple_ranks), 2):
+        body = tuple(groups[r1][:3] + groups[r2][:3])
+        wing_pool = [r for r in pair_ranks if r not in (r1, r2)]
+        for p1, p2 in combinations(wing_pool, 2):
+            cards = body + tuple(groups[p1][:2] + groups[p2][:2])
+            moves.append(Move(
+                MoveType.AIRPLANE,
+                cards,
+                max(r1, r2), 10,
             ))
 
     present = set(ranks)

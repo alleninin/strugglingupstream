@@ -9,8 +9,8 @@ from agents.random_agent import RandomAgent
 
 
 def main():
-    num_players = 3
-    g = Game(num_players=num_players, num_decks=1, seed=42)
+    num_players = 4
+    g = Game(num_players=num_players, num_decks=2, seed=42)
     agents = [RandomAgent(seed=42 + i) for i in range(num_players)]
 
     print("Initial hands:")

@@ -4,7 +4,7 @@ from game.moves import Move, MoveType
 from game.rules import Game
 
 NUM_RANKS = 15
-TYPE_DIM = 7
+TYPE_DIM = 8
 
 
 def _rank_vec(cards) -> np.ndarray:

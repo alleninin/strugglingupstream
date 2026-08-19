@@ -11,6 +11,7 @@ from game.moves import PASS_MOVE
 from agents.random_agent import RandomAgent
 from agents.dqn_agent import DQNAgent
 from agents.qlearning import QLearningAgent
+from agents.ddqn_agent import DDQNAgent
 
 
 def show_hand(hand):
@@ -42,22 +43,26 @@ def human_choose(game: Game, legal):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--num-players", type=int, default=3)
-    ap.add_argument("--num-decks", type=int, default=1)
+    ap.add_argument("--num-players", type=int, default=4)
+    ap.add_argument("--num-decks", type=int, default=2)
     ap.add_argument("--checkpoint", default=None,
-                    help="trained agent (.pt for DQN, .npy for Q-learning)")
+                    help="trained agent (.pt for DQN/DDQN, .npy for Q-learning)")
+    ap.add_argument("--agent", choices=["dqn", "ddqn"], default="dqn",
+                    help="which .pt agent architecture to load")
     ap.add_argument("--seed", type=int, default=None)
     args = ap.parse_args()
 
     opps = []
     for s in range(1, args.num_players):
         if args.checkpoint:
+            s_dim, a_dim = features.feature_dims(args.num_players, args.num_decks)
             if args.checkpoint.endswith(".npy"):
-                s_dim, a_dim = features.feature_dims(args.num_players, args.num_decks)
                 ag = QLearningAgent(s_dim, a_dim, seed=args.seed)
                 ag.load(args.checkpoint)
+            elif args.agent == "ddqn":
+                ag = DDQNAgent(s_dim, a_dim, seed=args.seed)
+                ag.load(args.checkpoint)
             else:
-                s_dim, a_dim = features.feature_dims(args.num_players, args.num_decks)
                 ag = DQNAgent(s_dim, a_dim, seed=args.seed)
                 ag.load(args.checkpoint)
             ag.epsilon = 0.0

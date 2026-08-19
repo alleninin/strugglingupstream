@@ -6,7 +6,7 @@ from .rules import Game
 
 
 class Match:
-    def __init__(self, num_players: int = 4, num_decks: int = 1,
+    def __init__(self, num_players: int = 4, num_decks: int = 2,
                  rng=None, seed=None):
         self.num_players = num_players
         self.num_decks = num_decks

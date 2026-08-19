@@ -8,6 +8,7 @@ from game.cards import Card, build_deck, RANK_LABELS
 from game.moves import Move, MoveType, generate_moves, beats, PASS_MOVE
 from game.rules import Game
 from game.match import Match
+from env import features
 from agents.random_agent import RandomAgent
 
 
@@ -121,6 +122,58 @@ def test_penalty():
     print("OK  Struggling-Upstream penalty transfers highest cards to winners")
 
 
+def test_airplane():
+    # 2 triples + 2 pairs = an airplane (exactly 10 cards)
+    hand = [card(3, 0), card(3, 1), card(3, 2),
+            card(7, 0), card(7, 1), card(7, 2),
+            card(9, 0), card(9, 1),
+            card(11, 0), card(11, 1)]
+    airplanes = [m for m in generate_moves(hand) if m.type == MoveType.AIRPLANE]
+    assert airplanes, "expected an airplane move"
+    assert all(len(m.cards) == 10 for m in airplanes)
+    assert all(m.length == 10 for m in airplanes)
+
+    # ranking by the higher triple rank
+    low_air = Move(MoveType.AIRPLANE, tuple(
+        [card(3, 0), card(3, 1), card(3, 2),
+         card(5, 0), card(5, 1), card(5, 2),
+         card(7, 0), card(7, 1),
+         card(9, 0), card(9, 1)]), 5, 10)
+    high_air = Move(MoveType.AIRPLANE, tuple(
+        [card(5, 0), card(5, 1), card(5, 2),
+         card(11, 0), card(11, 1), card(11, 2),
+         card(3, 0), card(3, 1),
+         card(7, 0), card(7, 1)]), 11, 10)
+    assert beats(high_air, low_air)
+    assert not beats(low_air, high_air)
+
+    # a bomb beats an airplane; an airplane does not beat a bomb
+    bomb = Move(MoveType.BOMB, tuple(card(4, i) for i in range(4)), 4, 4, is_bomb=True)
+    assert beats(bomb, high_air)
+    assert not beats(high_air, bomb)
+
+    # an airplane does not beat a full house (different type)
+    fh = Move(MoveType.FULL_HOUSE,
+              tuple(card(6, 0) for _ in range(3)) + tuple(card(8, 0) for _ in range(2)),
+              6, 5)
+    assert not beats(high_air, fh)
+    print("OK  airplane: 2 triples + 2 pairs (10 cards), ranking, bomb > airplane")
+
+
+def test_feature_dims_update():
+    assert features.TYPE_DIM == 8, features.TYPE_DIM
+    s_dim, a_dim = features.feature_dims(4, 2)
+    hand = [card(3, 0), card(3, 1), card(3, 2),
+            card(7, 0), card(7, 1), card(7, 2),
+            card(9, 0), card(9, 1),
+            card(11, 0), card(11, 1)]
+    ap = [m for m in generate_moves(hand) if m.type == MoveType.AIRPLANE][0]
+    mv = features.move_vector(ap)
+    assert len(mv) == a_dim, (len(mv), a_dim)
+    assert mv[features.NUM_RANKS + MoveType.AIRPLANE] == 1.0
+    print(f"OK  feature dims reflect AIRPLANE (TYPE_DIM=8, move dim={a_dim})")
+
+
 def main():
     test_deck()
     test_generate_moves()
@@ -128,6 +181,8 @@ def main():
     test_full_game()
     test_pass_and_clear()
     test_penalty()
+    test_airplane()
+    test_feature_dims_update()
     print("\nALL CHECKS PASSED")
 
 

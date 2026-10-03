@@ -45,24 +45,20 @@ pip install -r requirements.txt   # torch + numpy
 ```
 
 ## Run
+
+To train a model, use [Train the bots](#train-the-bots) below. The commands here
+are for checking the game, evaluating saved models, and playing.
+
 ```bash
 # 1. Sanity-check the rules with a greedy-bot game
 python3 scripts/demo.py
 
-# 2. Train an agent (saves a checkpoint)
-python3 -m training.train --agent qlearning --episodes 3000 --save-path checkpoints/q_agent.npy
-python3 -m training.train --agent dqn       --episodes 5000 --save-path checkpoints/dqn_agent.pt
-# Efficient default: Dueling Double-DQN + Prioritized Experience Replay
-python3 -m training.train --agent ddqn      --episodes 5000 --save-path checkpoints/ddqn_agent.pt
-# Shaped-reward bot (potential-based dense + trick + terminal), inner DDQN by default
-python3 -m training.train --agent shaped    --episodes 5000 --save-path checkpoints/shaped_agent.pt
-
-# 3. Tournament: learned agents / Greedy / Random (rotate seats on matched deals)
+# 2. Tournament: learned agents / Greedy / Random (rotate seats on matched deals)
 python3 evaluate.py --games 300
 python3 evaluate.py --rounds 3 --json reports/tournament.json
 
-# 4. Play against trained agents (per-seat checkpoints; human is always P0)
-python3 scripts/play.py --ddqn-checkpoint checkpoints/ddqn_agent.pt
+# 3. Play against trained agents (per-seat checkpoints; human is always P0)
+python3 scripts/play.py --ddqn-checkpoint checkpoints/ddqn_win_agent.best.pt
 python3 scripts/play.py --shaped-checkpoint checkpoints/shaped_agent.pt --shaped-arch ddqn
 # Mix fixed opponents, with no checkpoints required
 python3 scripts/play.py --greedy --random
@@ -109,7 +105,25 @@ appearances, since not every agent appears in every deal.
 Missing or incompatible checkpoints are skipped instead of entering an untrained
 agent under a trained model's name.
 
-### Learning against greedy
+## Train the bots
+
+**Use this section for training.** Choose one command for the bot you want to
+train; each starts a fresh model and saves to its own checkpoint path.
+
+```bash
+python3.12 -m training.train --agent ddqn --episodes 5000 --save-path checkpoints/ddqn_win_agent.pt
+python3.12 -m training.train --agent dqn --episodes 5000 --save-path checkpoints/dqn_win_agent.pt
+python3.12 -m training.train --agent qlearning --episodes 5000 --save-path checkpoints/qlearning_win_agent.npy
+# Alternative: custom placement/trick rewards, without demonstrations by default
+python3.12 -m training.train --agent shaped --episodes 5000 --save-path checkpoints/shaped_agent.pt
+```
+
+For a larger neural warm-up, add `--demo-games 1000 --demo-updates 3000` to
+the DDQN or DQN command. This is the larger warm-up tested in the learning report;
+it does not guarantee that subsequent reinforcement learning improves the model.
+For pure reinforcement learning without demonstrations, add `--demo-games 0`.
+
+### How training against greedy works
 
 Greedy already searches for useful combinations. An initially random policy
 rarely wins against three greedy opponents, and sparse winning examples make
@@ -120,14 +134,6 @@ during reinforcement learning to reduce forgetting. Neural models use a legal-ac
 classification loss; the linear Q-learning model uses normalized margin updates.
 The trained bots use only their learned model at play time, not a greedy fallback.
 This is expert-assisted learning, not pure reinforcement learning from scratch.
-
-```bash
-python3.12 -m training.train --agent ddqn --episodes 5000 --save-path checkpoints/ddqn_win_agent.pt
-python3.12 -m training.train --agent dqn --episodes 5000 --save-path checkpoints/dqn_win_agent.pt
-python3.12 -m training.train --agent qlearning --episodes 5000 --save-path checkpoints/qlearning_win_agent.npy
-# Ablation: no demonstrations, only reinforcement learning
-python3.12 -m training.train --agent ddqn --demo-games 0 --episodes 5000 --save-path checkpoints/ddqn_pure_rl.pt
-```
 
 `--demo-games`, `--demo-updates`, and `--demo-weight` control the warm-up and
 rehearsal (default weight 0.1). Set `--demo-weight 0` to disable rehearsal after
@@ -227,11 +233,8 @@ these small networks. Device selection is explicit: use `--device cpu`, `mps`,
 `cuda`, or `auto`, and `--torch-threads N` to compare on your machine. Standalone
 agent constructors retain automatic device selection unless `device` is supplied.
 
-```bash
-python3.12 -m training.train --agent ddqn --episodes 5000 \
-  --device cpu --torch-threads 1 --progress-every 100 \
-  --save-path checkpoints/ddqn_fast_agent.pt
-```
+The commands in [Train the bots](#train-the-bots) already use CPU and one thread.
+Add `--progress-every 100` to set the reporting interval explicitly.
 
 Startup prints the actual device and thread count. Progress distinguishes the
 time for the **last 100 episodes** from total training time; evaluation games are

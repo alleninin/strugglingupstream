@@ -66,7 +66,7 @@ def main():
               'episodes': args.episodes, 'seed': args.seed, 'num_players': 4, 'num_decks': 2,
               'opponent': 'greedy', 'device': str(agent.device), 'cpu_threads': torch.get_num_threads(),
               'seconds': seconds, 'transitions': agent.step_count,
-              'updates': max(0, agent.step_count - agent.batch_size + 1),
+              'updates': getattr(agent, 'learning_updates', max(0, agent.step_count - agent.batch_size + 1)),
               'replay_array_bytes': array_bytes(agent.buffer.tree.data),
               'torch': torch.__version__,
               'finite_weights': all(torch.isfinite(p).all().item() for p in agent.policy_net.parameters())}

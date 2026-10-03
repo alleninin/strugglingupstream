@@ -1,0 +1,15 @@
+[training] agent=ddqn reward=win device=cpu torch_threads=1
+[warmup] 1000 greedy games, 6921 decisions, 67.9s
+[warmup] win_rate_vs_greedy=0.180; best checkpoint -> reports/ddqn-v3-20261003/warm-planning-seed0.best.pt
+[ep  500] win_rate_vs_greedy = 0.180 (100 evaluation games in 5.7s)
+[ddqn 500/2500] epsilon=0.388 opponent=random training_win_rate=0.666 last 500 episodes=20.4s total_train=20.4s total_eval=5.7s
+[ep 1000] win_rate_vs_greedy = 0.200 (100 evaluation games in 5.9s)
+[ddqn 1000/2500] epsilon=0.275 opponent=mixed training_win_rate=0.242 last 500 episodes=25.8s total_train=46.3s total_eval=11.6s
+[ep 1500] win_rate_vs_greedy = 0.240 (100 evaluation games in 6.1s)
+[ddqn 1500/2500] epsilon=0.163 opponent=greedy training_win_rate=0.194 last 500 episodes=29.9s total_train=76.1s total_eval=17.7s
+[ep 2000] win_rate_vs_greedy = 0.220 (100 evaluation games in 5.9s)
+[ddqn 2000/2500] epsilon=0.050 opponent=greedy training_win_rate=0.152 last 500 episodes=34.5s total_train=110.7s total_eval=23.6s
+[ep 2500] win_rate_vs_greedy = 0.190 (100 evaluation games in 5.9s)
+[ddqn 2500/2500] epsilon=0.050 opponent=greedy training_win_rate=0.252 last 500 episodes=35.4s total_train=146.1s total_eval=29.5s
+Saved ddqn agent -> reports/ddqn-v3-20261003/warm-planning-seed0.pt
+Best validation win rate=0.240 -> reports/ddqn-v3-20261003/warm-planning-seed0.best.pt

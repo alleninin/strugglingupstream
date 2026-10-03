@@ -1,0 +1,6035 @@
+{
+  "num_games": 400,
+  "num_players": 4,
+  "num_decks": 2,
+  "seed": 840000,
+  "rounds": 100,
+  "results": {
+    "candidate": {
+      "appearances": 400,
+      "wins": 78,
+      "win_rate": 0.195,
+      "mean_place": 2.6675
+    },
+    "greedy0": {
+      "appearances": 400,
+      "wins": 112,
+      "win_rate": 0.28,
+      "mean_place": 2.44
+    },
+    "greedy1": {
+      "appearances": 400,
+      "wins": 109,
+      "win_rate": 0.2725,
+      "mean_place": 2.4825
+    },
+    "greedy2": {
+      "appearances": 400,
+      "wins": 101,
+      "win_rate": 0.2525,
+      "mean_place": 2.41
+    }
+  },
+  "games": [
+    {
+      "seed": 840000,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840000,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840000,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840000,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840001,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840001,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840001,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840001,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840002,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840002,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840002,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840002,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840003,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840003,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840003,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840003,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840004,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840004,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840004,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840004,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840005,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840005,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840005,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840005,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840006,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840006,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840006,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840006,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840007,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840007,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840007,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840007,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840008,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840008,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840008,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840008,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840009,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840009,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840009,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840009,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840010,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840010,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840010,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840010,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840011,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840011,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840011,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840011,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840012,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840012,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840012,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840012,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840013,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840013,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840013,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840013,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840014,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840014,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840014,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840014,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840015,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840015,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840015,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840015,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840016,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840016,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840016,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840016,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840017,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840017,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840017,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840017,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840018,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840018,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840018,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840018,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840019,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840019,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840019,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840019,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840020,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840020,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840020,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840020,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840021,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840021,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840021,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840021,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840022,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840022,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840022,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840022,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840023,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840023,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840023,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840023,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840024,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840024,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840024,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840024,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840025,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840025,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840025,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840025,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840026,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840026,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840026,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840026,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840027,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840027,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840027,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840027,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840028,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840028,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840028,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840028,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840029,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840029,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840029,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840029,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840030,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840030,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840030,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840030,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840031,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840031,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840031,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840031,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840032,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840032,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840032,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840032,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840033,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840033,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840033,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840033,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840034,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840034,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840034,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840034,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840035,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840035,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840035,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840035,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840036,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840036,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840036,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840036,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840037,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840037,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840037,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840037,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840038,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840038,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840038,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840038,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840039,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840039,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840039,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840039,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840040,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840040,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840040,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840040,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840041,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840041,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840041,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840041,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840042,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840042,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840042,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840042,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840043,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840043,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840043,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840043,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840044,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840044,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840044,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840044,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840045,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840045,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840045,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840045,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840046,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840046,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840046,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840046,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840047,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840047,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840047,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840047,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840048,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840048,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840048,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840048,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840049,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840049,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840049,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840049,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840050,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840050,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840050,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840050,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840051,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840051,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840051,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840051,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840052,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840052,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840052,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840052,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840053,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840053,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840053,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840053,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840054,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840054,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840054,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840054,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840055,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840055,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840055,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840055,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840056,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840056,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840056,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840056,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840057,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840057,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840057,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840057,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840058,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840058,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840058,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840058,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840059,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840059,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840059,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840059,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840060,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840060,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840060,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840060,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840061,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840061,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840061,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840061,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840062,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840062,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840062,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840062,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840063,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840063,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840063,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840063,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840064,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840064,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840064,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840064,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840065,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840065,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840065,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840065,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840066,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840066,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840066,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840066,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840067,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840067,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840067,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840067,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840068,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840068,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840068,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840068,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840069,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840069,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840069,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840069,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840070,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840070,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840070,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840070,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840071,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840071,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840071,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840071,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840072,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840072,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840072,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840072,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840073,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840073,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840073,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840073,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840074,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840074,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840074,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840074,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840075,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840075,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840075,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840075,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840076,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840076,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840076,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840076,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840077,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840077,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840077,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840077,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840078,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840078,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840078,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840078,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840079,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840079,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840079,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840079,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840080,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840080,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840080,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840080,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840081,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840081,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840081,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840081,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840082,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840082,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840082,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840082,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840083,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840083,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840083,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840083,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840084,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840084,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840084,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840084,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 840085,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840085,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840085,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840085,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840086,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840086,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840086,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840086,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840087,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840087,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840087,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840087,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840088,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840088,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840088,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840088,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840089,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840089,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840089,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840089,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840090,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840090,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840090,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840090,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840091,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840091,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840091,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840091,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840092,
+      "seats": [
+        "greedy0",
+        "greedy2",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840092,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840092,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy0",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840092,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840093,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840093,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840093,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840093,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840094,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840094,
+      "seats": [
+        "candidate",
+        "greedy1",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840094,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 840094,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "candidate",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 840095,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840095,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840095,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 840095,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840096,
+      "seats": [
+        "greedy2",
+        "greedy0",
+        "greedy1",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840096,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840096,
+      "seats": [
+        "greedy1",
+        "candidate",
+        "greedy2",
+        "greedy0"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840096,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 840097,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 840097,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840097,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840097,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840098,
+      "seats": [
+        "candidate",
+        "greedy0",
+        "greedy1",
+        "greedy2"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 840098,
+      "seats": [
+        "greedy0",
+        "greedy1",
+        "greedy2",
+        "candidate"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840098,
+      "seats": [
+        "greedy1",
+        "greedy2",
+        "candidate",
+        "greedy0"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 840098,
+      "seats": [
+        "greedy2",
+        "candidate",
+        "greedy0",
+        "greedy1"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 840099,
+      "seats": [
+        "greedy2",
+        "greedy1",
+        "greedy0",
+        "candidate"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 840099,
+      "seats": [
+        "greedy1",
+        "greedy0",
+        "candidate",
+        "greedy2"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 840099,
+      "seats": [
+        "greedy0",
+        "candidate",
+        "greedy2",
+        "greedy1"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 840099,
+      "seats": [
+        "candidate",
+        "greedy2",
+        "greedy1",
+        "greedy0"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    }
+  ]
+}

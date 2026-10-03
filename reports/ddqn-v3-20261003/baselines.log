@@ -1,0 +1,2 @@
+greedy {"greedy": 0.288, "random": 0.842}
+random {"greedy": 0.01, "random": 0.278}

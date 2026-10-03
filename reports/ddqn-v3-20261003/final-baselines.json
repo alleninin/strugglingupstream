@@ -1,0 +1,20 @@
+{
+  "games": 500,
+  "seed": 98765,
+  "num_players": 4,
+  "num_decks": 2,
+  "results": {
+    "checkpoints/ddqn_win_agent.best.pt": {
+      "greedy": 0.106,
+      "random": 0.802
+    },
+    "greedy": {
+      "greedy": 0.254,
+      "random": 0.864
+    },
+    "random": {
+      "greedy": 0.01,
+      "random": 0.23
+    }
+  }
+}

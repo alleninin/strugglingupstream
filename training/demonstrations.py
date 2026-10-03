@@ -41,11 +41,11 @@ class Demonstrations:
             owners = torch.as_tensor(np.repeat(np.arange(len(data)), lengths),
                                      dtype=torch.long, device=agent.device)
             _, scores = agent.policy_net.forward_grouped(
-                torch.as_tensor(np.stack([item.state for item in data]), device=agent.device),
+                torch.as_tensor(np.stack([item.state[:agent.state_dim] for item in data]), device=agent.device),
                 torch.as_tensor(moves, device=agent.device), owners)
         else:
             phis = np.concatenate([np.concatenate((
-                np.broadcast_to(item.state, (len(item.moves), len(item.state))),
+                np.broadcast_to(item.state[:agent.state_dim], (len(item.moves), agent.state_dim)),
                 item.move_features), axis=1) for item in data])
             scores = agent._q_batch(phis, agent.policy_net)
         columns = np.arange(max(lengths))

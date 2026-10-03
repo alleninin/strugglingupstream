@@ -29,6 +29,8 @@ class Game:
         self.passes_in_a_row = 0
         self.finish_order: List[int] = []
         self.done = False
+        # Public information only; never reconstruct this from hidden hands.
+        self.played_cards = []
         # Most recently resolved trick, consumed by the environment after each turn.
         self.last_trick_winner = None
 
@@ -74,6 +76,7 @@ class Game:
         for card in move.cards:
             remaining.remove(card)
         self.hands[seat] = remaining
+        self.played_cards.extend(move.cards)
         self.table_move = move
         self.table_owner = seat
         self.passes_in_a_row = 0

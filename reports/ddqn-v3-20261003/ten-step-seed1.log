@@ -1,0 +1,13 @@
+[training] agent=ddqn reward=win device=cpu torch_threads=1
+[ep  500] win_rate_vs_greedy = 0.030 (100 evaluation games in 5.8s)
+[ddqn 500/2500] epsilon=0.388 opponent=random training_win_rate=0.494 last 500 episodes=14.6s total_train=14.6s total_eval=5.8s
+[ep 1000] win_rate_vs_greedy = 0.030 (100 evaluation games in 5.8s)
+[ddqn 1000/2500] epsilon=0.275 opponent=mixed training_win_rate=0.148 last 500 episodes=21.1s total_train=35.8s total_eval=11.6s
+[ep 1500] win_rate_vs_greedy = 0.040 (100 evaluation games in 5.9s)
+[ddqn 1500/2500] epsilon=0.163 opponent=greedy training_win_rate=0.110 last 500 episodes=25.5s total_train=61.3s total_eval=17.5s
+[ep 2000] win_rate_vs_greedy = 0.010 (100 evaluation games in 5.7s)
+[ddqn 2000/2500] epsilon=0.050 opponent=greedy training_win_rate=0.022 last 500 episodes=30.3s total_train=91.5s total_eval=23.2s
+[ep 2500] win_rate_vs_greedy = 0.050 (100 evaluation games in 5.7s)
+[ddqn 2500/2500] epsilon=0.050 opponent=greedy training_win_rate=0.030 last 500 episodes=29.9s total_train=121.4s total_eval=28.9s
+Saved ddqn agent -> reports/ddqn-v3-20261003/ten-step-seed1.pt
+Best validation win rate=0.050 -> reports/ddqn-v3-20261003/ten-step-seed1.best.pt

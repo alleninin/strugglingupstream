@@ -1,0 +1,16 @@
+{
+  "games": 500,
+  "seed": 98765,
+  "num_players": 4,
+  "num_decks": 2,
+  "results": {
+    "reports/ddqn-v3-20261003/planning-seed0.best.pt": {
+      "greedy": 0.21,
+      "random": 0.814
+    },
+    "reports/ddqn-v3-20261003/planning-seed1.best.pt": {
+      "greedy": 0.198,
+      "random": 0.892
+    }
+  }
+}

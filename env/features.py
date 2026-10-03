@@ -37,6 +37,14 @@ def state_vector(game: Game, seat: int) -> np.ndarray:
         if j == seat:
             continue
         parts.append(_scalar(len(game.hands[j]) / max(1, game.initial_hand_size)))
+    # Append to preserve the old observation prefix for legacy checkpoints/bots.
+    parts.append(_rank_vec(game.played_cards) / max(1, 4 * game.num_decks))
+    parts.append(_rank_vec(tm.cards if tm is not None else []) / max(1, 4 * game.num_decks))
+    owner = np.zeros(n, dtype=np.float32)
+    if tm is not None:
+        owner[(game.table_owner - seat) % n] = 1.0
+    parts.append(owner)
+    parts.append(_scalar(game.passes_in_a_row / max(1, n - 1)))
     return np.concatenate(parts).astype(np.float32)
 
 
@@ -69,4 +77,14 @@ def combined_vector(state_vec: np.ndarray, move_vec: np.ndarray) -> np.ndarray:
 
 def feature_dims(num_players: int, num_decks: int = 1):
     # Dimensions depend on the seat count, not on a randomly dealt sample game.
-    return NUM_RANKS + TYPE_DIM + 4 + num_players - 1, NUM_RANKS + TYPE_DIM + 4
+    old_state = NUM_RANKS + TYPE_DIM + 4 + num_players - 1
+    return old_state + 2 * NUM_RANKS + num_players + 1, NUM_RANKS + TYPE_DIM + 4
+
+
+def legacy_state_dim(state_dim):
+    """Recognize an expanded game observation; synthetic test dimensions stay as-is."""
+    constant = 3 * NUM_RANKS + TYPE_DIM + 4
+    players, remainder = divmod(state_dim - constant, 2)
+    if remainder or players < 2:
+        return state_dim
+    return NUM_RANKS + TYPE_DIM + 3 + players

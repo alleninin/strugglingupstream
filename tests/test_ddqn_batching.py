@@ -47,7 +47,7 @@ def reference_predictions(net, data):
 
 class DDQNBatchingTests(unittest.TestCase):
     def setUp(self):
-        self.agent = DDQNAgent(*features.feature_dims(4), seed=7, device='cpu')
+        self.agent = DDQNAgent(*features.feature_dims(4), seed=7, device='cpu', dueling=True)
         self.data = replay_items()
 
     def test_grouped_values_and_gradients_match_repeated_state_reference(self):

@@ -1,0 +1,13 @@
+[training] agent=ddqn reward=basic device=cpu torch_threads=1
+[ep  500] win_rate_vs_greedy = 0.020 (100 evaluation games in 5.6s)
+[ddqn 500/2500] epsilon=0.388 opponent=mixed training_win_rate=0.102 last 500 episodes=25.8s total_train=25.8s total_eval=5.6s
+[ep 1000] win_rate_vs_greedy = 0.040 (100 evaluation games in 5.6s)
+[ddqn 1000/2500] epsilon=0.275 opponent=mixed training_win_rate=0.158 last 500 episodes=25.4s total_train=51.2s total_eval=11.2s
+[ep 1500] win_rate_vs_greedy = 0.060 (100 evaluation games in 5.7s)
+[ddqn 1500/2500] epsilon=0.163 opponent=mixed training_win_rate=0.192 last 500 episodes=25.7s total_train=76.9s total_eval=16.9s
+[ep 2000] win_rate_vs_greedy = 0.060 (100 evaluation games in 5.7s)
+[ddqn 2000/2500] epsilon=0.050 opponent=mixed training_win_rate=0.236 last 500 episodes=25.9s total_train=102.8s total_eval=22.5s
+[ep 2500] win_rate_vs_greedy = 0.060 (100 evaluation games in 5.6s)
+[ddqn 2500/2500] epsilon=0.050 opponent=mixed training_win_rate=0.260 last 500 episodes=26.1s total_train=128.8s total_eval=28.2s
+Saved ddqn agent -> reports/ddqn-v3-20261003/dense-seed0.pt
+Best validation win rate=0.060 -> reports/ddqn-v3-20261003/dense-seed0.best.pt

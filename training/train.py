@@ -30,6 +30,13 @@ def make_opponent_policies(num_players, seed, num_decks=2, opponent="greedy"):
 
 
 def evaluate_vs_opponent(agent, num_players, num_decks, seed, n=100, opponent="greedy"):
+    if n < 1:
+        raise ValueError("evaluation requires at least one game")
+    inner = getattr(agent, "inner", agent)
+    rng = getattr(inner, "rng", None)
+    numpy_rng = rng is not None and hasattr(rng, "bit_generator")
+    rng_state = (copy.deepcopy(rng.bit_generator.state) if numpy_rng else
+                 rng.getstate() if rng is not None else None)
     old_eps = getattr(agent, "epsilon", 0.0)
     agent.epsilon = 0.0
     wins = 0
@@ -52,16 +59,27 @@ def evaluate_vs_opponent(agent, num_players, num_decks, seed, n=100, opponent="g
                 wins += 1
     finally:
         agent.epsilon = old_eps
+        if rng_state is not None:
+            if numpy_rng:
+                rng.bit_generator.state = rng_state
+            else:
+                rng.setstate(rng_state)
     return wins / n
 
 
 def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_every,
           lambda1=0.2, lambda2=0.2, potential_scale=0.5, trick_scale=0.05,
-          opponent="greedy", eval_opponent="greedy", reward_scheme=None,
+          opponent=None, eval_opponent="greedy", reward_scheme=None,
           progress_every=0, eval_games=100, device="cpu", torch_threads=1,
-          demo_games=None, demo_updates=1000, demo_weight=0.1):
+          demo_games=None, demo_updates=1000, demo_weight=0.1,
+          n_step=3, learning_starts=1000, train_every=4, gamma=None,
+          planning_features=True):
+    if gamma is not None and not 0 < gamma <= 1:
+        raise ValueError("gamma must be in (0, 1]")
     if demo_games is None:
-        demo_games = 0 if agent_kind in ("shaped", "shaped-ql") else 200
+        demo_games = 200 if agent_kind in ("dqn", "qlearning") else 0
+    if opponent is None:
+        opponent = "curriculum" if agent_kind == "ddqn" else "greedy"
     if episodes < 0 or demo_games < 0 or demo_updates < 0 or not 0 <= demo_weight <= 1:
         raise ValueError("episode/demo counts must be nonnegative and demo_weight between 0 and 1")
     if eval_every and eval_games < 1:
@@ -89,6 +107,7 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
         from bots.shaped_reward_bot import ShapedRewardBot
         inner_type = "qlearning" if agent_kind == "shaped-ql" else "ddqn"
         cfg = ShapedRewardConfig(num_players=num_players, num_decks=num_decks,
+                                 gamma=.95 if gamma is None else gamma,
                                  lambda1=lambda1, lambda2=lambda2,
                                  potential_scale=potential_scale,
                                  trick_scale=trick_scale)
@@ -101,14 +120,18 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
         from agents.ddqn_agent import DDQNAgent
         agent = DDQNAgent(s_dim, a_dim, lr=3e-4, gamma=1.0 if win_objective else 0.95,
                           epsilon=0.5, epsilon_decay=1.0, min_epsilon=0.05,
-                          seed=seed, device=device)
+                          seed=seed, device=device, n_step=n_step,
+                          learning_starts=learning_starts, train_every=train_every,
+                          planning_features=planning_features)
     else:
         raise ValueError(f"unknown agent: {agent_kind}")
 
-    opp = make_opponent_policies(num_players, seed, num_decks, opponent)
+    initial_opponent = curriculum_opponent(0, episodes) if opponent == "curriculum" else opponent
+    opp = make_opponent_policies(num_players, seed, num_decks, initial_opponent)
     env = ZhengShangYouEnv(num_players=num_players, num_decks=num_decks,
                            opponent_policies=opp, seed=seed,
-                           reward_scheme=reward_scheme)
+                           reward_scheme=reward_scheme,
+                           reward_discount=1.0 if gamma is None else gamma)
     if hasattr(agent, "set_env"):
         agent.set_env(env)
     os.makedirs(os.path.dirname(save_path) or ".", exist_ok=True)
@@ -116,9 +139,15 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
     inner.epsilon_decay = 1.0
     if win_objective:
         inner.gamma = 1.0  # Must match the undiscounted potential in the environment.
+    if gamma is not None:
+        inner.gamma = gamma
     if hasattr(inner, "device"):
         print(f"[training] agent={agent_kind} reward={reward_scheme} device={inner.device} "
               f"torch_threads={torch.get_num_threads()}", flush=True)
+        if agent_kind == "ddqn":
+            print(f"[DDQN] network={type(inner.policy_net).__name__} state_dim={inner.state_dim} "
+                  f"n_step={inner.n_step} learning_starts={inner.learning_starts} "
+                  f"train_every={inner.train_every}", flush=True)
 
     stem, extension = os.path.splitext(save_path)
     best_path = stem + ".best" + extension
@@ -154,8 +183,9 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
     for ep in range(episodes):
         agent.epsilon = exploration_epsilon(ep, episodes)
         episode_seed = (seed * 1000 + ep) if seed is not None else None
-        if opponent == "mixed":
-            env.opponent_policies = make_opponent_policies(num_players, episode_seed, num_decks, opponent)
+        episode_opponent = curriculum_opponent(ep, episodes) if opponent == "curriculum" else opponent
+        if opponent in ("mixed", "curriculum"):
+            env.opponent_policies = make_opponent_policies(num_players, episode_seed, num_decks, episode_opponent)
         state = env.reset(seed=episode_seed)
         agent.reset_episode()
         done = env.done
@@ -191,6 +221,7 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
             interval_episodes = ep + 1 - progress_episode
             interval_seconds = now - progress_started - (evaluation_seconds - progress_evaluation_seconds)
             print(f"[{agent_kind} {ep + 1}/{episodes}] epsilon={agent.epsilon:.3f} "
+                  f"opponent={episode_opponent} "
                   f"training_win_rate={progress_wins / interval_episodes:.3f} "
                   f"last {interval_episodes} episodes={interval_seconds:.1f}s "
                   f"total_train={now - started - evaluation_seconds:.1f}s "
@@ -214,6 +245,11 @@ def exploration_epsilon(episode, episodes):
     return 0.5 + (0.05 - 0.5) * min(1.0, episode / duration)
 
 
+def curriculum_opponent(episode, episodes):
+    progress = episode / max(1, episodes)
+    return "random" if progress < .2 else "mixed" if progress < .5 else "greedy"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--agent", choices=["qlearning", "dqn", "ddqn", "shaped", "shaped-ql"],
@@ -232,7 +268,14 @@ def main():
     ap.add_argument("--torch-threads", type=int, default=1,
                     help="CPU threads for neural-network operations")
     ap.add_argument("--demo-games", type=int, default=None,
-                    help="greedy warm-up games: 200 for ddqn/dqn/qlearning, 0 for shaped; use 0 for pure RL")
+                    help="greedy warm-up games: 200 for dqn/qlearning, 0 for ddqn/shaped")
+    ap.add_argument("--n-step", type=int, default=3, help="DDQN return horizon")
+    ap.add_argument("--learning-starts", type=int, default=1000, help="DDQN replay warm-up transitions")
+    ap.add_argument("--train-every", type=int, default=4, help="DDQN transitions per gradient update")
+    ap.add_argument("--gamma", type=float, default=None,
+                    help="discount; defaults to 1 for win reward, .95 otherwise")
+    ap.add_argument("--planning-features", action=argparse.BooleanOptionalAction, default=True,
+                    help="DDQN: expose remaining-hand counts and combo structure to the Q network")
     ap.add_argument("--demo-updates", type=int, default=1000,
                     help="warm-up minibatches (32 examples each)")
     ap.add_argument("--demo-weight", type=float, default=0.1,
@@ -241,7 +284,7 @@ def main():
     ap.add_argument("--lambda2", type=float, default=0.2)
     ap.add_argument("--potential-scale", type=float, default=0.5)
     ap.add_argument("--trick-scale", type=float, default=0.05)
-    ap.add_argument("--opponent", choices=["greedy", "random", "mixed"], default="greedy",
+    ap.add_argument("--opponent", choices=["greedy", "random", "mixed", "curriculum"], default=None,
                     help="opponent policy used for the other seats during training")
     ap.add_argument("--eval-opponent", choices=["greedy", "random", "mixed"], default="greedy",
                     help="opponent policy used for the periodic win-rate evaluation")
@@ -264,7 +307,9 @@ def main():
           opponent=args.opponent, eval_opponent=args.eval_opponent,
           reward_scheme=args.reward, progress_every=args.progress_every,
           eval_games=args.eval_games, device=args.device, torch_threads=args.torch_threads,
-          demo_games=args.demo_games, demo_updates=args.demo_updates, demo_weight=args.demo_weight)
+          demo_games=args.demo_games, demo_updates=args.demo_updates, demo_weight=args.demo_weight,
+          n_step=args.n_step, learning_starts=args.learning_starts, train_every=args.train_every,
+          gamma=args.gamma, planning_features=args.planning_features)
 
 
 if __name__ == "__main__":

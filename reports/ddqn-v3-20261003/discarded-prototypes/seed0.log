@@ -1,0 +1,7 @@
+[training] agent=ddqn reward=win device=cpu torch_threads=1
+[ep  500] win_rate_vs_greedy = 0.020 (100 evaluation games in 5.9s)
+[ddqn 500/2500] epsilon=0.388 opponent=random training_win_rate=0.542 last 500 episodes=16.2s total_train=16.2s total_eval=5.9s
+[ep 1000] win_rate_vs_greedy = 0.040 (100 evaluation games in 5.5s)
+[ddqn 1000/2500] epsilon=0.275 opponent=mixed training_win_rate=0.212 last 500 episodes=22.1s total_train=38.3s total_eval=11.4s
+[ep 1500] win_rate_vs_greedy = 0.100 (100 evaluation games in 5.6s)
+[ddqn 1500/2500] epsilon=0.163 opponent=greedy training_win_rate=0.154 last 500 episodes=26.1s total_train=64.4s total_eval=17.0s

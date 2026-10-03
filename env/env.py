@@ -10,13 +10,16 @@ from bots.greedy_bot import GreedyBot
 class ZhengShangYouEnv:
     def __init__(self, num_players: int = 4, num_decks: int = 2,
                  opponent_policies: Optional[List[Callable]] = None, seed=None,
-                 reward_scheme: str = "default"):
+                 reward_scheme: str = "default", reward_discount: float = 1.0):
         self.num_players = num_players
         self.num_decks = num_decks
         self.opponent_policies = opponent_policies
         self.agent_seat = 0
         self.seed = seed
         self.reward_scheme = reward_scheme
+        if not 0 < reward_discount <= 1:
+            raise ValueError("reward_discount must be in (0, 1]")
+        self.reward_discount = reward_discount
         self.rng = np.random.default_rng(seed)
         if reward_scheme not in ("default", "basic", "win"):
             raise ValueError("unknown reward scheme")
@@ -32,8 +35,8 @@ class ZhengShangYouEnv:
             (self.reward_scheme == "win" and bool(self.game.finish_order)))
 
     def _potential(self):
-        # Undiscounted potential shaping: progress helps credit assignment but
-        # telescopes to a constant over the episode, including terminal losses.
+        # With the learner's matching discount, potential shaping telescopes to
+        # a fixed offset in discounted return, including terminal losses.
         return -len(self.game.hands[self.agent_seat]) / self.game.initial_hand_size
 
     def _opponent_policy(self, seat: int) -> Callable:
@@ -88,7 +91,7 @@ class ZhengShangYouEnv:
         card_reward = 0.1 * len(action.cards)
 
         if self.reward_scheme == "win":
-            card_reward = (0.0 if self.done else self._potential()) - potential
+            card_reward = (0.0 if self.done else self.reward_discount * self._potential()) - potential
 
         if self.done:
             return None, card_reward + self._terminal_reward(seat), True, \

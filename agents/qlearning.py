@@ -11,6 +11,7 @@ class QLearningAgent(BaseAgent):
                  epsilon_decay: float = 0.9995, min_epsilon: float = 0.02,
                  seed: int = None):
         self.base_dim = state_dim + action_dim
+        self.state_dim, self.action_dim = state_dim, action_dim
         self.dim = self.base_dim + state_dim * action_dim
         self.alpha = alpha
         self.gamma = gamma
@@ -22,6 +23,7 @@ class QLearningAgent(BaseAgent):
         self.demonstrations = None
 
     def _phi(self, state, move):
+        state = state[:self.state_dim]
         base = super()._phi(state, move)
         # Additive w_s*s + w_a*a gives the same action preference in every
         # state. Cross terms let the linear learner condition a move on its hand
@@ -63,7 +65,13 @@ class QLearningAgent(BaseAgent):
             np.save(checkpoint, self.w)
 
     def load(self, path: str) -> None:
+        from env import features
         w = np.load(path)
+        old_state = features.legacy_state_dim(self.state_dim)
+        old_base = old_state + self.action_dim
+        old_dim = old_base + old_state * self.action_dim
+        if w.shape in ((old_base,), (old_dim,)):
+            self.state_dim, self.base_dim, self.dim = old_state, old_base, old_dim
         if w.shape == (self.base_dim,):
             # Preserve predictions from legacy additive checkpoints until retrained.
             w = np.pad(w, (0, self.dim - self.base_dim))

@@ -9,6 +9,7 @@ class BaseAgent(ABC):
     epsilon: float = 0.0
 
     def _phi(self, state, move):
+        state = state[:getattr(self, "state_dim", len(state))]
         return features.combined_vector(state, features.move_vector(move))
 
     @abstractmethod

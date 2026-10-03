@@ -372,7 +372,8 @@ class GreedyBot:
         if finishing:
             return finishing[0]
         scale = own_size / float(obs[28]) if obs[28] > 0 else self.initial_hand_size
-        opponents = [int(round(float(value) * scale)) for value in obs[29:]]
+        opponents = [int(round(float(value) * scale))
+                     for value in obs[29:29 + self.num_players - 1]]
         if float(obs[27]) < .5:
             return self._lead(legal, hand, opponents)
         table = (MoveType(int(np.argmax(obs[15:25]))),

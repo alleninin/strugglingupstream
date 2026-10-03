@@ -288,7 +288,7 @@ class LearningTests(unittest.TestCase):
 
     def test_ddqn_single_action_advantage_has_zero_gradient(self):
         dims = features.feature_dims(2)
-        agent = DDQNAgent(*dims, batch_size=1, seed=2)
+        agent = DDQNAgent(*dims, batch_size=1, seed=2, dueling=True, learning_starts=1)
         game = game_for([3], [4])
         state = features.state_vector(game, 0)
         action = game.legal_moves()[0]

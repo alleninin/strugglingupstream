@@ -1,0 +1,2 @@
+reports/ddqn-v3-20261003/dense-seed0.best.pt {"greedy": 0.076, "random": 0.804}
+reports/ddqn-v3-20261003/dense-seed1.best.pt {"greedy": 0.062, "random": 0.7}

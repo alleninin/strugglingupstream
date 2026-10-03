@@ -1,0 +1,23 @@
+[training] agent=ddqn reward=win device=cpu torch_threads=1
+[ep  1000] win_rate_vs_greedy = 0.060 (100 evaluation games in 5.9s)
+[ddqn 1000/10000] epsilon=0.444 opponent=random training_win_rate=0.553 last 1000 episodes=29.2s total_train=29.2s total_eval=5.9s
+[ep  2000] win_rate_vs_greedy = 0.090 (100 evaluation games in 5.7s)
+[ddqn 2000/10000] epsilon=0.388 opponent=random training_win_rate=0.640 last 1000 episodes=29.2s total_train=58.4s total_eval=11.6s
+[ep  3000] win_rate_vs_greedy = 0.070 (100 evaluation games in 5.8s)
+[ddqn 3000/10000] epsilon=0.331 opponent=mixed training_win_rate=0.193 last 1000 episodes=42.4s total_train=100.7s total_eval=17.4s
+[ep  4000] win_rate_vs_greedy = 0.110 (100 evaluation games in 6.2s)
+[ddqn 4000/10000] epsilon=0.275 opponent=mixed training_win_rate=0.194 last 1000 episodes=44.3s total_train=145.1s total_eval=23.6s
+[ep  5000] win_rate_vs_greedy = 0.050 (100 evaluation games in 5.9s)
+[ddqn 5000/10000] epsilon=0.219 opponent=mixed training_win_rate=0.187 last 1000 episodes=43.0s total_train=188.0s total_eval=29.6s
+[ep  6000] win_rate_vs_greedy = 0.050 (100 evaluation games in 6.1s)
+[ddqn 6000/10000] epsilon=0.163 opponent=greedy training_win_rate=0.068 last 1000 episodes=60.3s total_train=248.4s total_eval=35.7s
+[ep  7000] win_rate_vs_greedy = 0.070 (100 evaluation games in 5.8s)
+[ddqn 7000/10000] epsilon=0.106 opponent=greedy training_win_rate=0.062 last 1000 episodes=61.0s total_train=309.4s total_eval=41.5s
+[ep  8000] win_rate_vs_greedy = 0.040 (100 evaluation games in 5.8s)
+[ddqn 8000/10000] epsilon=0.050 opponent=greedy training_win_rate=0.061 last 1000 episodes=61.7s total_train=371.1s total_eval=47.3s
+[ep  9000] win_rate_vs_greedy = 0.030 (100 evaluation games in 5.9s)
+[ddqn 9000/10000] epsilon=0.050 opponent=greedy training_win_rate=0.062 last 1000 episodes=62.8s total_train=433.9s total_eval=53.2s
+[ep 10000] win_rate_vs_greedy = 0.030 (100 evaluation games in 5.9s)
+[ddqn 10000/10000] epsilon=0.050 opponent=greedy training_win_rate=0.070 last 1000 episodes=64.1s total_train=498.0s total_eval=59.1s
+Saved ddqn agent -> reports/ddqn-v3-20261003/long-seed0.pt
+Best validation win rate=0.110 -> reports/ddqn-v3-20261003/long-seed0.best.pt

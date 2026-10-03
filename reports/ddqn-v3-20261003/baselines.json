@@ -1,0 +1,16 @@
+{
+  "games": 500,
+  "seed": 54321,
+  "num_players": 4,
+  "num_decks": 2,
+  "results": {
+    "greedy": {
+      "greedy": 0.288,
+      "random": 0.842
+    },
+    "random": {
+      "greedy": 0.01,
+      "random": 0.278
+    }
+  }
+}

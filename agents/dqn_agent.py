@@ -32,6 +32,7 @@ class DQNAgent(BaseAgent):
                  buffer_size: int = 20000, batch_size: int = 64,
                  target_update: int = 200, seed: int = None, device="auto"):
         self.input_dim = state_dim + action_dim
+        self.state_dim, self.action_dim = state_dim, action_dim
         self.gamma = gamma
         self.epsilon = epsilon
         self.epsilon_decay = epsilon_decay
@@ -123,5 +124,18 @@ class DQNAgent(BaseAgent):
         torch.save(self.policy_net.state_dict(), path)
 
     def load(self, path: str) -> None:
-        self.policy_net.load_state_dict(torch.load(path, map_location=self.device))
+        from env import features
+        weights = torch.load(path, map_location=self.device, weights_only=True)
+        saved_dim = weights['net.0.weight'].shape[1] - self.action_dim
+        if saved_dim not in (self.state_dim, features.legacy_state_dim(self.state_dim)):
+            raise ValueError("checkpoint has incompatible player count or feature dimensions")
+        self.state_dim = saved_dim
+        self.input_dim = saved_dim + self.action_dim
+        self.policy_net = QNetwork(self.input_dim).to(self.device)
+        self.target_net = QNetwork(self.input_dim).to(self.device)
+        self.optimizer = optim.Adam(self.policy_net.parameters(), lr=self.optimizer.param_groups[0]['lr'])
+        self.policy_net.load_state_dict(weights)
         self.target_net.load_state_dict(self.policy_net.state_dict())
+        self.buffer = []
+        self.buffer_pos = self.step_count = 0
+        self.demonstrations = None

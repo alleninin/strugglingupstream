@@ -1,0 +1,12659 @@
+{
+  "num_games": 840,
+  "num_players": 4,
+  "num_decks": 2,
+  "seed": 200000,
+  "rounds": 3,
+  "results": {
+    "QLearning": {
+      "appearances": 420,
+      "wins": 84,
+      "win_rate": 0.2,
+      "mean_place": 2.5690476190476192
+    },
+    "DQN": {
+      "appearances": 420,
+      "wins": 94,
+      "win_rate": 0.22380952380952382,
+      "mean_place": 2.3857142857142857
+    },
+    "DDQN": {
+      "appearances": 420,
+      "wins": 70,
+      "win_rate": 0.16666666666666666,
+      "mean_place": 2.65
+    },
+    "Shaped": {
+      "appearances": 420,
+      "wins": 18,
+      "win_rate": 0.04285714285714286,
+      "mean_place": 3.2142857142857144
+    },
+    "ShapedQL": {
+      "appearances": 420,
+      "wins": 76,
+      "win_rate": 0.18095238095238095,
+      "mean_place": 2.414285714285714
+    },
+    "Greedy": {
+      "appearances": 420,
+      "wins": 251,
+      "win_rate": 0.5976190476190476,
+      "mean_place": 1.6
+    },
+    "Random": {
+      "appearances": 420,
+      "wins": 12,
+      "win_rate": 0.02857142857142857,
+      "mean_place": 3.480952380952381
+    },
+    "GreedyBefore": {
+      "appearances": 420,
+      "wins": 235,
+      "win_rate": 0.5595238095238095,
+      "mean_place": 1.6857142857142857
+    }
+  },
+  "games": [
+    {
+      "seed": 200000,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200000,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200000,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200000,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200001,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200001,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200001,
+      "seats": [
+        "Shaped",
+        "Random",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200001,
+      "seats": [
+        "Random",
+        "QLearning",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200002,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200002,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200002,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200002,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200003,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200003,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200003,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200003,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200004,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200004,
+      "seats": [
+        "Random",
+        "DDQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200004,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200004,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200005,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200005,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200005,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200005,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200006,
+      "seats": [
+        "Greedy",
+        "Random",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200006,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200006,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200006,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200007,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200007,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200007,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200007,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200008,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200008,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200008,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200008,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200009,
+      "seats": [
+        "Greedy",
+        "Random",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200009,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200009,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200009,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200010,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200010,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200010,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200010,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200011,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200011,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200011,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200011,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200012,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200012,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200012,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200012,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200013,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200013,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200013,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200013,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200014,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200014,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200014,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200014,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200015,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200015,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200015,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200015,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200016,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200016,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200016,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200016,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200017,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200017,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200017,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200017,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200018,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200018,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200018,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200018,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200019,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200019,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200019,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200019,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200020,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200020,
+      "seats": [
+        "Random",
+        "Greedy",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200020,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200020,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200021,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200021,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200021,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200021,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200022,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200022,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200022,
+      "seats": [
+        "DQN",
+        "Random",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200022,
+      "seats": [
+        "Random",
+        "Shaped",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200023,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200023,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200023,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200023,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200024,
+      "seats": [
+        "Random",
+        "Shaped",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200024,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200024,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200024,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200025,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200025,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200025,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200025,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200026,
+      "seats": [
+        "Random",
+        "QLearning",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200026,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200026,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200026,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200027,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200027,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200027,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200027,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200028,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200028,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200028,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200028,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200029,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200029,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200029,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200029,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200030,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200030,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200030,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200030,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200031,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200031,
+      "seats": [
+        "Random",
+        "Shaped",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200031,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200031,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200032,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200032,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200032,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200032,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200033,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200033,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200033,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200033,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200034,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200034,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200034,
+      "seats": [
+        "QLearning",
+        "Random",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200034,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200035,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200035,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200035,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200035,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200036,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200036,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200036,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200036,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200037,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200037,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200037,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200037,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200038,
+      "seats": [
+        "Random",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200038,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200038,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200038,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200039,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200039,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200039,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200039,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200040,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200040,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200040,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200040,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200041,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200041,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200041,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200041,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200042,
+      "seats": [
+        "Random",
+        "Greedy",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200042,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200042,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200042,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200043,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200043,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200043,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200043,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200044,
+      "seats": [
+        "Random",
+        "DQN",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200044,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200044,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200044,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200045,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200045,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200045,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200045,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200046,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200046,
+      "seats": [
+        "DDQN",
+        "Random",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200046,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200046,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200047,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200047,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200047,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200047,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200048,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200048,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200048,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200048,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200049,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200049,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200049,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200049,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200050,
+      "seats": [
+        "Greedy",
+        "Random",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200050,
+      "seats": [
+        "Random",
+        "QLearning",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200050,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200050,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200051,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200051,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200051,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200051,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200052,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200052,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200052,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200052,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200053,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200053,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200053,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200053,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200054,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200054,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200054,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200054,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200055,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200055,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200055,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200055,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200056,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200056,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200056,
+      "seats": [
+        "Greedy",
+        "Random",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200056,
+      "seats": [
+        "Random",
+        "Shaped",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200057,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200057,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200057,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200057,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200058,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200058,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200058,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200058,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200059,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200059,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200059,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200059,
+      "seats": [
+        "Random",
+        "DQN",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200060,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200060,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200060,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200060,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200061,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200061,
+      "seats": [
+        "DQN",
+        "Random",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200061,
+      "seats": [
+        "Random",
+        "QLearning",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200061,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200062,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200062,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200062,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200062,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200063,
+      "seats": [
+        "DDQN",
+        "Random",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200063,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200063,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200063,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200064,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200064,
+      "seats": [
+        "Random",
+        "DQN",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200064,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200064,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200065,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200065,
+      "seats": [
+        "DQN",
+        "Random",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200065,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200065,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200066,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200066,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200066,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200066,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200067,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200067,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200067,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200067,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200068,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200068,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200068,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200068,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200069,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200069,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200069,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200069,
+      "seats": [
+        "Random",
+        "DDQN",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200070,
+      "seats": [
+        "Random",
+        "Shaped",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200070,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200070,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200070,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200071,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200071,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200071,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200071,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200072,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200072,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200072,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200072,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200073,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200073,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200073,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200073,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200074,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200074,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200074,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200074,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200075,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200075,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200075,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200075,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200076,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200076,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200076,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200076,
+      "seats": [
+        "Greedy",
+        "Random",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200077,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200077,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200077,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200077,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200078,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200078,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200078,
+      "seats": [
+        "Random",
+        "DQN",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200078,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200079,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200079,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200079,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200079,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200080,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200080,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200080,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200080,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200081,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200081,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200081,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200081,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200082,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200082,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200082,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200082,
+      "seats": [
+        "Greedy",
+        "Random",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200083,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200083,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200083,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200083,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200084,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200084,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200084,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200084,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200085,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200085,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200085,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200085,
+      "seats": [
+        "QLearning",
+        "Random",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200086,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200086,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200086,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200086,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200087,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200087,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200087,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200087,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200088,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200088,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200088,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200088,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200089,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200089,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200089,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200089,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200090,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200090,
+      "seats": [
+        "Random",
+        "DQN",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200090,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200090,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200091,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200091,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200091,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200091,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200092,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200092,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200092,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200092,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200093,
+      "seats": [
+        "DQN",
+        "Random",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200093,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200093,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200093,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200094,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200094,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200094,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200094,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200095,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200095,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200095,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200095,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200096,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200096,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200096,
+      "seats": [
+        "Greedy",
+        "Random",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200096,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200097,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200097,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200097,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200097,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200098,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200098,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200098,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200098,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200099,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200099,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200099,
+      "seats": [
+        "Greedy",
+        "Random",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200099,
+      "seats": [
+        "Random",
+        "QLearning",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200100,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200100,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200100,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200100,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200101,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200101,
+      "seats": [
+        "DQN",
+        "Random",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200101,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200101,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200102,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200102,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200102,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200102,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200103,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200103,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200103,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200103,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200104,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200104,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200104,
+      "seats": [
+        "DDQN",
+        "Random",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200104,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200105,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200105,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200105,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200105,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200106,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200106,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200106,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200106,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200107,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200107,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200107,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200107,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200108,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200108,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200108,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200108,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200109,
+      "seats": [
+        "Random",
+        "Greedy",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200109,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200109,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200109,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200110,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200110,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200110,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200110,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200111,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200111,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200111,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200111,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200112,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200112,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200112,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200112,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200113,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200113,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200113,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200113,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200114,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200114,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200114,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200114,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200115,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200115,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200115,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200115,
+      "seats": [
+        "Random",
+        "DQN",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200116,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200116,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200116,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200116,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200117,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200117,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200117,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200117,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200118,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200118,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200118,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200118,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200119,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200119,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200119,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200119,
+      "seats": [
+        "Shaped",
+        "Random",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200120,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200120,
+      "seats": [
+        "DDQN",
+        "Random",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200120,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200120,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200121,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200121,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200121,
+      "seats": [
+        "DQN",
+        "Random",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200121,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200122,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200122,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200122,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200122,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200123,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200123,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200123,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200123,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200124,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200124,
+      "seats": [
+        "Shaped",
+        "Random",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200124,
+      "seats": [
+        "Random",
+        "Greedy",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200124,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200125,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200125,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200125,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200125,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200126,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200126,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200126,
+      "seats": [
+        "QLearning",
+        "Random",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200126,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200127,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200127,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200127,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200127,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200128,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200128,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200128,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200128,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200129,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200129,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200129,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200129,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200130,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200130,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200130,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200130,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200131,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200131,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200131,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200131,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200132,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200132,
+      "seats": [
+        "Shaped",
+        "Random",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200132,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200132,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200133,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200133,
+      "seats": [
+        "Greedy",
+        "Random",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200133,
+      "seats": [
+        "Random",
+        "Shaped",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200133,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200134,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200134,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200134,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200134,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200135,
+      "seats": [
+        "DQN",
+        "Random",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200135,
+      "seats": [
+        "Random",
+        "Shaped",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200135,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200135,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200136,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200136,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200136,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200136,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200137,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200137,
+      "seats": [
+        "Random",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200137,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200137,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200138,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200138,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200138,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200138,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200139,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200139,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200139,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200139,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200140,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200140,
+      "seats": [
+        "Random",
+        "DDQN",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200140,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200140,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200141,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200141,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200141,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200141,
+      "seats": [
+        "Shaped",
+        "Random",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200142,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200142,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200142,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200142,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200143,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200143,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200143,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200143,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200144,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200144,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200144,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200144,
+      "seats": [
+        "Shaped",
+        "Random",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200145,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200145,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200145,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200145,
+      "seats": [
+        "Greedy",
+        "Random",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200146,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200146,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200146,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200146,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200147,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200147,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200147,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200147,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200148,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200148,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200148,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200148,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200149,
+      "seats": [
+        "Random",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200149,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200149,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200149,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200150,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200150,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200150,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200150,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200151,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200151,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200151,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200151,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200152,
+      "seats": [
+        "Random",
+        "DQN",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200152,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200152,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200152,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200153,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200153,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200153,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200153,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200154,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200154,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200154,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200154,
+      "seats": [
+        "DDQN",
+        "Random",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200155,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200155,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200155,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200155,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200156,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200156,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200156,
+      "seats": [
+        "Random",
+        "DQN",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200156,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200157,
+      "seats": [
+        "Random",
+        "Shaped",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200157,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200157,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200157,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200158,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200158,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200158,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200158,
+      "seats": [
+        "Random",
+        "DQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200159,
+      "seats": [
+        "Random",
+        "DQN",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200159,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200159,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200159,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200160,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200160,
+      "seats": [
+        "Random",
+        "Greedy",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200160,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200160,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200161,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200161,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200161,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200161,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200162,
+      "seats": [
+        "Greedy",
+        "Random",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200162,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200162,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200162,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200163,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200163,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200163,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200163,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200164,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200164,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200164,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200164,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200165,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200165,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200165,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200165,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200166,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200166,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200166,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200166,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200167,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200167,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200167,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200167,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200168,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200168,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200168,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200168,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200169,
+      "seats": [
+        "Random",
+        "Shaped",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200169,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200169,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200169,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200170,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200170,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200170,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200170,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200171,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200171,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200171,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200171,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200172,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200172,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200172,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200172,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200173,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200173,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200173,
+      "seats": [
+        "DDQN",
+        "Random",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200173,
+      "seats": [
+        "Random",
+        "QLearning",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200174,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200174,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200174,
+      "seats": [
+        "Random",
+        "Greedy",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200174,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200175,
+      "seats": [
+        "QLearning",
+        "Random",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200175,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200175,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200175,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200176,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200176,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200176,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200176,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200177,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200177,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200177,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200177,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200178,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200178,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200178,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200178,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200179,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Random",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200179,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200179,
+      "seats": [
+        "Random",
+        "ShapedQL",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200179,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200180,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200180,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Shaped",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200180,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200180,
+      "seats": [
+        "Shaped",
+        "ShapedQL",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200181,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200181,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200181,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200181,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200182,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200182,
+      "seats": [
+        "Shaped",
+        "Random",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200182,
+      "seats": [
+        "Random",
+        "Greedy",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200182,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200183,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200183,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200183,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200183,
+      "seats": [
+        "Random",
+        "Greedy",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200184,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200184,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200184,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200184,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200185,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200185,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200185,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200185,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200186,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200186,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "ShapedQL",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200186,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200186,
+      "seats": [
+        "ShapedQL",
+        "Shaped",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200187,
+      "seats": [
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200187,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200187,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "GreedyBefore",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200187,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200188,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200188,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200188,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200188,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200189,
+      "seats": [
+        "Greedy",
+        "ShapedQL",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200189,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200189,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Greedy",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200189,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200190,
+      "seats": [
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200190,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200190,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200190,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200191,
+      "seats": [
+        "Random",
+        "DDQN",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200191,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200191,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200191,
+      "seats": [
+        "DQN",
+        "Random",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200192,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200192,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200192,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200192,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200193,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200193,
+      "seats": [
+        "ShapedQL",
+        "QLearning",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200193,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 200193,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "ShapedQL",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200194,
+      "seats": [
+        "GreedyBefore",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200194,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200194,
+      "seats": [
+        "Random",
+        "Greedy",
+        "GreedyBefore",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200194,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200195,
+      "seats": [
+        "Greedy",
+        "GreedyBefore",
+        "DQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200195,
+      "seats": [
+        "GreedyBefore",
+        "DQN",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200195,
+      "seats": [
+        "DQN",
+        "ShapedQL",
+        "Greedy",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200195,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "GreedyBefore",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200196,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200196,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200196,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200196,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200197,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200197,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200197,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200197,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200198,
+      "seats": [
+        "DDQN",
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200198,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200198,
+      "seats": [
+        "ShapedQL",
+        "DQN",
+        "DDQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200198,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200199,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "GreedyBefore",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200199,
+      "seats": [
+        "QLearning",
+        "GreedyBefore",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200199,
+      "seats": [
+        "GreedyBefore",
+        "Shaped",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200199,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "QLearning",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200200,
+      "seats": [
+        "DDQN",
+        "Random",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200200,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200200,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200200,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200201,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 200201,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200201,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200201,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200202,
+      "seats": [
+        "ShapedQL",
+        "Greedy",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200202,
+      "seats": [
+        "Greedy",
+        "Random",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200202,
+      "seats": [
+        "Random",
+        "QLearning",
+        "ShapedQL",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200202,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200203,
+      "seats": [
+        "GreedyBefore",
+        "Random",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200203,
+      "seats": [
+        "Random",
+        "DQN",
+        "Shaped",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200203,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "GreedyBefore",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200203,
+      "seats": [
+        "Shaped",
+        "GreedyBefore",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200204,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200204,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 200204,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200204,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200205,
+      "seats": [
+        "ShapedQL",
+        "DDQN",
+        "Random",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200205,
+      "seats": [
+        "DDQN",
+        "Random",
+        "GreedyBefore",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200205,
+      "seats": [
+        "Random",
+        "GreedyBefore",
+        "ShapedQL",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200205,
+      "seats": [
+        "GreedyBefore",
+        "ShapedQL",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200206,
+      "seats": [
+        "QLearning",
+        "ShapedQL",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200206,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200206,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200206,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200207,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 200207,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 200207,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200207,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200208,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "GreedyBefore"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 200208,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "GreedyBefore",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 200208,
+      "seats": [
+        "DQN",
+        "GreedyBefore",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 200208,
+      "seats": [
+        "GreedyBefore",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 200209,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "ShapedQL",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 200209,
+      "seats": [
+        "DDQN",
+        "ShapedQL",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 200209,
+      "seats": [
+        "ShapedQL",
+        "Random",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 200209,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DDQN",
+        "ShapedQL"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    }
+  ]
+}

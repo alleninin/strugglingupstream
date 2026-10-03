@@ -1,0 +1,13 @@
+{
+  "agent": "qlearning",
+  "episodes": 0,
+  "seed": 0,
+  "demo_games": 1000,
+  "demo_updates": 3000,
+  "eval_games": 300,
+  "win_rates": {
+    "greedy": 0.07333333333333333,
+    "random": 0.7033333333333334
+  },
+  "checkpoint": "reports/ddqn-learning-20261002/larger-demo-qlearning.npy"
+}

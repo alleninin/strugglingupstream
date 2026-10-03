@@ -29,6 +29,8 @@ class Card:
 
 
 def build_deck(num_decks: int = 1) -> List[Card]:
+    if num_decks < 1:
+        raise ValueError("num_decks must be positive")
     cards: List[Card] = []
     cid = 0
     for _ in range(num_decks):
@@ -41,3 +43,19 @@ def build_deck(num_decks: int = 1) -> List[Card]:
         cards.append(Card(id=cid, rank=17, suit=1, is_joker=True))
         cid += 1
     return cards
+
+
+def deal_hands(num_players: int, num_decks: int, rng) -> List[List[Card]]:
+    """Shuffle a fresh deck and distribute every card, including any remainder."""
+    deck = build_deck(num_decks)
+    if not 2 <= num_players <= len(deck):
+        raise ValueError("num_players must be between 2 and the number of cards")
+    rng.shuffle(deck)
+    base, extra = divmod(len(deck), num_players)
+    hands = []
+    start = 0
+    for seat in range(num_players):
+        end = start + base + (seat < extra)
+        hands.append(deck[start:end])
+        start = end
+    return hands

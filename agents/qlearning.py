@@ -10,7 +10,8 @@ class QLearningAgent(BaseAgent):
                  gamma: float = 0.95, epsilon: float = 0.2,
                  epsilon_decay: float = 0.9995, min_epsilon: float = 0.02,
                  seed: int = None):
-        self.dim = state_dim + action_dim
+        self.base_dim = state_dim + action_dim
+        self.dim = self.base_dim + state_dim * action_dim
         self.alpha = alpha
         self.gamma = gamma
         self.epsilon = epsilon
@@ -18,6 +19,16 @@ class QLearningAgent(BaseAgent):
         self.min_epsilon = min_epsilon
         self.rng = np.random.default_rng(seed)
         self.w = np.zeros(self.dim, dtype=np.float32)
+        self.demonstrations = None
+
+    def _phi(self, state, move):
+        base = super()._phi(state, move)
+        # Additive w_s*s + w_a*a gives the same action preference in every
+        # state. Cross terms let the linear learner condition a move on its hand
+        # and the table. Bounding counts keeps multi-deck features well scaled.
+        action = base[len(state):]
+        interactions = np.outer(np.tanh(state), np.tanh(action)).ravel()
+        return np.concatenate((base, interactions)).astype(np.float32)
 
     def q(self, phi) -> float:
         return float(np.dot(self.w, phi))
@@ -40,11 +51,22 @@ class QLearningAgent(BaseAgent):
             next_phis = [self._phi(next_state, m) for m in next_legal]
             target = float(reward) + self.gamma * max(self.q(p) for p in next_phis)
         td = target - self.q(phi)
-        self.w += self.alpha * td * phi
+        # Rank counts vary with deck/hand size; normalize the update so one
+        # large hand does not multiply the effective learning rate unchecked.
+        self.w += (self.alpha * td / max(1.0, float(np.dot(phi, phi)))) * phi
+        if self.demonstrations is not None and self.demonstrations.weight:
+            self.demonstrations.update_linear(self, self.demonstrations.weight)
         self.epsilon = max(self.min_epsilon, self.epsilon * self.epsilon_decay)
 
     def save(self, path: str) -> None:
-        np.save(path, self.w)
+        with open(path, "wb") as checkpoint:
+            np.save(checkpoint, self.w)
 
     def load(self, path: str) -> None:
-        self.w = np.load(path)
+        w = np.load(path)
+        if w.shape == (self.base_dim,):
+            # Preserve predictions from legacy additive checkpoints until retrained.
+            w = np.pad(w, (0, self.dim - self.base_dim))
+        if w.shape != (self.dim,):
+            raise ValueError(f"checkpoint dim {w.shape} != agent dim {self.dim}")
+        self.w = w.astype(np.float32)

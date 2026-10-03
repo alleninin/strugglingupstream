@@ -1,0 +1,16 @@
+{
+  "implementation": "reports/ddqn-performance-20261002/ddqn_before.py",
+  "episodes": 100,
+  "seed": 42,
+  "num_players": 4,
+  "num_decks": 2,
+  "opponent": "greedy",
+  "device": "cpu",
+  "cpu_threads": 8,
+  "seconds": 25.595412082970142,
+  "transitions": 2151,
+  "updates": 2088,
+  "replay_array_bytes": 7370508,
+  "torch": "2.13.0",
+  "finite_weights": true
+}

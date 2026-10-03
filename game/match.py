@@ -1,7 +1,7 @@
 import random
 from typing import List, Optional
 
-from .cards import Card, build_deck
+from .cards import Card, deal_hands
 from .rules import Game
 
 
@@ -15,27 +15,25 @@ class Match:
         self.last_transfers = []
 
     def next_deal(self, prev_finish_order: Optional[List[int]] = None) -> List[List[Card]]:
-        if prev_finish_order is None or self.hands is None:
-            deck = build_deck(self.num_decks)
-            self.rng.shuffle(deck)
-            n = self.num_players
-            base = len(deck) // n
-            self.hands = [deck[i * base:(i + 1) * base] for i in range(n)]
-            self.last_transfers = []
-            return self.hands
-        self._apply_penalty(prev_finish_order)
+        if prev_finish_order is not None and sorted(prev_finish_order) != list(range(self.num_players)):
+            raise ValueError("finish order must contain every seat exactly once")
+        self.hands = deal_hands(self.num_players, self.num_decks, self.rng)
+        self.last_transfers = []
+        if prev_finish_order is not None:
+            self._apply_penalty(prev_finish_order)
         return self.hands
 
     def _apply_penalty(self, finish_order: List[int]) -> None:
-        losers = finish_order[-2:]
-        winners = finish_order[:-2]
+        count = min(2, self.num_players // 2)
+        losers = finish_order[-count:]
+        winners = finish_order[:count]
         transfers = []
         for i, loser in enumerate(reversed(losers)):
-            winner = winners[i] if i < len(winners) else winners[0]
+            winner = winners[i]
             if not self.hands[loser]:
                 continue
-            self.hands[loser].sort(key=lambda c: c.rank)
-            top = self.hands[loser].pop()
+            top = max(self.hands[loser], key=lambda c: c.rank)
+            self.hands[loser].remove(top)
             self.hands[winner].append(top)
             transfers.append((loser, winner, top))
         self.last_transfers = transfers

@@ -5,13 +5,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 from game.rules import Game
-from agents.random_agent import RandomAgent
+from bots.greedy_bot import GreedyBot
 
 
 def main():
     num_players = 4
     g = Game(num_players=num_players, num_decks=2, seed=42)
-    agents = [RandomAgent(seed=42 + i) for i in range(num_players)]
+    agents = [GreedyBot(num_players=num_players, num_decks=2, seed=42 + i)
+              for i in range(num_players)]
 
     print("Initial hands:")
     for i, h in enumerate(g.hands):

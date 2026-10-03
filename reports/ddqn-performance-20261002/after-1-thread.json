@@ -1,0 +1,16 @@
+{
+  "implementation": "current",
+  "episodes": 100,
+  "seed": 42,
+  "num_players": 4,
+  "num_decks": 2,
+  "opponent": "greedy",
+  "device": "cpu",
+  "cpu_threads": 1,
+  "seconds": 9.68675733404234,
+  "transitions": 2112,
+  "updates": 2049,
+  "replay_array_bytes": 3577744,
+  "torch": "2.13.0",
+  "finite_weights": true
+}

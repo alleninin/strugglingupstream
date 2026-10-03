@@ -4,7 +4,7 @@ from game.moves import Move, MoveType
 from game.rules import Game
 
 NUM_RANKS = 15
-TYPE_DIM = 8
+TYPE_DIM = len(MoveType)
 
 
 def _rank_vec(cards) -> np.ndarray:
@@ -68,9 +68,5 @@ def combined_vector(state_vec: np.ndarray, move_vec: np.ndarray) -> np.ndarray:
 
 
 def feature_dims(num_players: int, num_decks: int = 1):
-    g = Game(num_players=num_players, num_decks=num_decks)
-    s = state_vector(g, 0)
-    card = g.hands[0][0]
-    m = Move(MoveType.SINGLE, (card,), card.rank, 1)
-    mv = move_vector(m)
-    return len(s), len(mv)
+    # Dimensions depend on the seat count, not on a randomly dealt sample game.
+    return NUM_RANKS + TYPE_DIM + 4 + num_players - 1, NUM_RANKS + TYPE_DIM + 4

@@ -1,0 +1,104 @@
+
+=== Training QLearning: 1000 episodes ===
+
+=== Training DQN: 1000 episodes ===
+
+=== Training DDQN: 1000 episodes ===
+[qlearning 100/1000] epsilon=0.180 elapsed=3.7s
+[dqn 100/1000] epsilon=0.295 elapsed=6.1s
+[qlearning 200/1000] epsilon=0.109 elapsed=7.4s
+[qlearning 300/1000] epsilon=0.067 elapsed=10.9s
+[dqn 200/1000] epsilon=0.174 elapsed=12.2s
+[qlearning 400/1000] epsilon=0.050 elapsed=14.3s
+[qlearning 500/1000] epsilon=0.050 elapsed=18.2s
+[dqn 300/1000] epsilon=0.106 elapsed=17.8s
+[qlearning 600/1000] epsilon=0.050 elapsed=21.9s
+[dqn 400/1000] epsilon=0.064 elapsed=24.0s
+[qlearning 700/1000] epsilon=0.050 elapsed=25.8s
+[ddqn 100/1000] epsilon=0.298 elapsed=25.3s
+[qlearning 800/1000] epsilon=0.050 elapsed=29.4s
+[dqn 500/1000] epsilon=0.050 elapsed=30.0s
+[qlearning 900/1000] epsilon=0.050 elapsed=33.0s
+[dqn 600/1000] epsilon=0.050 elapsed=35.4s
+[qlearning 1000/1000] epsilon=0.050 elapsed=36.5s
+Saved qlearning agent -> checkpoints/greedy-v2-20261002/qlearning_agent.npy
+
+=== Training Shaped: 1000 episodes ===
+[dqn 700/1000] epsilon=0.050 elapsed=41.4s
+[dqn 800/1000] epsilon=0.050 elapsed=46.9s
+[ddqn 200/1000] epsilon=0.178 elapsed=50.3s
+[dqn 900/1000] epsilon=0.050 elapsed=52.6s
+[dqn 1000/1000] epsilon=0.050 elapsed=58.5s
+Saved dqn agent -> checkpoints/greedy-v2-20261002/dqn_agent.pt
+
+=== Training ShapedQL: 1000 episodes ===
+[shaped-ql 100/1000] epsilon=0.176 elapsed=4.2s
+[shaped 100/1000] epsilon=0.287 elapsed=27.1s
+[shaped-ql 200/1000] epsilon=0.104 elapsed=8.4s
+[shaped-ql 300/1000] epsilon=0.060 elapsed=12.3s
+[shaped-ql 400/1000] epsilon=0.050 elapsed=17.1s
+[ddqn 300/1000] epsilon=0.107 elapsed=77.0s
+[shaped-ql 500/1000] epsilon=0.050 elapsed=23.1s
+[shaped-ql 600/1000] epsilon=0.050 elapsed=27.5s
+[shaped-ql 700/1000] epsilon=0.050 elapsed=31.9s
+[shaped-ql 800/1000] epsilon=0.050 elapsed=36.0s
+[shaped 200/1000] epsilon=0.162 elapsed=58.6s
+[shaped-ql 900/1000] epsilon=0.050 elapsed=40.1s
+[shaped-ql 1000/1000] epsilon=0.050 elapsed=44.0s
+[ddqn 400/1000] epsilon=0.065 elapsed=103.7s
+[shaped 300/1000] epsilon=0.091 elapsed=88.9s
+[ddqn 500/1000] epsilon=0.050 elapsed=128.9s
+[ddqn 600/1000] epsilon=0.050 elapsed=153.9s
+[shaped 400/1000] epsilon=0.052 elapsed=118.4s
+[ddqn 700/1000] epsilon=0.050 elapsed=176.8s
+[shaped 500/1000] epsilon=0.050 elapsed=145.9s
+[ddqn 800/1000] epsilon=0.050 elapsed=201.7s
+[shaped 600/1000] epsilon=0.050 elapsed=173.4s
+[ddqn 900/1000] epsilon=0.050 elapsed=225.4s
+[shaped 700/1000] epsilon=0.050 elapsed=201.9s
+[ddqn 1000/1000] epsilon=0.050 elapsed=250.0s
+[shaped 800/1000] epsilon=0.050 elapsed=234.2s
+[shaped 900/1000] epsilon=0.050 elapsed=265.7s
+[shaped 1000/1000] epsilon=0.050 elapsed=296.1s
+Saved shaped agent -> checkpoints/greedy-v2-20261002/shaped_agent.pt
+Saved shaped-ql agent -> checkpoints/greedy-v2-20261002/shaped-ql_agent.npy
+Saved ddqn agent -> checkpoints/greedy-v2-20261002/ddqn_agent.pt
+
+=== Held-out mixed tournament ===
+[tournament 100/840]
+[tournament 200/840]
+[tournament 300/840]
+[tournament 400/840]
+[tournament 500/840]
+[tournament 600/840]
+[tournament 700/840]
+[tournament 800/840]
+Tournament: 840 deals, 4 players, 2 deck(s); matched deals with rotated seats
+Agent            Games  WinRate(1st)    AvgPlace
+Greedy             420         0.598       1.600
+GreedyBefore       420         0.560       1.686
+DQN                420         0.224       2.386
+ShapedQL           420         0.181       2.414
+QLearning          420         0.200       2.569
+DDQN               420         0.167       2.650
+Shaped             420         0.043       3.214
+Random             420         0.029       3.481
+QLearning vs 3 greedy: first=0.045, place=3.320, n=200
+QLearning vs 3 random: first=0.690, place=1.435, n=200
+DQN vs 3 greedy: first=0.165, place=2.765, n=200
+DQN vs 3 random: first=0.675, place=1.470, n=200
+DDQN vs 3 greedy: first=0.110, place=3.045, n=200
+DDQN vs 3 random: first=0.575, place=1.695, n=200
+Shaped vs 3 greedy: first=0.005, place=3.635, n=200
+Shaped vs 3 random: first=0.230, place=2.250, n=200
+ShapedQL vs 3 greedy: first=0.070, place=3.205, n=200
+ShapedQL vs 3 random: first=0.780, place=1.320, n=200
+Greedy vs 3 greedy: first=0.250, place=2.500, n=200
+Greedy vs 3 random: first=0.910, place=1.110, n=200
+Random vs 3 greedy: first=0.010, place=3.730, n=200
+Random vs 3 random: first=0.250, place=2.500, n=200
+GreedyBefore vs 3 greedy: first=0.220, place=2.475, n=200
+GreedyBefore vs 3 random: first=0.960, place=1.055, n=200
+Greedy vs 3 GreedyBefore: first=0.245, place=2.635, n=200
+
+Report: reports/greedy-v2-20261002/REPORT.md

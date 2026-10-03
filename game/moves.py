@@ -14,13 +14,15 @@ class MoveType(IntEnum):
     STRAIGHT = 5
     BOMB = 6
     AIRPLANE = 7
+    CONSEC_PAIRS = 8      # 连对: 3+ consecutive pairs (no wings)
+    CONSEC_TRIPLES = 9    # 连飞机: 2+ consecutive triples (body, no wings)
 
 STRAIGHT_MIN = 3
 STRAIGHT_MAX = 14
 MIN_STRAIGHT_LEN = 5
 
 
-@dataclass
+@dataclass(frozen=True)
 class Move:
     type: MoveType
     cards: Tuple[Card, ...]
@@ -49,6 +51,29 @@ def _by_rank(hand: List[Card]):
     return groups
 
 
+def _consecutive_runs(ranks: List[int], min_len: int) -> List[List[int]]:
+    """Yield every contiguous subsequence of length >= min_len from the sorted,
+    unique ``ranks`` list (e.g. [3,4,5,7] with min_len=2 -> [[3,4],[4,5],[3,4,5]])."""
+    runs: List[List[int]] = []
+    if not ranks:
+        return runs
+    segs: List[List[int]] = []
+    cur = [ranks[0]]
+    for r in ranks[1:]:
+        if r == cur[-1] + 1:
+            cur.append(r)
+        else:
+            segs.append(cur)
+            cur = [r]
+    segs.append(cur)
+    for seg in segs:
+        L = len(seg)
+        for length in range(min_len, L + 1):
+            for start in range(0, L - length + 1):
+                runs.append(seg[start:start + length])
+    return runs
+
+
 def generate_moves(hand: List[Card]) -> List[Move]:
     moves: List[Move] = []
     groups = _by_rank(hand)
@@ -57,17 +82,17 @@ def generate_moves(hand: List[Card]) -> List[Move]:
     for r in ranks:
         moves.append(Move(MoveType.SINGLE, (groups[r][0],), r, 1))
     for r in ranks:
-        if len(groups[r]) >= 2:
+        if r <= 15 and len(groups[r]) >= 2:
             moves.append(Move(MoveType.PAIR, tuple(groups[r][:2]), r, 2))
     for r in ranks:
-        if len(groups[r]) >= 3:
+        if r <= 15 and len(groups[r]) >= 3:
             moves.append(Move(MoveType.TRIPLE, tuple(groups[r][:3]), r, 3))
     for r in ranks:
-        if len(groups[r]) >= 4:
+        if r <= 15 and len(groups[r]) >= 4:
             moves.append(Move(MoveType.BOMB, tuple(groups[r][:4]), r, 4, is_bomb=True))
 
-    triples = [r for r in ranks if len(groups[r]) >= 3]
-    pairs = [r for r in ranks if len(groups[r]) >= 2]
+    triples = [r for r in ranks if r <= 15 and len(groups[r]) >= 3]
+    pairs = [r for r in ranks if r <= 15 and len(groups[r]) >= 2]
     for t in triples:
         for p in pairs:
             if p == t:
@@ -78,12 +103,9 @@ def generate_moves(hand: List[Card]) -> List[Move]:
                 t, 5,
             ))
 
-    # Airplane: two triples (any ranks, not necessarily consecutive) plus two
-    # pairs (any ranks) = exactly 10 cards. Ranked by the higher triple rank;
-    # all airplanes share length 10 so they only compare against each other.
-    triple_ranks = [r for r in triples if r <= 14]   # 2s cap at 2 copies, jokers can't triple
-    pair_ranks = [r for r in pairs if r <= 15]       # jokers do not form pairs
-    for r1, r2 in combinations(sorted(triple_ranks), 2):
+    triple_ranks = [r for r in triples if r <= 14]
+    pair_ranks = [r for r in pairs if r <= 15]
+    for r1, r2 in combinations(triples, 2):
         body = tuple(groups[r1][:3] + groups[r2][:3])
         wing_pool = [r for r in pair_ranks if r not in (r1, r2)]
         for p1, p2 in combinations(wing_pool, 2):
@@ -94,17 +116,23 @@ def generate_moves(hand: List[Card]) -> List[Move]:
                 max(r1, r2), 10,
             ))
 
-    present = set(ranks)
-    for start in range(STRAIGHT_MIN, STRAIGHT_MAX + 1):
-        max_len = STRAIGHT_MAX - start + 1
-        if max_len < MIN_STRAIGHT_LEN:
-            break
-        for length in range(MIN_STRAIGHT_LEN, max_len + 1):
-            end = start + length - 1
-            seq = list(range(start, end + 1))
-            if all(r in present for r in seq):
-                cards = tuple(groups[r][0] for r in seq)
-                moves.append(Move(MoveType.STRAIGHT, cards, end, length))
+    # 连飞机 (airplane body): 2+ consecutive triples, no wings.
+    for run in _consecutive_runs(sorted(triple_ranks), 2):
+        body = tuple(c for r in run for c in groups[r][:3])
+        moves.append(Move(
+            MoveType.CONSEC_TRIPLES, body, max(run), len(run)))
+
+    # 连对 (consecutive pairs): 3+ consecutive pairs, no wings.
+    consec_pair_ranks = [r for r in pairs if r <= 14]
+    for run in _consecutive_runs(sorted(consec_pair_ranks), 3):
+        body = tuple(c for r in run for c in groups[r][:2])
+        moves.append(Move(
+            MoveType.CONSEC_PAIRS, body, max(run), len(run)))
+
+    straight_ranks = [r for r in ranks if STRAIGHT_MIN <= r <= STRAIGHT_MAX]
+    for run in _consecutive_runs(straight_ranks, MIN_STRAIGHT_LEN):
+        cards = tuple(groups[r][0] for r in run)
+        moves.append(Move(MoveType.STRAIGHT, cards, run[-1], len(run)))
 
     return moves
 

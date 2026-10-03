@@ -3,9 +3,9 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from typing import List
-from collections import defaultdict
 
 from .base import BaseAgent
+from .runtime import resolve_device
 from game.moves import Move
 
 
@@ -30,7 +30,7 @@ class DQNAgent(BaseAgent):
                  gamma: float = 0.95, epsilon: float = 0.5,
                  epsilon_decay: float = 0.995, min_epsilon: float = 0.05,
                  buffer_size: int = 20000, batch_size: int = 64,
-                 target_update: int = 200, seed: int = None):
+                 target_update: int = 200, seed: int = None, device="auto"):
         self.input_dim = state_dim + action_dim
         self.gamma = gamma
         self.epsilon = epsilon
@@ -39,13 +39,10 @@ class DQNAgent(BaseAgent):
         self.batch_size = batch_size
         self.target_update = target_update
         self.rng = np.random.default_rng(seed)
+        if seed is not None:
+            torch.manual_seed(seed)
 
-        if torch.backends.mps.is_available():
-            self.device = torch.device("mps")
-        elif torch.cuda.is_available():
-            self.device = torch.device("cuda")
-        else:
-            self.device = torch.device("cpu")
+        self.device = resolve_device(device)
 
         self.policy_net = QNetwork(self.input_dim).to(self.device)
         self.target_net = QNetwork(self.input_dim).to(self.device)
@@ -54,7 +51,9 @@ class DQNAgent(BaseAgent):
 
         self.buffer = []
         self.buffer_size = buffer_size
+        self.buffer_pos = 0
         self.step_count = 0
+        self.demonstrations = None
 
     def _q_batch(self, phis, net):
         if len(phis) == 0:
@@ -65,9 +64,9 @@ class DQNAgent(BaseAgent):
     def act(self, obs, legal_moves: List[Move]) -> Move:
         if not legal_moves:
             return None
-        phis = [self._phi(obs, m) for m in legal_moves]
         if self.rng.random() < self.epsilon:
             return legal_moves[int(self.rng.integers(len(legal_moves)))]
+        phis = [self._phi(obs, m) for m in legal_moves]
         with torch.no_grad():
             qvals = self._q_batch(phis, self.policy_net).cpu().numpy()
         return legal_moves[int(np.argmax(qvals))]
@@ -76,9 +75,12 @@ class DQNAgent(BaseAgent):
         state, action, reward, next_state, done, next_legal = transition
         phi = self._phi(state, action)
         next_phis = None if (done or not next_legal) else [self._phi(next_state, m) for m in next_legal]
-        self.buffer.append((phi, float(reward), next_phis, bool(done)))
-        if len(self.buffer) > self.buffer_size:
-            self.buffer.pop(0)
+        item = (phi, float(reward), next_phis, bool(done))
+        if len(self.buffer) < self.buffer_size:
+            self.buffer.append(item)
+        else:
+            self.buffer[self.buffer_pos] = item
+        self.buffer_pos = (self.buffer_pos + 1) % self.buffer_size
 
         self.step_count += 1
         if self.step_count % self.target_update == 0:
@@ -93,31 +95,28 @@ class DQNAgent(BaseAgent):
         batch = [self.buffer[i] for i in idxs]
         states = np.stack([b[0] for b in batch])
         rewards = np.array([b[1] for b in batch], dtype=np.float32)
-        dones = np.array([b[3] for b in batch], dtype=bool)
 
         targets = rewards.copy()
         non_terminal = [(i, b[2]) for i, b in enumerate(batch)
                         if not b[3] and b[2] is not None and len(b[2]) > 0]
         if non_terminal:
-            all_next, map_i = [], []
-            for i, nph in non_terminal:
-                for p in nph:
-                    all_next.append(p)
-                    map_i.append(i)
+            all_next = [p for _, nph in non_terminal for p in nph]
             with torch.no_grad():
                 nq = self._q_batch(all_next, self.target_net).cpu().numpy()
-            best = defaultdict(float)
-            for k, i in enumerate(map_i):
-                if nq[k] > best[i]:
-                    best[i] = nq[k]
-            for i in best:
-                targets[i] += self.gamma * best[i]
+            offset = 0
+            for i, nph in non_terminal:
+                end = offset + len(nph)
+                targets[i] += self.gamma * nq[offset:end].max()
+                offset = end
 
         sx = torch.from_numpy(states).to(self.device)
         pred = self.policy_net(sx).squeeze(-1)
-        loss = nn.functional.mse_loss(pred, torch.from_numpy(targets).to(self.device))
+        loss = nn.functional.smooth_l1_loss(pred, torch.from_numpy(targets).to(self.device))
+        if self.demonstrations is not None and self.demonstrations.weight:
+            loss = loss + self.demonstrations.weight * self.demonstrations.loss(self)
         self.optimizer.zero_grad()
         loss.backward()
+        torch.nn.utils.clip_grad_norm_(self.policy_net.parameters(), 10.0)
         self.optimizer.step()
 
     def save(self, path: str) -> None:

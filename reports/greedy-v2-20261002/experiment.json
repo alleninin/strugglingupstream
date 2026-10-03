@@ -1,0 +1,81 @@
+{
+  "config": {
+    "episodes": 1000,
+    "rounds": 3,
+    "baseline_deals": 50,
+    "seed": 42,
+    "eval_seed": 200000,
+    "output": "reports/greedy-v2-20261002",
+    "checkpoints": "checkpoints/greedy-v2-20261002",
+    "legacy_source": "reports/greedy-v2-20261002/greedy_before.py",
+    "skip_training": false,
+    "workers": 3,
+    "num_players": 4,
+    "num_decks": 2,
+    "opponent": "mixed",
+    "torch_threads": 1,
+    "torch_version": "2.13.0",
+    "source_sha256": {
+      "agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "agents/base.py": "721d33f9132535c64edfbb16f2faf6af408110775d7496b8425a78846b3ce9ea",
+      "agents/ddqn_agent.py": "91636bbb0579a0ee3f8879e177812648bfc89c931428c528b1ec62fc5420fe55",
+      "agents/dqn_agent.py": "759dd07d9bed91446e715099f5ce00f7d4fce58ceaded145c8a17c0fb5e8f460",
+      "agents/dueling_dqn.py": "c8555fac05e2658f680346a083fa650f324ea281f40b9c311ab15086b8191f3f",
+      "agents/prioritized_replay.py": "f8098e777b0432425b6e64f4519e357f0b72e62cf16f58e314a8ea3af9b48e77",
+      "agents/qlearning.py": "fd4b3e0e6b0ec5097608e24324896fb51a893399d5925db59a6798229ac783c2",
+      "agents/random_agent.py": "45c8024ca92b2457f82edc3433f07ff2c6da4562e4523dc0ec4e44aaa9417bb0",
+      "bots/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bots/greedy_bot.py": "2830e04829c1c696e7f133dbce55e93381d164ff6ad0dab1a08c4f8ba4e4d43a",
+      "bots/shaped_reward.py": "2f739b588080b4c9775c986b068a35e86bc79ae6f798807f92749236984f9424",
+      "bots/shaped_reward_bot.py": "645fe46d7a9da04b8ce93bdea4493cd36344e062fa442137bfacadacb5000f5e",
+      "bots/train_shaped.py": "53e86b8aeeac2ce8eff40e25cd95b700905b9e27bb5b0d5de5abe12af4c5ef55",
+      "env/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "env/env.py": "e62b3ad89942d5418726531d1bc96d875d6a3322be0ae99ec2793dbbd1964b28",
+      "env/features.py": "39b8d46119c6578082b96310a5acc96ebc07de2d370e8cfd82dfa4b6a229de9b",
+      "game/__init__.py": "70406175fb920a171835868e4ccce8a907f6ba89ee25e6f579de93efe49d63fc",
+      "game/cards.py": "f19ee0bb264eec1fab83b6a34344c3a3e832db6a15fcfdb6d1e8cd746992d6d7",
+      "game/match.py": "cb5bae94cf0701f4ef3d4d3435851b47f495069eac6a940b4fbae5549de1c473",
+      "game/moves.py": "d65b64d9bae237b664cdc103fd5767b745ac85daddf5d38be3208814de5bfa60",
+      "game/rules.py": "0d61a0cfc501b8fb5a537edd362d0fd6380f8f443ae42fc124c8f9b92338129f",
+      "training/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "training/train.py": "a98227488ead7ab2ff08b10e753d7e5a8128089586c85b9bdb40259580676bf2"
+    }
+  },
+  "training": {
+    "QLearning": {
+      "episodes": 1000,
+      "seconds": 36.48178904200904,
+      "checkpoint": "checkpoints/greedy-v2-20261002/qlearning_agent.npy",
+      "epsilon_at_end": 0.05,
+      "device": "cpu"
+    },
+    "DQN": {
+      "episodes": 1000,
+      "seconds": 59.32081954111345,
+      "checkpoint": "checkpoints/greedy-v2-20261002/dqn_agent.pt",
+      "epsilon_at_end": 0.05,
+      "device": "cpu"
+    },
+    "ShapedQL": {
+      "episodes": 1000,
+      "seconds": 44.03224716684781,
+      "checkpoint": "checkpoints/greedy-v2-20261002/shaped-ql_agent.npy",
+      "epsilon_at_end": 0.05,
+      "device": "cpu"
+    },
+    "DDQN": {
+      "episodes": 1000,
+      "seconds": 250.89201812492684,
+      "checkpoint": "checkpoints/greedy-v2-20261002/ddqn_agent.pt",
+      "epsilon_at_end": 0.05,
+      "device": "cpu"
+    },
+    "Shaped": {
+      "episodes": 1000,
+      "seconds": 296.93337137484923,
+      "checkpoint": "checkpoints/greedy-v2-20261002/shaped_agent.pt",
+      "epsilon_at_end": 0.05,
+      "device": "cpu"
+    }
+  }
+}

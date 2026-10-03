@@ -1,0 +1,25 @@
+[warmup] 200 greedy games, 1388 decisions, 92.9s
+[ep  500] win_rate_vs_greedy = 0.050 (100 evaluation games in 4.5s)
+[qlearning 500/2500] epsilon=0.388 last 500 episodes=66.5s total_train=66.5s total_eval=4.5s
+[ep 1000] win_rate_vs_greedy = 0.040 (100 evaluation games in 4.4s)
+[qlearning 1000/2500] epsilon=0.275 last 500 episodes=60.6s total_train=127.1s total_eval=8.9s
+[ep 1500] win_rate_vs_greedy = 0.070 (100 evaluation games in 4.4s)
+[qlearning 1500/2500] epsilon=0.163 last 500 episodes=57.9s total_train=185.1s total_eval=13.3s
+[ep 2000] win_rate_vs_greedy = 0.070 (100 evaluation games in 4.2s)
+[qlearning 2000/2500] epsilon=0.050 last 500 episodes=61.4s total_train=246.5s total_eval=17.5s
+[ep 2500] win_rate_vs_greedy = 0.060 (100 evaluation games in 4.5s)
+[qlearning 2500/2500] epsilon=0.050 last 500 episodes=49.9s total_train=296.3s total_eval=22.0s
+Saved qlearning agent -> reports/ddqn-learning-20261002/after-qlearning.npy
+{
+  "agent": "qlearning",
+  "episodes": 2500,
+  "seed": 0,
+  "demo_games": 200,
+  "demo_updates": 1000,
+  "eval_games": 300,
+  "win_rates": {
+    "greedy": 0.07666666666666666,
+    "random": 0.77
+  },
+  "checkpoint": "reports/ddqn-learning-20261002/after-qlearning.npy"
+}

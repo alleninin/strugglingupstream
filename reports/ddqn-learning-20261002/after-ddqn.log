@@ -1,0 +1,26 @@
+[training] agent=ddqn device=cpu torch_threads=1
+[warmup] 200 greedy games, 1388 decisions, 23.2s
+[ep  500] win_rate_vs_greedy = 0.080 (100 evaluation games in 5.4s)
+[ddqn 500/2500] epsilon=0.388 last 500 episodes=201.8s total_train=201.8s total_eval=5.4s
+[ep 1000] win_rate_vs_greedy = 0.020 (100 evaluation games in 7.3s)
+[ddqn 1000/2500] epsilon=0.275 last 500 episodes=144.6s total_train=346.4s total_eval=12.7s
+[ep 1500] win_rate_vs_greedy = 0.040 (100 evaluation games in 4.2s)
+[ddqn 1500/2500] epsilon=0.163 last 500 episodes=103.9s total_train=450.3s total_eval=17.0s
+[ep 2000] win_rate_vs_greedy = 0.040 (100 evaluation games in 4.1s)
+[ddqn 2000/2500] epsilon=0.050 last 500 episodes=92.2s total_train=542.4s total_eval=21.0s
+[ep 2500] win_rate_vs_greedy = 0.030 (100 evaluation games in 4.0s)
+[ddqn 2500/2500] epsilon=0.050 last 500 episodes=94.4s total_train=636.8s total_eval=25.1s
+Saved ddqn agent -> reports/ddqn-learning-20261002/after-ddqn.pt
+{
+  "agent": "ddqn",
+  "episodes": 2500,
+  "seed": 0,
+  "demo_games": 200,
+  "demo_updates": 1000,
+  "eval_games": 300,
+  "win_rates": {
+    "greedy": 0.05333333333333334,
+    "random": 0.56
+  },
+  "checkpoint": "reports/ddqn-learning-20261002/after-ddqn.pt"
+}

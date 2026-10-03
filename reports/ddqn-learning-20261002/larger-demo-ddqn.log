@@ -1,0 +1,16 @@
+[training] agent=ddqn reward=win device=cpu torch_threads=1
+[warmup] 1000 greedy games, 6921 decisions, 94.1s
+Saved ddqn agent -> reports/ddqn-learning-20261002/larger-demo-ddqn.pt
+{
+  "agent": "ddqn",
+  "episodes": 0,
+  "seed": 0,
+  "demo_games": 1000,
+  "demo_updates": 3000,
+  "eval_games": 300,
+  "win_rates": {
+    "greedy": 0.14333333333333334,
+    "random": 0.8033333333333333
+  },
+  "checkpoint": "reports/ddqn-learning-20261002/larger-demo-ddqn.pt"
+}

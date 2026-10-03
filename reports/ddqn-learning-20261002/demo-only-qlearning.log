@@ -1,0 +1,15 @@
+[warmup] 200 greedy games, 1388 decisions, 36.5s
+Saved qlearning agent -> reports/ddqn-learning-20261002/demo-only-qlearning.npy
+{
+  "agent": "qlearning",
+  "episodes": 0,
+  "seed": 0,
+  "demo_games": 200,
+  "demo_updates": 1000,
+  "eval_games": 100,
+  "win_rates": {
+    "greedy": 0.09,
+    "random": 0.65
+  },
+  "checkpoint": "reports/ddqn-learning-20261002/demo-only-qlearning.npy"
+}

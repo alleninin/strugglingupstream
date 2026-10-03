@@ -1,0 +1,13 @@
+{
+  "agent": "ddqn",
+  "episodes": 2500,
+  "seed": 0,
+  "demo_games": 200,
+  "demo_updates": 1000,
+  "eval_games": 300,
+  "win_rates": {
+    "greedy": 0.05333333333333334,
+    "random": 0.56
+  },
+  "checkpoint": "reports/ddqn-learning-20261002/after-ddqn.pt"
+}

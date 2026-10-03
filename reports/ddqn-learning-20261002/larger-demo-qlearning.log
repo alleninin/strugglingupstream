@@ -1,0 +1,17 @@
+[warmup] 1000 greedy games, 6921 decisions, 105.4s
+[warmup] win_rate_vs_greedy=0.070; best checkpoint -> reports/ddqn-learning-20261002/larger-demo-qlearning.best.npy
+Saved qlearning agent -> reports/ddqn-learning-20261002/larger-demo-qlearning.npy
+Best validation win rate=0.070 -> reports/ddqn-learning-20261002/larger-demo-qlearning.best.npy
+{
+  "agent": "qlearning",
+  "episodes": 0,
+  "seed": 0,
+  "demo_games": 1000,
+  "demo_updates": 3000,
+  "eval_games": 300,
+  "win_rates": {
+    "greedy": 0.07333333333333333,
+    "random": 0.7033333333333334
+  },
+  "checkpoint": "reports/ddqn-learning-20261002/larger-demo-qlearning.npy"
+}

@@ -1,4 +1,7 @@
 """Seeded tournaments with matched deals and complete seat rotations."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import argparse
 from itertools import combinations
 import json
@@ -9,8 +12,8 @@ import random
 
 from game.rules import Game
 from env import features
-from agents.qlearning import QLearningAgent
-from agents.dqn_agent import DQNAgent
+from archive.legacy.qlearning import QLearningAgent
+from archive.legacy.dqn_agent import DQNAgent
 from agents.ddqn_agent import DDQNAgent
 from bots.random_bot import RandomAgent
 from bots.greedy_bot import GreedyBot
@@ -128,7 +131,7 @@ def main():
     ap.add_argument('--json', help='save configuration, aggregate results, and every game result')
     args = ap.parse_args()
     s_dim, a_dim = features.feature_dims(args.num_players, args.num_decks)
-    from bots.shaped_reward_bot import ShapedRewardBot
+    from archive.legacy.shaped_reward_bot import ShapedRewardBot
     specs = [('QLearning', QLearningAgent, args.q_path, {}),
              ('DQN', DQNAgent, args.dqn_path, {}),
              ('DDQN', DDQNAgent, args.ddqn_path, {}),

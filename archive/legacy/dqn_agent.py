@@ -4,8 +4,8 @@ import torch.nn as nn
 import torch.optim as optim
 from typing import List
 
-from .base import BaseAgent
-from .runtime import resolve_device
+from agents.base import BaseAgent
+from agents.runtime import resolve_device
 from game.moves import Move
 
 
@@ -30,7 +30,9 @@ class DQNAgent(BaseAgent):
                  gamma: float = 0.95, epsilon: float = 0.5,
                  epsilon_decay: float = 0.995, min_epsilon: float = 0.05,
                  buffer_size: int = 20000, batch_size: int = 64,
-                 target_update: int = 200, seed: int = None, device="auto"):
+                 target_update: int = 200, seed: int = None, device="auto", partition_features=False):
+        self.partition_features = partition_features
+        self.planning_features = partition_features
         self.input_dim = state_dim + action_dim
         self.state_dim, self.action_dim = state_dim, action_dim
         self.gamma = gamma
@@ -45,8 +47,8 @@ class DQNAgent(BaseAgent):
 
         self.device = resolve_device(device)
 
-        self.policy_net = QNetwork(self.input_dim).to(self.device)
-        self.target_net = QNetwork(self.input_dim).to(self.device)
+        self.policy_net = self._network().to(self.device)
+        self.target_net = self._network().to(self.device)
         self.target_net.load_state_dict(self.policy_net.state_dict())
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=lr)
 
@@ -55,6 +57,13 @@ class DQNAgent(BaseAgent):
         self.buffer_pos = 0
         self.step_count = 0
         self.demonstrations = None
+
+    def _network(self):
+        if self.planning_features:
+            # Lazy import: HandQNetwork shares the scalar QNetwork defined here.
+            from agents.hand_q_network import HandQNetwork
+            return HandQNetwork(self.state_dim, self.action_dim, self.partition_features)
+        return QNetwork(self.input_dim)
 
     def _q_batch(self, phis, net):
         if len(phis) == 0:
@@ -126,13 +135,22 @@ class DQNAgent(BaseAgent):
     def load(self, path: str) -> None:
         from env import features
         weights = torch.load(path, map_location=self.device, weights_only=True)
-        saved_dim = weights['net.0.weight'].shape[1] - self.action_dim
+        schema = weights.get('feature_schema')
+        self.planning_features = schema is not None
+        self.partition_features = schema is not None and len(schema) == 3
+        if schema is not None:
+            if len(schema) not in (2, 3) or (len(schema) == 3 and int(schema[2]) != 2):
+                raise ValueError("unsupported hand feature schema")
+            if int(schema[1]) != self.action_dim:
+                raise ValueError("checkpoint has incompatible action features")
+        saved_dim = (int(schema[0]) if schema is not None else
+                     weights['net.0.weight'].shape[1] - self.action_dim)
         if saved_dim not in (self.state_dim, features.legacy_state_dim(self.state_dim)):
             raise ValueError("checkpoint has incompatible player count or feature dimensions")
         self.state_dim = saved_dim
         self.input_dim = saved_dim + self.action_dim
-        self.policy_net = QNetwork(self.input_dim).to(self.device)
-        self.target_net = QNetwork(self.input_dim).to(self.device)
+        self.policy_net = self._network().to(self.device)
+        self.target_net = self._network().to(self.device)
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=self.optimizer.param_groups[0]['lr'])
         self.policy_net.load_state_dict(weights)
         self.target_net.load_state_dict(self.policy_net.state_dict())

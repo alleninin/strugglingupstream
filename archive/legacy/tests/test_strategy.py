@@ -9,7 +9,7 @@ from game.moves import MoveType, PASS_MOVE, generate_moves
 from game.rules import Game
 from bots.random_bot import RandomAgent
 from evaluate import run_tournament
-from training.train import make_opponent_policies
+from archive.legacy.train import make_opponent_policies
 from unittest.mock import patch
 from collections import Counter
 from test_regressions import hands_for, histogram

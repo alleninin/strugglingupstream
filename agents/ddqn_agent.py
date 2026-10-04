@@ -6,8 +6,8 @@ import torch
 import torch.optim as optim
 
 from .base import BaseAgent
-from .dueling_dqn import DuelingQNetwork
-from .dqn_agent import QNetwork
+from .networks import DuelingQNetwork
+from .networks import QNetwork
 from .hand_q_network import HandQNetwork
 from .prioritized_replay import PrioritizedReplayBuffer
 from .runtime import resolve_device

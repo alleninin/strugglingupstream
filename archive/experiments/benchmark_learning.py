@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import sys
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 
@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--baseline', type=Path, help='directory of pre-change source snapshots')
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
-    from training.train import evaluate_vs_opponent
+    from archive.legacy.train import evaluate_vs_opponent
     if args.baseline:
         # Load the exact saved environment, agent and training loop together.
         load_module('env.env', args.baseline / 'env_before.py')
@@ -37,7 +37,7 @@ def main():
         train = load_module('training._reference', args.baseline / 'train_before.py').train
         options = {}
     else:
-        from training.train import train
+        from archive.legacy.train import train
         options = dict(demo_games=args.demo_games, demo_updates=args.demo_updates)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     suffix = '.npy' if args.agent == 'qlearning' else '.pt'

@@ -1,0 +1,52 @@
+[training] agent=dqn reward=win device=cpu torch_threads=1
+[warmup] 3 greedy games, 16 decisions, 0.3s
+[warmup] win_rate_vs_greedy=0.000; best checkpoint -> reports/shared-planning-20261003/dqn.best.pt
+[ep  60] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.3s)
+[dqn 60/120] epsilon=0.473 opponent=greedy training_win_rate=0.017 last 60 episodes=10.3s total_train=10.3s total_eval=0.3s
+[ep 120] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.3s)
+[dqn 120/120] epsilon=0.446 opponent=greedy training_win_rate=0.033 last 60 episodes=10.2s total_train=20.5s total_eval=0.6s
+Saved dqn agent -> reports/shared-planning-20261003/dqn.pt
+Best validation win rate=0.000 -> reports/shared-planning-20261003/dqn.best.pt
+[warmup] 3 greedy games, 16 decisions, 0.5s
+[warmup] win_rate_vs_greedy=0.000; best checkpoint -> reports/shared-planning-20261003/qlearning.best.npy
+[ep  60] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.3s)
+[qlearning 60/120] epsilon=0.473 opponent=greedy training_win_rate=0.033 last 60 episodes=7.9s total_train=7.9s total_eval=0.3s
+[ep 120] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.4s)
+[qlearning 120/120] epsilon=0.446 opponent=greedy training_win_rate=0.050 last 60 episodes=7.4s total_train=15.3s total_eval=0.7s
+Saved qlearning agent -> reports/shared-planning-20261003/qlearning.npy
+Best validation win rate=0.000 -> reports/shared-planning-20261003/qlearning.best.npy
+[training] agent=shaped reward=default device=cpu torch_threads=1
+[shaped] avg reward / 60 eps -> dense=+0.360 trick=+0.759 terminal=-0.795 total=+0.325
+[ep  60] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.3s)
+[shaped 60/120] epsilon=0.473 opponent=greedy training_win_rate=0.017 last 60 episodes=8.8s total_train=8.8s total_eval=0.3s
+[shaped] avg reward / 60 eps -> dense=+0.348 trick=+0.749 terminal=-0.897 total=+0.201
+[ep 120] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.4s)
+[shaped 120/120] epsilon=0.446 opponent=greedy training_win_rate=0.000 last 60 episodes=9.1s total_train=17.9s total_eval=0.7s
+Saved shaped agent -> reports/shared-planning-20261003/shaped.pt
+Best validation win rate=0.000 -> reports/shared-planning-20261003/shaped.best.pt
+[shaped] avg reward / 60 eps -> dense=+0.363 trick=+0.619 terminal=-0.862 total=+0.121
+[ep  60] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.3s)
+[shaped-ql 60/120] epsilon=0.473 opponent=greedy training_win_rate=0.000 last 60 episodes=4.1s total_train=4.1s total_eval=0.3s
+[shaped] avg reward / 60 eps -> dense=+0.349 trick=+0.669 terminal=-0.817 total=+0.201
+[ep 120] win_rate_vs_greedy = 0.000 (5 evaluation games in 0.3s)
+[shaped-ql 120/120] epsilon=0.446 opponent=greedy training_win_rate=0.033 last 60 episodes=4.5s total_train=8.7s total_eval=0.6s
+Saved shaped-ql agent -> reports/shared-planning-20261003/shaped-ql.npy
+Best validation win rate=0.000 -> reports/shared-planning-20261003/shaped-ql.best.npy
+{
+  "dqn": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.0
+  },
+  "qlearning": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.1
+  },
+  "shaped": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.0
+  },
+  "shaped-ql": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.0
+  }
+}

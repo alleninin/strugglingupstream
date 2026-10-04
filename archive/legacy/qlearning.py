@@ -1,7 +1,7 @@
 import numpy as np
 from typing import List
 
-from .base import BaseAgent
+from agents.base import BaseAgent
 from game.moves import Move
 
 
@@ -9,10 +9,11 @@ class QLearningAgent(BaseAgent):
     def __init__(self, state_dim: int, action_dim: int, alpha: float = 0.05,
                  gamma: float = 0.95, epsilon: float = 0.2,
                  epsilon_decay: float = 0.9995, min_epsilon: float = 0.02,
-                 seed: int = None):
+                 seed: int = None, partition_features=False):
+        self.partition_features = partition_features
         self.base_dim = state_dim + action_dim
         self.state_dim, self.action_dim = state_dim, action_dim
-        self.dim = self.base_dim + state_dim * action_dim
+        self.dim = self.base_dim + state_dim * action_dim + (5 if partition_features else 0)
         self.alpha = alpha
         self.gamma = gamma
         self.epsilon = epsilon
@@ -30,7 +31,11 @@ class QLearningAgent(BaseAgent):
         # and the table. Bounding counts keeps multi-deck features well scaled.
         action = base[len(state):]
         interactions = np.outer(np.tanh(state), np.tanh(action)).ravel()
-        return np.concatenate((base, interactions)).astype(np.float32)
+        parts = [base, interactions]
+        if self.partition_features:
+            from env.hand_structure import partition_vector
+            parts.append(partition_vector(state[:15], np.maximum(0, state[:15] - action[:15])))
+        return np.concatenate(parts).astype(np.float32)
 
     def q(self, phi) -> float:
         return float(np.dot(self.w, phi))
@@ -67,14 +72,19 @@ class QLearningAgent(BaseAgent):
     def load(self, path: str) -> None:
         from env import features
         w = np.load(path)
-        old_state = features.legacy_state_dim(self.state_dim)
-        old_base = old_state + self.action_dim
-        old_dim = old_base + old_state * self.action_dim
-        if w.shape in ((old_base,), (old_dim,)):
-            self.state_dim, self.base_dim, self.dim = old_state, old_base, old_dim
-        if w.shape == (self.base_dim,):
-            # Preserve predictions from legacy additive checkpoints until retrained.
-            w = np.pad(w, (0, self.dim - self.base_dim))
-        if w.shape != (self.dim,):
-            raise ValueError(f"checkpoint dim {w.shape} != agent dim {self.dim}")
-        self.w = w.astype(np.float32)
+        # Preserve .npy compatibility: the five appended features identify the
+        # new schema by length. Old additive and interaction weights still load.
+        for state_dim in (self.state_dim, features.legacy_state_dim(self.state_dim)):
+            base_dim = state_dim + self.action_dim
+            interaction_dim = base_dim + state_dim * self.action_dim
+            if w.shape not in ((base_dim,), (interaction_dim,), (interaction_dim + 5,)):
+                continue
+            self.state_dim, self.base_dim = state_dim, base_dim
+            self.partition_features = w.shape == (interaction_dim + 5,)
+            self.dim = interaction_dim + (5 if self.partition_features else 0)
+            if w.shape == (base_dim,):
+                w = np.pad(w, (0, self.dim - base_dim))
+            self.w = w.astype(np.float32)
+            self.demonstrations = None
+            return
+        raise ValueError(f"checkpoint dim {w.shape} is incompatible with this agent")

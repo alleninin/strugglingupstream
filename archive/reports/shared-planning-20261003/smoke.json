@@ -1,0 +1,18 @@
+{
+  "dqn": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.0
+  },
+  "qlearning": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.1
+  },
+  "shaped": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.0
+  },
+  "shaped-ql": {
+    "partition_features_restored": true,
+    "smoke_win_rate_vs_greedy": 0.0
+  }
+}

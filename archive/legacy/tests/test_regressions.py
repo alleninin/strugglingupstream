@@ -11,21 +11,21 @@ import numpy as np
 import torch
 
 from agents.ddqn_agent import DDQNAgent
-from agents.dqn_agent import DQNAgent
+from archive.legacy.dqn_agent import DQNAgent
 from agents.prioritized_replay import PrioritizedReplayBuffer, SumTree
-from agents.qlearning import QLearningAgent
+from archive.legacy.qlearning import QLearningAgent
 from bots.random_bot import RandomAgent
 from bots.greedy_bot import GreedyBot, M
-from bots.shaped_reward import ShapedReward, ShapedRewardConfig, moves_to_empty, terminal_reward
-from bots.shaped_reward_bot import ShapedRewardBot
+from archive.legacy.shaped_reward import ShapedReward, ShapedRewardConfig, moves_to_empty, terminal_reward
+from archive.legacy.shaped_reward_bot import ShapedRewardBot
 from env import features
 from env.env import ZhengShangYouEnv
 from game.cards import build_deck
 from game.match import Match
 from game.moves import Move, MoveType, PASS_MOVE, generate_moves
 from game.rules import Game
-from scripts.watch import load_seat0
-from training.train import make_opponent_policies, train
+from archive.legacy.watch import load_seat0
+from archive.legacy.train import make_opponent_policies, train
 import evaluate
 
 
@@ -282,7 +282,7 @@ class LearningTests(unittest.TestCase):
         def loss(prediction, target):
             targets.append(target.detach().cpu().numpy())
             return original(prediction, target)
-        with patch("agents.dqn_agent.nn.functional.smooth_l1_loss", side_effect=loss):
+        with patch("archive.legacy.dqn_agent.nn.functional.smooth_l1_loss", side_effect=loss):
             agent._learn()
         np.testing.assert_allclose(targets[0], [0.])
 
@@ -368,7 +368,7 @@ class LearningTests(unittest.TestCase):
     def test_periodic_save_creates_destination_before_evaluation(self):
         with tempfile.TemporaryDirectory() as directory:
             checkpoint = str(Path(directory) / "new-directory" / "agent.npy")
-            with patch("training.train.evaluate_vs_opponent", return_value=.5), contextlib.redirect_stdout(io.StringIO()):
+            with patch("archive.legacy.train.evaluate_vs_opponent", return_value=.5), contextlib.redirect_stdout(io.StringIO()):
                 train("qlearning", 1, 2, 1, 4, checkpoint, 1, opponent="random", demo_games=0)
             self.assertTrue(Path(checkpoint).exists())
 

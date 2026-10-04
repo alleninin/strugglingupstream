@@ -7,15 +7,15 @@ import numpy as np
 import torch
 
 from agents.ddqn_agent import DDQNAgent
-from agents.dqn_agent import DQNAgent
-from agents.qlearning import QLearningAgent
+from archive.legacy.dqn_agent import DQNAgent
+from archive.legacy.qlearning import QLearningAgent
 from bots.random_bot import RandomAgent
 from agents.hand_q_network import HandQNetwork
 from env.env import ZhengShangYouEnv
 from bots.greedy_bot import GreedyBot
 from env import features
 from game.rules import Game
-from training.train import evaluate_vs_opponent, curriculum_opponent
+from archive.legacy.train import evaluate_vs_opponent, curriculum_opponent
 from unittest.mock import patch
 
 

@@ -107,8 +107,8 @@ separately in `demo-only-*.json`; do not directly compare those estimates with t
 From the repository root, reproduce a main comparison:
 
 ```sh
-python3.12 -B scripts/benchmark_learning.py --agent ddqn --episodes 2500 --baseline reports/ddqn-learning-20261002 --output /tmp/before-ddqn.json
-python3.12 -B scripts/benchmark_learning.py --agent ddqn --episodes 2500 --demo-games 200 --demo-updates 1000 --output /tmp/after-ddqn.json
+python3.12 -B archive/experiments/benchmark_learning.py --agent ddqn --episodes 2500 --baseline reports/ddqn-learning-20261002 --output /tmp/before-ddqn.json
+python3.12 -B archive/experiments/benchmark_learning.py --agent ddqn --episodes 2500 --demo-games 200 --demo-updates 1000 --output /tmp/after-ddqn.json
 ```
 
 Replace `ddqn` with `dqn` or `qlearning` for the other learners. The reproduction

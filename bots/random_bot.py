@@ -1,7 +1,7 @@
 import random
 from typing import List
 
-from .base import BaseAgent
+from agents.base import BaseAgent
 from game.moves import Move
 
 

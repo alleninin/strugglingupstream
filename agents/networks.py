@@ -50,3 +50,13 @@ class DuelingQNetwork(nn.Module):
         advantages = self.adv_stream(torch.cat(
             [h.index_select(0, owners), encoded_moves], dim=1)).squeeze(-1)
         return values, advantages
+
+
+class QNetwork(nn.Module):
+    """Scalar action-value network shared by current DDQN representations."""
+    def __init__(self, input_dim, hidden=(128, 64)):
+        super().__init__()
+        self.net = _mlp(input_dim, hidden, 1)
+
+    def forward(self, x):
+        return self.net(x)

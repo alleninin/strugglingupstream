@@ -49,8 +49,18 @@ python3.12 -m training.train --agent qlearning --episodes 5000 --save-path check
 For alternative placement/trick rewards, use `--agent shaped` (`.pt`) or
 `--agent shaped-ql` (`.npy`). All training options: `python3.12 -m training.train --help`.
 Old checkpoints retain their old architecture; retrain to use the new DDQN features.
-Partition features estimate how many plays each move leaves; `--no-partition-features`
-restores the previous representation. They add CPU work during training and play.
+Partition features estimate how many plays each move leaves and add CPU work.
+They are enabled by default for DDQN (`--no-partition-features` disables them).
+Other learners can opt in; their win-rate benefit has not yet been established:
+
+```bash
+python3.12 -m training.train --agent dqn --partition-features --episodes 5000 --save-path checkpoints/dqn_partition_agent.pt
+python3.12 -m training.train --agent qlearning --partition-features --episodes 5000 --save-path checkpoints/qlearning_partition_agent.npy
+```
+
+The flag also works with `shaped` and `shaped-ql`. Add `--opponent curriculum` to
+use DDQN's opponent schedule; add `--demo-games 0` to disable demonstration warm-up.
+Each agent keeps its own learning algorithm and reward.
 
 ## Evaluate
 
@@ -116,3 +126,6 @@ python3.12 -B scripts/test_rules.py
 learners, `bots/` the heuristic/reward bots, and `training/` the training loop.
 See the [DDQN experiment report](reports/ddqn-fix-20261003/REPORT.md) for architecture,
 measured results and limitations.
+
+Historical benchmark scripts and the redundant shaped-training CLI are in
+[archive/experiments](archive/experiments/README.md). Active training uses `training.train`.

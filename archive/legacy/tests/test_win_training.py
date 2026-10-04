@@ -11,11 +11,11 @@ from env.env import ZhengShangYouEnv
 from game.cards import build_deck
 from game.rules import Game
 from bots.random_bot import RandomAgent
-from training.train import exploration_epsilon, evaluate_vs_opponent, train
-from training.demonstrations import Demonstrations, Example
+from archive.legacy.train import exploration_epsilon, evaluate_vs_opponent, train
+from archive.legacy.demonstrations import Demonstrations, Example
 from agents.ddqn_agent import DDQNAgent
-from agents.dqn_agent import DQNAgent
-from agents.qlearning import QLearningAgent
+from archive.legacy.dqn_agent import DQNAgent
+from archive.legacy.qlearning import QLearningAgent
 from env import features
 
 
@@ -117,7 +117,7 @@ class WinTrainingTests(unittest.TestCase):
 
     def test_evaluation_uses_separate_deals_and_restores_exploration(self):
         agent = QLearningAgent(*features.feature_dims(2), epsilon=.37, seed=0)
-        with patch("training.train.ZhengShangYouEnv", wraps=ZhengShangYouEnv) as env:
+        with patch("archive.legacy.train.ZhengShangYouEnv", wraps=ZhengShangYouEnv) as env:
             evaluate_vs_opponent(agent, 2, 1, seed=0, n=2, opponent="random")
         seeds = [call.kwargs["seed"] for call in env.call_args_list]
         self.assertEqual(len(set(seeds)), 2)
@@ -133,7 +133,7 @@ class WinTrainingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = str(Path(directory) / "q.npy")
             best = str(Path(directory) / "q.best.npy")
-            with patch("training.train.evaluate_vs_opponent", side_effect=[.8, .1]), \
+            with patch("archive.legacy.train.evaluate_vs_opponent", side_effect=[.8, .1]), \
                  patch.object(QLearningAgent, "save", save), contextlib.redirect_stdout(io.StringIO()):
                 train("qlearning", 2, 2, 1, 0, path, 1, demo_games=0)
             self.assertTrue(Path(best).exists())

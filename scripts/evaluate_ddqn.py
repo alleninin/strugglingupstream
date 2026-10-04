@@ -9,7 +9,7 @@ sys.path.insert(0, str(ROOT))
 
 import torch
 from agents.ddqn_agent import DDQNAgent
-from agents.random_agent import RandomAgent
+from bots.random_bot import RandomAgent
 from bots.greedy_bot import GreedyBot
 from env.features import feature_dims
 from training.train import evaluate_vs_opponent

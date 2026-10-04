@@ -1,0 +1,61 @@
+
+=== Deal seed=0 :: P0=QLearningAgent, P1..P3=Greedy ===
+P0 hand: 3 3 5 5 6 6 7 7 8 8 9 9 10 10 J Q Q K K K K K A A 2 2 RJ
+  P0 leads : FULL_HOUSE(K,K,K,3,3)  (hand 22)
+  P1 follows: FULL_HOUSE(2,2,2,3,3)  (hand 22)  [table: FULL_HOUSE(K,K,K,3,3) by P0]
+  P2 follows: BOMB(3,3,3,3)  (hand 23)  [table: FULL_HOUSE(2,2,2,3,3) by P1]
+  P3 follows: BOMB(5,5,5,5)  (hand 23)  [table: BOMB(3,3,3,3) by P2]
+  P0 follows: PASS  (hand 22)  [table: BOMB(5,5,5,5) by P3]
+  P1 follows: PASS  (hand 22)  [table: BOMB(5,5,5,5) by P3]
+  P2 follows: PASS  (hand 23)  [table: BOMB(5,5,5,5) by P3]
+  P3 leads : CONSEC_PAIRS(J,J,Q,Q,K,K)  (hand 17)
+  P0 follows: CONSEC_PAIRS(Q,Q,K,K,A,A)  (hand 16)  [table: CONSEC_PAIRS(J,J,Q,Q,K,K) by P3]
+  P1 follows: BOMB(10,10,10,10)  (hand 18)  [table: CONSEC_PAIRS(Q,Q,K,K,A,A) by P0]
+  P2 follows: PASS  (hand 23)  [table: BOMB(10,10,10,10) by P1]
+  P3 follows: PASS  (hand 17)  [table: BOMB(10,10,10,10) by P1]
+  P0 follows: PASS  (hand 16)  [table: BOMB(10,10,10,10) by P1]
+  P1 leads : AIRPLANE(4,4,4,J,J,J,6,6,9,9)  (hand 8)
+  P2 follows: AIRPLANE(4,4,4,A,A,A,5,5,7,7)  (hand 13)  [table: AIRPLANE(4,4,4,J,J,J,6,6,9,9) by P1]
+  P3 follows: PASS  (hand 17)  [table: AIRPLANE(4,4,4,A,A,A,5,5,7,7) by P2]
+  P0 follows: PASS  (hand 16)  [table: AIRPLANE(4,4,4,A,A,A,5,5,7,7) by P2]
+  P1 follows: PASS  (hand 8)  [table: AIRPLANE(4,4,4,A,A,A,5,5,7,7) by P2]
+  P2 leads : STRAIGHT(6,7,8,9,10,J)  (hand 7)
+  P3 follows: PASS  (hand 17)  [table: STRAIGHT(6,7,8,9,10,J) by P2]
+  P0 follows: PASS  (hand 16)  [table: STRAIGHT(6,7,8,9,10,J) by P2]
+  P1 follows: STRAIGHT(7,8,9,10,J,Q)  (hand 2)  [table: STRAIGHT(6,7,8,9,10,J) by P2]
+  P2 follows: PASS  (hand 7)  [table: STRAIGHT(7,8,9,10,J,Q) by P1]
+  P3 follows: PASS  (hand 17)  [table: STRAIGHT(7,8,9,10,J,Q) by P1]
+  P0 follows: PASS  (hand 16)  [table: STRAIGHT(7,8,9,10,J,Q) by P1]
+  P1 leads : PAIR(A,A)  (hand 0)
+  P2 follows: PASS  (hand 7)  [table: PAIR(A,A) by P1]
+  P3 follows: PAIR(2,2)  (hand 15)  [table: PAIR(A,A) by P1]
+  P0 follows: PASS  (hand 16)  [table: PAIR(2,2) by P3]
+  P2 follows: PASS  (hand 7)  [table: PAIR(2,2) by P3]
+  P3 leads : CONSEC_PAIRS(6,6,7,7,8,8,9,9)  (hand 7)
+  P0 follows: CONSEC_PAIRS(7,7,8,8,9,9,10,10)  (hand 8)  [table: CONSEC_PAIRS(6,6,7,7,8,8,9,9) by P3]
+  P2 follows: PASS  (hand 7)  [table: CONSEC_PAIRS(7,7,8,8,9,9,10,10) by P0]
+  P3 follows: PASS  (hand 7)  [table: CONSEC_PAIRS(7,7,8,8,9,9,10,10) by P0]
+  P0 leads : PAIR(5,5)  (hand 6)
+  P2 follows: PAIR(8,8)  (hand 5)  [table: PAIR(5,5) by P0]
+  P3 follows: PAIR(Q,Q)  (hand 5)  [table: PAIR(8,8) by P2]
+  P0 follows: PAIR(2,2)  (hand 4)  [table: PAIR(Q,Q) by P3]
+  P2 follows: PASS  (hand 5)  [table: PAIR(2,2) by P0]
+  P3 follows: PASS  (hand 5)  [table: PAIR(2,2) by P0]
+  P0 leads : PAIR(6,6)  (hand 2)
+  P2 follows: PASS  (hand 5)  [table: PAIR(6,6) by P0]
+  P3 follows: PASS  (hand 5)  [table: PAIR(6,6) by P0]
+  P0 leads : SINGLE(J)  (hand 1)
+  P2 follows: SINGLE(BJ)  (hand 4)  [table: SINGLE(J) by P0]
+  P3 follows: SINGLE(RJ)  (hand 4)  [table: SINGLE(BJ) by P2]
+  P0 follows: PASS  (hand 1)  [table: SINGLE(RJ) by P3]
+  P2 follows: PASS  (hand 4)  [table: SINGLE(RJ) by P3]
+  P3 leads : PAIR(4,4)  (hand 2)
+  P0 follows: PASS  (hand 1)  [table: PAIR(4,4) by P3]
+  P2 follows: PASS  (hand 4)  [table: PAIR(4,4) by P3]
+  P3 leads : SINGLE(Q)  (hand 1)
+  P0 follows: SINGLE(RJ)  (hand 0)  [table: SINGLE(Q) by P3]
+  P2 follows: PASS  (hand 4)  [table: SINGLE(RJ) by P0]
+  P3 follows: PASS  (hand 1)  [table: SINGLE(RJ) by P0]
+  P2 leads : SINGLE(6)  (hand 3)
+  P3 follows: SINGLE(A)  (hand 0)  [table: SINGLE(6) by P2]
+  Finish order: [1, 0, 3, 2]  -> P0 placed 2nd

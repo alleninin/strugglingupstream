@@ -2,14 +2,15 @@ import argparse
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+ROOT = str(Path(__file__).resolve().parents[2])
 sys.path.insert(0, ROOT)
 
 from game.rules import Game
 from env import features
 from game.moves import PASS_MOVE
-from agents.dqn_agent import DQNAgent
-from agents.qlearning import QLearningAgent
+from archive.legacy.dqn_agent import DQNAgent
+from archive.legacy.qlearning import QLearningAgent
 from agents.ddqn_agent import DDQNAgent
 from bots.greedy_bot import GreedyBot
 from bots.random_bot import RandomAgent
@@ -51,7 +52,7 @@ def load_agent(kind, path, s_dim, a_dim, seed, num_players, num_decks):
         ag = DDQNAgent(s_dim, a_dim, seed=seed)
     elif kind.startswith("shaped"):
         arch = kind.split(":", 1)[1] if ":" in kind else "ddqn"
-        from bots.shaped_reward_bot import ShapedRewardBot
+        from archive.legacy.shaped_reward_bot import ShapedRewardBot
         ag = ShapedRewardBot(s_dim, a_dim, agent_type=arch)
     elif kind == "greedy":
         from bots.greedy_bot import GreedyBot

@@ -1,14 +1,14 @@
 """Compatibility CLI for shaped training; the shared harness owns the loop."""
 
 import argparse
-import os
+from pathlib import Path
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = str(Path(__file__).resolve().parents[2])
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
-from training.train import train
+from archive.legacy.train import train
 
 
 def main():

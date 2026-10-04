@@ -52,8 +52,8 @@ These are short benchmark runs, not repeated statistical performance estimates.
 Run from the repository root:
 
 ```sh
-python3.12 -B scripts/benchmark_ddqn.py --episodes 100 --threads 8 --device cpu --reference reports/ddqn-performance-20261002/ddqn_before.py --json /tmp/ddqn-before.json
-python3.12 -B scripts/benchmark_ddqn.py --episodes 100 --threads 1 --device cpu --json /tmp/ddqn-after.json
+python3.12 -B archive/experiments/benchmark_ddqn.py --episodes 100 --threads 8 --device cpu --reference reports/ddqn-performance-20261002/ddqn_before.py --json /tmp/ddqn-before.json
+python3.12 -B archive/experiments/benchmark_ddqn.py --episodes 100 --threads 1 --device cpu --json /tmp/ddqn-after.json
 python3.12 -B -m unittest discover -s tests -q
 ```
 

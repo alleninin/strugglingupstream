@@ -6,7 +6,7 @@ integer subtraction, counting thresholds and runs from sparse game outcomes.
 """
 import torch
 from torch import nn
-from .dqn_agent import QNetwork
+from .networks import QNetwork
 
 
 class HandQNetwork(nn.Module):

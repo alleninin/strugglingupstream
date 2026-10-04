@@ -1,0 +1,6047 @@
+{
+  "num_games": 400,
+  "num_players": 4,
+  "num_decks": 2,
+  "seed": 100000,
+  "rounds": null,
+  "results": {
+    "QLearning": {
+      "appearances": 264,
+      "wins": 48,
+      "win_rate": 0.18181818181818182,
+      "mean_place": 2.534090909090909
+    },
+    "DQN": {
+      "appearances": 268,
+      "wins": 59,
+      "win_rate": 0.22014925373134328,
+      "mean_place": 2.332089552238806
+    },
+    "DDQN": {
+      "appearances": 272,
+      "wins": 126,
+      "win_rate": 0.4632352941176471,
+      "mean_place": 1.849264705882353
+    },
+    "Shaped": {
+      "appearances": 268,
+      "wins": 28,
+      "win_rate": 0.1044776119402985,
+      "mean_place": 2.8656716417910446
+    },
+    "Greedy": {
+      "appearances": 268,
+      "wins": 137,
+      "win_rate": 0.5111940298507462,
+      "mean_place": 1.8022388059701493
+    },
+    "Random": {
+      "appearances": 260,
+      "wins": 2,
+      "win_rate": 0.007692307692307693,
+      "mean_place": 3.6615384615384614
+    }
+  },
+  "games": [
+    {
+      "seed": 100000,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100000,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100000,
+      "seats": [
+        "DQN",
+        "Random",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100000,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100001,
+      "seats": [
+        "DDQN",
+        "Random",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100001,
+      "seats": [
+        "Random",
+        "DQN",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100001,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100001,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100002,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100002,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100002,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100002,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100003,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100003,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100003,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100003,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100004,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100004,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100004,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100004,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100005,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100005,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100005,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100005,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100006,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100006,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100006,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100006,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100007,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100007,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100007,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100007,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100008,
+      "seats": [
+        "Random",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100008,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100008,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100008,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100009,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100009,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100009,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100009,
+      "seats": [
+        "Random",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100010,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100010,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100010,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100010,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100011,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100011,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100011,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100011,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100012,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100012,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100012,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100012,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100013,
+      "seats": [
+        "Random",
+        "Shaped",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100013,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100013,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100013,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100014,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100014,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100014,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100014,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100015,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100015,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100015,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100015,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100016,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100016,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100016,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100016,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100017,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100017,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100017,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100017,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100018,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100018,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100018,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100018,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100019,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100019,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100019,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100019,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100020,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100020,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100020,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100020,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100021,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100021,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100021,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100021,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100022,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100022,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100022,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100022,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100023,
+      "seats": [
+        "Random",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100023,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100023,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100023,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100024,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100024,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100024,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100024,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100025,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100025,
+      "seats": [
+        "Shaped",
+        "Random",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100025,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100025,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100026,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100026,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100026,
+      "seats": [
+        "Greedy",
+        "Random",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100026,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100027,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100027,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100027,
+      "seats": [
+        "DQN",
+        "Random",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100027,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100028,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100028,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100028,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100028,
+      "seats": [
+        "DQN",
+        "Random",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100029,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100029,
+      "seats": [
+        "Random",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100029,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100029,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100030,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100030,
+      "seats": [
+        "DDQN",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100030,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100030,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100031,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100031,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100031,
+      "seats": [
+        "Random",
+        "Greedy",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100031,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100032,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100032,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100032,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100032,
+      "seats": [
+        "Random",
+        "Shaped",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100033,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100033,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100033,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100033,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100034,
+      "seats": [
+        "DDQN",
+        "Random",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100034,
+      "seats": [
+        "Random",
+        "DQN",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100034,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100034,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100035,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100035,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100035,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100035,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100036,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100036,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100036,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100036,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100037,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100037,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100037,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100037,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100038,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100038,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100038,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100038,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100039,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100039,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100039,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100039,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100040,
+      "seats": [
+        "Random",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100040,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100040,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100040,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100041,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100041,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100041,
+      "seats": [
+        "Greedy",
+        "Random",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100041,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100042,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100042,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100042,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100042,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100043,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100043,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100043,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100043,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100044,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100044,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100044,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100044,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100045,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100045,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100045,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100045,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100046,
+      "seats": [
+        "Random",
+        "QLearning",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100046,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100046,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100046,
+      "seats": [
+        "Greedy",
+        "Random",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100047,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100047,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100047,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100047,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100048,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100048,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100048,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100048,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100049,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100049,
+      "seats": [
+        "DDQN",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100049,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100049,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100050,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100050,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100050,
+      "seats": [
+        "DQN",
+        "Random",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100050,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100051,
+      "seats": [
+        "Random",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100051,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100051,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "Random",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100051,
+      "seats": [
+        "Shaped",
+        "Random",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100052,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100052,
+      "seats": [
+        "Random",
+        "DDQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100052,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100052,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100053,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100053,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100053,
+      "seats": [
+        "DQN",
+        "Random",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100053,
+      "seats": [
+        "Random",
+        "Shaped",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100054,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100054,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100054,
+      "seats": [
+        "Shaped",
+        "Random",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100054,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100055,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100055,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100055,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100055,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100056,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100056,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100056,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100056,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100057,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100057,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100057,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100057,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100058,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100058,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100058,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100058,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100059,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100059,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100059,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100059,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100060,
+      "seats": [
+        "Random",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100060,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100060,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100060,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100061,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100061,
+      "seats": [
+        "DQN",
+        "Random",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100061,
+      "seats": [
+        "Random",
+        "Shaped",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100061,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100062,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100062,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100062,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100062,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100063,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100063,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100063,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100063,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100064,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100064,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100064,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100064,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100065,
+      "seats": [
+        "Random",
+        "Shaped",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100065,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100065,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100065,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100066,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100066,
+      "seats": [
+        "DQN",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100066,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100066,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100067,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100067,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100067,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100067,
+      "seats": [
+        "Random",
+        "Greedy",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100068,
+      "seats": [
+        "Random",
+        "DQN",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100068,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100068,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100068,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100069,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100069,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100069,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100069,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100070,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100070,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100070,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100070,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100071,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100071,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100071,
+      "seats": [
+        "Random",
+        "Greedy",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100071,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100072,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100072,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100072,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100072,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100073,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100073,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100073,
+      "seats": [
+        "DDQN",
+        "Random",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100073,
+      "seats": [
+        "Random",
+        "DQN",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100074,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100074,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100074,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100074,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100075,
+      "seats": [
+        "Random",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100075,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100075,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100075,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100076,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100076,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100076,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100076,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100077,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100077,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100077,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100077,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100078,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100078,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100078,
+      "seats": [
+        "Greedy",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100078,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100079,
+      "seats": [
+        "Random",
+        "DDQN",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100079,
+      "seats": [
+        "DDQN",
+        "Shaped",
+        "DQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100079,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100079,
+      "seats": [
+        "DQN",
+        "Random",
+        "DDQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100080,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100080,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100080,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100080,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100081,
+      "seats": [
+        "Shaped",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100081,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100081,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100081,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100082,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100082,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Greedy",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100082,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100082,
+      "seats": [
+        "Greedy",
+        "Shaped",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100083,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100083,
+      "seats": [
+        "Shaped",
+        "Random",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100083,
+      "seats": [
+        "Random",
+        "Greedy",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100083,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100084,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100084,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100084,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100084,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100085,
+      "seats": [
+        "Random",
+        "DQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100085,
+      "seats": [
+        "DQN",
+        "Greedy",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100085,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100085,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100086,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Greedy",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100086,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100086,
+      "seats": [
+        "Greedy",
+        "Random",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100086,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100087,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100087,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100087,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100087,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100088,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100088,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100088,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100088,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100089,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100089,
+      "seats": [
+        "DQN",
+        "QLearning",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100089,
+      "seats": [
+        "QLearning",
+        "Random",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100089,
+      "seats": [
+        "Random",
+        "Shaped",
+        "DQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100090,
+      "seats": [
+        "Random",
+        "Greedy",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100090,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100090,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100090,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100091,
+      "seats": [
+        "QLearning",
+        "Random",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100091,
+      "seats": [
+        "Random",
+        "DQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        1,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100091,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "QLearning",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "seed": 100091,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Random",
+        "DQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100092,
+      "seats": [
+        "QLearning",
+        "DQN",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100092,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100092,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "QLearning",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100092,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100093,
+      "seats": [
+        "Random",
+        "Shaped",
+        "Greedy",
+        "DDQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100093,
+      "seats": [
+        "Shaped",
+        "Greedy",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100093,
+      "seats": [
+        "Greedy",
+        "DDQN",
+        "Random",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100093,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Shaped",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100094,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100094,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100094,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100094,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100095,
+      "seats": [
+        "Shaped",
+        "QLearning",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100095,
+      "seats": [
+        "QLearning",
+        "Greedy",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100095,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "Shaped",
+        "QLearning"
+      ],
+      "finish_order": [
+        0,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100095,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "QLearning",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100096,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "Random",
+        "DDQN"
+      ],
+      "finish_order": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100096,
+      "seats": [
+        "Shaped",
+        "Random",
+        "DDQN",
+        "DQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "seed": 100096,
+      "seats": [
+        "Random",
+        "DDQN",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "seed": 100096,
+      "seats": [
+        "DDQN",
+        "DQN",
+        "Shaped",
+        "Random"
+      ],
+      "finish_order": [
+        2,
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "seed": 100097,
+      "seats": [
+        "Shaped",
+        "DDQN",
+        "Greedy",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "seed": 100097,
+      "seats": [
+        "DDQN",
+        "Greedy",
+        "DQN",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "seed": 100097,
+      "seats": [
+        "Greedy",
+        "DQN",
+        "Shaped",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100097,
+      "seats": [
+        "DQN",
+        "Shaped",
+        "DDQN",
+        "Greedy"
+      ],
+      "finish_order": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100098,
+      "seats": [
+        "Greedy",
+        "QLearning",
+        "DDQN",
+        "Random"
+      ],
+      "finish_order": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "seed": 100098,
+      "seats": [
+        "QLearning",
+        "DDQN",
+        "Random",
+        "Greedy"
+      ],
+      "finish_order": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "seed": 100098,
+      "seats": [
+        "DDQN",
+        "Random",
+        "Greedy",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100098,
+      "seats": [
+        "Random",
+        "Greedy",
+        "QLearning",
+        "DDQN"
+      ],
+      "finish_order": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "seed": 100099,
+      "seats": [
+        "DDQN",
+        "QLearning",
+        "Shaped",
+        "DQN"
+      ],
+      "finish_order": [
+        2,
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "seed": 100099,
+      "seats": [
+        "QLearning",
+        "Shaped",
+        "DQN",
+        "DDQN"
+      ],
+      "finish_order": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "seed": 100099,
+      "seats": [
+        "Shaped",
+        "DQN",
+        "DDQN",
+        "QLearning"
+      ],
+      "finish_order": [
+        2,
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "seed": 100099,
+      "seats": [
+        "DQN",
+        "DDQN",
+        "QLearning",
+        "Shaped"
+      ],
+      "finish_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

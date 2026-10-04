@@ -5,12 +5,13 @@ import random
 import time
 import copy
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+ROOT = str(Path(__file__).resolve().parents[2])
 sys.path.insert(0, ROOT)
 
 from env import features
 from env.env import ZhengShangYouEnv
-from agents.qlearning import QLearningAgent
+from archive.legacy.qlearning import QLearningAgent
 
 
 def make_opponent_policies(num_players, seed, num_decks=2, opponent="greedy"):
@@ -104,13 +105,13 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
                                epsilon_decay=0.9998, min_epsilon=0.05, seed=seed,
                                partition_features=partition_features)
     elif agent_kind == "dqn":
-        from agents.dqn_agent import DQNAgent
+        from archive.legacy.dqn_agent import DQNAgent
         agent = DQNAgent(s_dim, a_dim, lr=3e-4, gamma=0.95, epsilon=0.5,
                          epsilon_decay=0.9998, min_epsilon=0.05, seed=seed, device=device,
                          partition_features=partition_features)
     elif agent_kind in ("shaped", "shaped-ql"):
-        from bots.shaped_reward import ShapedRewardConfig
-        from bots.shaped_reward_bot import ShapedRewardBot
+        from archive.legacy.shaped_reward import ShapedRewardConfig
+        from archive.legacy.shaped_reward_bot import ShapedRewardBot
         inner_type = "qlearning" if agent_kind == "shaped-ql" else "ddqn"
         cfg = ShapedRewardConfig(num_players=num_players, num_decks=num_decks,
                                  gamma=.95 if gamma is None else gamma,
@@ -161,7 +162,7 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
     best_win_rate = -1.0
 
     if demo_games:
-        from training.demonstrations import collect_demonstrations, Demonstrations
+        from archive.legacy.demonstrations import collect_demonstrations, Demonstrations
         warmup_started = time.perf_counter()
         examples = collect_demonstrations(demo_games, num_players, num_decks, seed)
         demonstrations = Demonstrations(examples, seed=seed, weight=demo_weight)

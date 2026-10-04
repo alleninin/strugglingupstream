@@ -1,11 +1,11 @@
 """Shaped-reward bot: wraps a DDQN (or Q-learning) agent and recomputes the reward
-in observe() using bots.shaped_reward, leaving the underlying agent's learning code
+in observe() using archive.legacy.shaped_reward, leaving the underlying agent's learning code
 untouched. Drop-in compatible with the existing training loop (BaseAgent interface).
 """
 
 from agents.base import BaseAgent
 from agents.ddqn_agent import DDQNAgent
-from agents.qlearning import QLearningAgent
+from archive.legacy.qlearning import QLearningAgent
 
 from .shaped_reward import ShapedReward, ShapedRewardConfig
 

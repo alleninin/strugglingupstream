@@ -1,0 +1,16 @@
+.DS_Store
+agents/__pycache__/__init__.cpython-312.pyc
+agents/__pycache__/base.cpython-312.pyc
+agents/__pycache__/dqn_agent.cpython-312.pyc
+agents/__pycache__/qlearning.cpython-312.pyc
+agents/__pycache__/random_agent.cpython-312.pyc
+env/__pycache__/__init__.cpython-312.pyc
+env/__pycache__/env.cpython-312.pyc
+env/__pycache__/features.cpython-312.pyc
+game/__pycache__/__init__.cpython-312.pyc
+game/__pycache__/cards.cpython-312.pyc
+game/__pycache__/match.cpython-312.pyc
+game/__pycache__/moves.cpython-312.pyc
+game/__pycache__/rules.cpython-312.pyc
+training/__pycache__/__init__.cpython-312.pyc
+training/__pycache__/train.cpython-312.pyc

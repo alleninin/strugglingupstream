@@ -39,7 +39,7 @@ import numpy as np
 
 from game.moves import MoveType
 from env import features
-from .greedy_bot import M, O
+from bots.greedy_bot import M, O
 
 
 @dataclass

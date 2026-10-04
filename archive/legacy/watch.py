@@ -15,7 +15,8 @@ import argparse
 import os
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+ROOT = str(Path(__file__).resolve().parents[2])
 sys.path.insert(0, ROOT)
 
 from game.rules import Game
@@ -31,16 +32,16 @@ def load_seat0(kind, path, s_dim, a_dim, seed, num_players=4, num_decks=2):
         from bots.random_bot import RandomAgent
         return RandomAgent(seed=seed), "Random"
     if kind == "qlearning":
-        from agents.qlearning import QLearningAgent
+        from archive.legacy.qlearning import QLearningAgent
         ag = QLearningAgent(s_dim, a_dim, seed=seed)
     elif kind == "dqn":
-        from agents.dqn_agent import DQNAgent
+        from archive.legacy.dqn_agent import DQNAgent
         ag = DQNAgent(s_dim, a_dim, epsilon=0.0)
     elif kind == "ddqn":
         from agents.ddqn_agent import DDQNAgent
         ag = DDQNAgent(s_dim, a_dim, epsilon=0.0)
     elif kind == "shaped":
-        from bots.shaped_reward_bot import ShapedRewardBot
+        from archive.legacy.shaped_reward_bot import ShapedRewardBot
         ag = ShapedRewardBot(s_dim, a_dim, agent_type="ddqn")
     else:
         raise SystemExit(f"unknown --agent {kind!r}")

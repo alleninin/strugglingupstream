@@ -1,7 +1,7 @@
 """Retrain five learners and evaluate them on held-out, seat-balanced deals.
 
 Example:
-python3.12 -B scripts/benchmark_bots.py --episodes 1000 --rounds 3 \
+python3.12 -B archive/experiments/benchmark_bots.py --episodes 1000 --rounds 3 \
   --output reports/greedy-v2-20261002 --checkpoints checkpoints/greedy-v2-20261002 \
   --legacy-source reports/greedy-v2-20261002/greedy_before.py
 """
@@ -14,21 +14,21 @@ from pathlib import Path
 import sys
 import time
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import numpy as np
 import torch
-from agents.dqn_agent import DQNAgent
+from archive.legacy.dqn_agent import DQNAgent
 from agents.ddqn_agent import DDQNAgent
-from agents.qlearning import QLearningAgent
-from agents.random_agent import RandomAgent
+from archive.legacy.qlearning import QLearningAgent
+from bots.random_bot import RandomAgent
 from bots.greedy_bot import GreedyBot
-from bots.shaped_reward_bot import ShapedRewardBot
+from archive.legacy.shaped_reward_bot import ShapedRewardBot
 from env.features import feature_dims
 from evaluate import load_checkpoint, print_results, run_tournament, simulate_game
-from training.train import train
+from archive.legacy.train import train
 
 KINDS = {'qlearning': 'QLearning', 'dqn': 'DQN', 'ddqn': 'DDQN',
          'shaped': 'Shaped', 'shaped-ql': 'ShapedQL'}

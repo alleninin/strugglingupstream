@@ -18,3 +18,11 @@ def hand_structure(counts):
         turns = _exact_turns(counts)
     singles = sum(group.type == 'SINGLE' for group in groups)
     return turns, singles
+
+
+def partition_vector(before, after):
+    """Shared five-feature representation for neural and linear learners."""
+    old = hand_structure(tuple(int(round(x)) for x in before))
+    new = hand_structure(tuple(int(round(x)) for x in after))
+    return (old[0] / 15, new[0] / 15, (old[0] - new[0]) / 4,
+            new[1] / 15, (old[1] - new[1]) / 4)

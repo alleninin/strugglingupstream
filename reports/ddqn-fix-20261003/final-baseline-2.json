@@ -1,0 +1,12 @@
+{
+  "games": 500,
+  "seed": 920261003,
+  "num_players": 4,
+  "num_decks": 2,
+  "results": {
+    "reports/ddqn-fix-20261003/baseline-2.best.pt": {
+      "greedy": 0.184,
+      "random": 0.79
+    }
+  }
+}

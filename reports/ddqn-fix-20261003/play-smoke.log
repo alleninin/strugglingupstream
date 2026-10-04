@@ -1,0 +1,701 @@
+Deal dealt. You are P0. Opponents: P1=DDQN, P2=DDQN, P3=DDQN
+
+--- Your turn (seat 0) ---
+Your hand: 3 4 4 4 5 5 5 5 6 6 6 7 8 9 9 9 10 10 10 10 J K A A 2 2 RJ
+Table: (you are leading)
+Legal moves:
+  [0] SINGLE(3)
+  [1] SINGLE(4)
+  [2] SINGLE(5)
+  [3] SINGLE(6)
+  [4] SINGLE(7)
+  [5] SINGLE(8)
+  [6] SINGLE(9)
+  [7] SINGLE(10)
+  [8] SINGLE(J)
+  [9] SINGLE(K)
+  [10] SINGLE(A)
+  [11] SINGLE(2)
+  [12] SINGLE(RJ)
+  [13] PAIR(4,4)
+  [14] PAIR(5,5)
+  [15] PAIR(6,6)
+  [16] PAIR(9,9)
+  [17] PAIR(10,10)
+  [18] PAIR(A,A)
+  [19] PAIR(2,2)
+  [20] TRIPLE(4,4,4)
+  [21] TRIPLE(5,5,5)
+  [22] TRIPLE(6,6,6)
+  [23] TRIPLE(9,9,9)
+  [24] TRIPLE(10,10,10)
+  [25] BOMB(5,5,5,5)
+  [26] BOMB(10,10,10,10)
+  [27] FULL_HOUSE(4,4,4,5,5)
+  [28] FULL_HOUSE(4,4,4,6,6)
+  [29] FULL_HOUSE(4,4,4,9,9)
+  [30] FULL_HOUSE(4,4,4,10,10)
+  [31] FULL_HOUSE(4,4,4,A,A)
+  [32] FULL_HOUSE(4,4,4,2,2)
+  [33] FULL_HOUSE(5,5,5,4,4)
+  [34] FULL_HOUSE(5,5,5,6,6)
+  [35] FULL_HOUSE(5,5,5,9,9)
+  [36] FULL_HOUSE(5,5,5,10,10)
+  [37] FULL_HOUSE(5,5,5,A,A)
+  [38] FULL_HOUSE(5,5,5,2,2)
+  [39] FULL_HOUSE(6,6,6,4,4)
+  [40] FULL_HOUSE(6,6,6,5,5)
+  [41] FULL_HOUSE(6,6,6,9,9)
+  [42] FULL_HOUSE(6,6,6,10,10)
+  [43] FULL_HOUSE(6,6,6,A,A)
+  [44] FULL_HOUSE(6,6,6,2,2)
+  [45] FULL_HOUSE(9,9,9,4,4)
+  [46] FULL_HOUSE(9,9,9,5,5)
+  [47] FULL_HOUSE(9,9,9,6,6)
+  [48] FULL_HOUSE(9,9,9,10,10)
+  [49] FULL_HOUSE(9,9,9,A,A)
+  [50] FULL_HOUSE(9,9,9,2,2)
+  [51] FULL_HOUSE(10,10,10,4,4)
+  [52] FULL_HOUSE(10,10,10,5,5)
+  [53] FULL_HOUSE(10,10,10,6,6)
+  [54] FULL_HOUSE(10,10,10,9,9)
+  [55] FULL_HOUSE(10,10,10,A,A)
+  [56] FULL_HOUSE(10,10,10,2,2)
+  [57] AIRPLANE(4,4,4,5,5,5,6,6,9,9)
+  [58] AIRPLANE(4,4,4,5,5,5,6,6,10,10)
+  [59] AIRPLANE(4,4,4,5,5,5,6,6,A,A)
+  [60] AIRPLANE(4,4,4,5,5,5,6,6,2,2)
+  [61] AIRPLANE(4,4,4,5,5,5,9,9,10,10)
+  [62] AIRPLANE(4,4,4,5,5,5,9,9,A,A)
+  [63] AIRPLANE(4,4,4,5,5,5,9,9,2,2)
+  [64] AIRPLANE(4,4,4,5,5,5,10,10,A,A)
+  [65] AIRPLANE(4,4,4,5,5,5,10,10,2,2)
+  [66] AIRPLANE(4,4,4,5,5,5,A,A,2,2)
+  [67] AIRPLANE(4,4,4,6,6,6,5,5,9,9)
+  [68] AIRPLANE(4,4,4,6,6,6,5,5,10,10)
+  [69] AIRPLANE(4,4,4,6,6,6,5,5,A,A)
+  [70] AIRPLANE(4,4,4,6,6,6,5,5,2,2)
+  [71] AIRPLANE(4,4,4,6,6,6,9,9,10,10)
+  [72] AIRPLANE(4,4,4,6,6,6,9,9,A,A)
+  [73] AIRPLANE(4,4,4,6,6,6,9,9,2,2)
+  [74] AIRPLANE(4,4,4,6,6,6,10,10,A,A)
+  [75] AIRPLANE(4,4,4,6,6,6,10,10,2,2)
+  [76] AIRPLANE(4,4,4,6,6,6,A,A,2,2)
+  [77] AIRPLANE(4,4,4,9,9,9,5,5,6,6)
+  [78] AIRPLANE(4,4,4,9,9,9,5,5,10,10)
+  [79] AIRPLANE(4,4,4,9,9,9,5,5,A,A)
+  [80] AIRPLANE(4,4,4,9,9,9,5,5,2,2)
+  [81] AIRPLANE(4,4,4,9,9,9,6,6,10,10)
+  [82] AIRPLANE(4,4,4,9,9,9,6,6,A,A)
+  [83] AIRPLANE(4,4,4,9,9,9,6,6,2,2)
+  [84] AIRPLANE(4,4,4,9,9,9,10,10,A,A)
+  [85] AIRPLANE(4,4,4,9,9,9,10,10,2,2)
+  [86] AIRPLANE(4,4,4,9,9,9,A,A,2,2)
+  [87] AIRPLANE(4,4,4,10,10,10,5,5,6,6)
+  [88] AIRPLANE(4,4,4,10,10,10,5,5,9,9)
+  [89] AIRPLANE(4,4,4,10,10,10,5,5,A,A)
+  [90] AIRPLANE(4,4,4,10,10,10,5,5,2,2)
+  [91] AIRPLANE(4,4,4,10,10,10,6,6,9,9)
+  [92] AIRPLANE(4,4,4,10,10,10,6,6,A,A)
+  [93] AIRPLANE(4,4,4,10,10,10,6,6,2,2)
+  [94] AIRPLANE(4,4,4,10,10,10,9,9,A,A)
+  [95] AIRPLANE(4,4,4,10,10,10,9,9,2,2)
+  [96] AIRPLANE(4,4,4,10,10,10,A,A,2,2)
+  [97] AIRPLANE(5,5,5,6,6,6,4,4,9,9)
+  [98] AIRPLANE(5,5,5,6,6,6,4,4,10,10)
+  [99] AIRPLANE(5,5,5,6,6,6,4,4,A,A)
+  [100] AIRPLANE(5,5,5,6,6,6,4,4,2,2)
+  [101] AIRPLANE(5,5,5,6,6,6,9,9,10,10)
+  [102] AIRPLANE(5,5,5,6,6,6,9,9,A,A)
+  [103] AIRPLANE(5,5,5,6,6,6,9,9,2,2)
+  [104] AIRPLANE(5,5,5,6,6,6,10,10,A,A)
+  [105] AIRPLANE(5,5,5,6,6,6,10,10,2,2)
+  [106] AIRPLANE(5,5,5,6,6,6,A,A,2,2)
+  [107] AIRPLANE(5,5,5,9,9,9,4,4,6,6)
+  [108] AIRPLANE(5,5,5,9,9,9,4,4,10,10)
+  [109] AIRPLANE(5,5,5,9,9,9,4,4,A,A)
+  [110] AIRPLANE(5,5,5,9,9,9,4,4,2,2)
+  [111] AIRPLANE(5,5,5,9,9,9,6,6,10,10)
+  [112] AIRPLANE(5,5,5,9,9,9,6,6,A,A)
+  [113] AIRPLANE(5,5,5,9,9,9,6,6,2,2)
+  [114] AIRPLANE(5,5,5,9,9,9,10,10,A,A)
+  [115] AIRPLANE(5,5,5,9,9,9,10,10,2,2)
+  [116] AIRPLANE(5,5,5,9,9,9,A,A,2,2)
+  [117] AIRPLANE(5,5,5,10,10,10,4,4,6,6)
+  [118] AIRPLANE(5,5,5,10,10,10,4,4,9,9)
+  [119] AIRPLANE(5,5,5,10,10,10,4,4,A,A)
+  [120] AIRPLANE(5,5,5,10,10,10,4,4,2,2)
+  [121] AIRPLANE(5,5,5,10,10,10,6,6,9,9)
+  [122] AIRPLANE(5,5,5,10,10,10,6,6,A,A)
+  [123] AIRPLANE(5,5,5,10,10,10,6,6,2,2)
+  [124] AIRPLANE(5,5,5,10,10,10,9,9,A,A)
+  [125] AIRPLANE(5,5,5,10,10,10,9,9,2,2)
+  [126] AIRPLANE(5,5,5,10,10,10,A,A,2,2)
+  [127] AIRPLANE(6,6,6,9,9,9,4,4,5,5)
+  [128] AIRPLANE(6,6,6,9,9,9,4,4,10,10)
+  [129] AIRPLANE(6,6,6,9,9,9,4,4,A,A)
+  [130] AIRPLANE(6,6,6,9,9,9,4,4,2,2)
+  [131] AIRPLANE(6,6,6,9,9,9,5,5,10,10)
+  [132] AIRPLANE(6,6,6,9,9,9,5,5,A,A)
+  [133] AIRPLANE(6,6,6,9,9,9,5,5,2,2)
+  [134] AIRPLANE(6,6,6,9,9,9,10,10,A,A)
+  [135] AIRPLANE(6,6,6,9,9,9,10,10,2,2)
+  [136] AIRPLANE(6,6,6,9,9,9,A,A,2,2)
+  [137] AIRPLANE(6,6,6,10,10,10,4,4,5,5)
+  [138] AIRPLANE(6,6,6,10,10,10,4,4,9,9)
+  [139] AIRPLANE(6,6,6,10,10,10,4,4,A,A)
+  [140] AIRPLANE(6,6,6,10,10,10,4,4,2,2)
+  [141] AIRPLANE(6,6,6,10,10,10,5,5,9,9)
+  [142] AIRPLANE(6,6,6,10,10,10,5,5,A,A)
+  [143] AIRPLANE(6,6,6,10,10,10,5,5,2,2)
+  [144] AIRPLANE(6,6,6,10,10,10,9,9,A,A)
+  [145] AIRPLANE(6,6,6,10,10,10,9,9,2,2)
+  [146] AIRPLANE(6,6,6,10,10,10,A,A,2,2)
+  [147] AIRPLANE(9,9,9,10,10,10,4,4,5,5)
+  [148] AIRPLANE(9,9,9,10,10,10,4,4,6,6)
+  [149] AIRPLANE(9,9,9,10,10,10,4,4,A,A)
+  [150] AIRPLANE(9,9,9,10,10,10,4,4,2,2)
+  [151] AIRPLANE(9,9,9,10,10,10,5,5,6,6)
+  [152] AIRPLANE(9,9,9,10,10,10,5,5,A,A)
+  [153] AIRPLANE(9,9,9,10,10,10,5,5,2,2)
+  [154] AIRPLANE(9,9,9,10,10,10,6,6,A,A)
+  [155] AIRPLANE(9,9,9,10,10,10,6,6,2,2)
+  [156] AIRPLANE(9,9,9,10,10,10,A,A,2,2)
+  [157] CONSEC_TRIPLES(4,4,4,5,5,5)
+  [158] CONSEC_TRIPLES(5,5,5,6,6,6)
+  [159] CONSEC_TRIPLES(4,4,4,5,5,5,6,6,6)
+  [160] CONSEC_TRIPLES(9,9,9,10,10,10)
+  [161] CONSEC_PAIRS(4,4,5,5,6,6)
+  [162] STRAIGHT(3,4,5,6,7)
+  [163] STRAIGHT(4,5,6,7,8)
+  [164] STRAIGHT(5,6,7,8,9)
+  [165] STRAIGHT(6,7,8,9,10)
+  [166] STRAIGHT(7,8,9,10,J)
+  [167] STRAIGHT(3,4,5,6,7,8)
+  [168] STRAIGHT(4,5,6,7,8,9)
+  [169] STRAIGHT(5,6,7,8,9,10)
+  [170] STRAIGHT(6,7,8,9,10,J)
+  [171] STRAIGHT(3,4,5,6,7,8,9)
+  [172] STRAIGHT(4,5,6,7,8,9,10)
+  [173] STRAIGHT(5,6,7,8,9,10,J)
+  [174] STRAIGHT(3,4,5,6,7,8,9,10)
+  [175] STRAIGHT(4,5,6,7,8,9,10,J)
+  [176] STRAIGHT(3,4,5,6,7,8,9,10,J)
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays SINGLE(6)  (hand: 26)
+P3 plays SINGLE(Q)  (hand: 26)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 4 5 5 5 5 6 6 6 7 8 9 9 9 10 10 10 10 J K A A 2 2 RJ
+Table: SINGLE(Q) (led by P3)
+Legal moves:
+  [0] SINGLE(K)
+  [1] SINGLE(A)
+  [2] SINGLE(2)
+  [3] SINGLE(RJ)
+  [4] BOMB(5,5,5,5)
+  [5] BOMB(10,10,10,10)
+  [6] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays SINGLE(2)  (hand: 25)
+P3 plays PASS  (hand: 26)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 4 5 5 5 5 6 6 6 7 8 9 9 9 10 10 10 10 J A A 2 2 RJ
+Table: SINGLE(2) (led by P2)
+Legal moves:
+  [0] SINGLE(RJ)
+  [1] BOMB(5,5,5,5)
+  [2] BOMB(10,10,10,10)
+  [3] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays PASS  (hand: 25)
+P3 plays PASS  (hand: 26)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 4 5 5 5 5 6 6 6 7 8 9 9 9 10 10 10 10 J A A 2 2
+Table: (you are leading)
+Legal moves:
+  [0] SINGLE(4)
+  [1] SINGLE(5)
+  [2] SINGLE(6)
+  [3] SINGLE(7)
+  [4] SINGLE(8)
+  [5] SINGLE(9)
+  [6] SINGLE(10)
+  [7] SINGLE(J)
+  [8] SINGLE(A)
+  [9] SINGLE(2)
+  [10] PAIR(4,4)
+  [11] PAIR(5,5)
+  [12] PAIR(6,6)
+  [13] PAIR(9,9)
+  [14] PAIR(10,10)
+  [15] PAIR(A,A)
+  [16] PAIR(2,2)
+  [17] TRIPLE(4,4,4)
+  [18] TRIPLE(5,5,5)
+  [19] TRIPLE(6,6,6)
+  [20] TRIPLE(9,9,9)
+  [21] TRIPLE(10,10,10)
+  [22] BOMB(5,5,5,5)
+  [23] BOMB(10,10,10,10)
+  [24] FULL_HOUSE(4,4,4,5,5)
+  [25] FULL_HOUSE(4,4,4,6,6)
+  [26] FULL_HOUSE(4,4,4,9,9)
+  [27] FULL_HOUSE(4,4,4,10,10)
+  [28] FULL_HOUSE(4,4,4,A,A)
+  [29] FULL_HOUSE(4,4,4,2,2)
+  [30] FULL_HOUSE(5,5,5,4,4)
+  [31] FULL_HOUSE(5,5,5,6,6)
+  [32] FULL_HOUSE(5,5,5,9,9)
+  [33] FULL_HOUSE(5,5,5,10,10)
+  [34] FULL_HOUSE(5,5,5,A,A)
+  [35] FULL_HOUSE(5,5,5,2,2)
+  [36] FULL_HOUSE(6,6,6,4,4)
+  [37] FULL_HOUSE(6,6,6,5,5)
+  [38] FULL_HOUSE(6,6,6,9,9)
+  [39] FULL_HOUSE(6,6,6,10,10)
+  [40] FULL_HOUSE(6,6,6,A,A)
+  [41] FULL_HOUSE(6,6,6,2,2)
+  [42] FULL_HOUSE(9,9,9,4,4)
+  [43] FULL_HOUSE(9,9,9,5,5)
+  [44] FULL_HOUSE(9,9,9,6,6)
+  [45] FULL_HOUSE(9,9,9,10,10)
+  [46] FULL_HOUSE(9,9,9,A,A)
+  [47] FULL_HOUSE(9,9,9,2,2)
+  [48] FULL_HOUSE(10,10,10,4,4)
+  [49] FULL_HOUSE(10,10,10,5,5)
+  [50] FULL_HOUSE(10,10,10,6,6)
+  [51] FULL_HOUSE(10,10,10,9,9)
+  [52] FULL_HOUSE(10,10,10,A,A)
+  [53] FULL_HOUSE(10,10,10,2,2)
+  [54] AIRPLANE(4,4,4,5,5,5,6,6,9,9)
+  [55] AIRPLANE(4,4,4,5,5,5,6,6,10,10)
+  [56] AIRPLANE(4,4,4,5,5,5,6,6,A,A)
+  [57] AIRPLANE(4,4,4,5,5,5,6,6,2,2)
+  [58] AIRPLANE(4,4,4,5,5,5,9,9,10,10)
+  [59] AIRPLANE(4,4,4,5,5,5,9,9,A,A)
+  [60] AIRPLANE(4,4,4,5,5,5,9,9,2,2)
+  [61] AIRPLANE(4,4,4,5,5,5,10,10,A,A)
+  [62] AIRPLANE(4,4,4,5,5,5,10,10,2,2)
+  [63] AIRPLANE(4,4,4,5,5,5,A,A,2,2)
+  [64] AIRPLANE(4,4,4,6,6,6,5,5,9,9)
+  [65] AIRPLANE(4,4,4,6,6,6,5,5,10,10)
+  [66] AIRPLANE(4,4,4,6,6,6,5,5,A,A)
+  [67] AIRPLANE(4,4,4,6,6,6,5,5,2,2)
+  [68] AIRPLANE(4,4,4,6,6,6,9,9,10,10)
+  [69] AIRPLANE(4,4,4,6,6,6,9,9,A,A)
+  [70] AIRPLANE(4,4,4,6,6,6,9,9,2,2)
+  [71] AIRPLANE(4,4,4,6,6,6,10,10,A,A)
+  [72] AIRPLANE(4,4,4,6,6,6,10,10,2,2)
+  [73] AIRPLANE(4,4,4,6,6,6,A,A,2,2)
+  [74] AIRPLANE(4,4,4,9,9,9,5,5,6,6)
+  [75] AIRPLANE(4,4,4,9,9,9,5,5,10,10)
+  [76] AIRPLANE(4,4,4,9,9,9,5,5,A,A)
+  [77] AIRPLANE(4,4,4,9,9,9,5,5,2,2)
+  [78] AIRPLANE(4,4,4,9,9,9,6,6,10,10)
+  [79] AIRPLANE(4,4,4,9,9,9,6,6,A,A)
+  [80] AIRPLANE(4,4,4,9,9,9,6,6,2,2)
+  [81] AIRPLANE(4,4,4,9,9,9,10,10,A,A)
+  [82] AIRPLANE(4,4,4,9,9,9,10,10,2,2)
+  [83] AIRPLANE(4,4,4,9,9,9,A,A,2,2)
+  [84] AIRPLANE(4,4,4,10,10,10,5,5,6,6)
+  [85] AIRPLANE(4,4,4,10,10,10,5,5,9,9)
+  [86] AIRPLANE(4,4,4,10,10,10,5,5,A,A)
+  [87] AIRPLANE(4,4,4,10,10,10,5,5,2,2)
+  [88] AIRPLANE(4,4,4,10,10,10,6,6,9,9)
+  [89] AIRPLANE(4,4,4,10,10,10,6,6,A,A)
+  [90] AIRPLANE(4,4,4,10,10,10,6,6,2,2)
+  [91] AIRPLANE(4,4,4,10,10,10,9,9,A,A)
+  [92] AIRPLANE(4,4,4,10,10,10,9,9,2,2)
+  [93] AIRPLANE(4,4,4,10,10,10,A,A,2,2)
+  [94] AIRPLANE(5,5,5,6,6,6,4,4,9,9)
+  [95] AIRPLANE(5,5,5,6,6,6,4,4,10,10)
+  [96] AIRPLANE(5,5,5,6,6,6,4,4,A,A)
+  [97] AIRPLANE(5,5,5,6,6,6,4,4,2,2)
+  [98] AIRPLANE(5,5,5,6,6,6,9,9,10,10)
+  [99] AIRPLANE(5,5,5,6,6,6,9,9,A,A)
+  [100] AIRPLANE(5,5,5,6,6,6,9,9,2,2)
+  [101] AIRPLANE(5,5,5,6,6,6,10,10,A,A)
+  [102] AIRPLANE(5,5,5,6,6,6,10,10,2,2)
+  [103] AIRPLANE(5,5,5,6,6,6,A,A,2,2)
+  [104] AIRPLANE(5,5,5,9,9,9,4,4,6,6)
+  [105] AIRPLANE(5,5,5,9,9,9,4,4,10,10)
+  [106] AIRPLANE(5,5,5,9,9,9,4,4,A,A)
+  [107] AIRPLANE(5,5,5,9,9,9,4,4,2,2)
+  [108] AIRPLANE(5,5,5,9,9,9,6,6,10,10)
+  [109] AIRPLANE(5,5,5,9,9,9,6,6,A,A)
+  [110] AIRPLANE(5,5,5,9,9,9,6,6,2,2)
+  [111] AIRPLANE(5,5,5,9,9,9,10,10,A,A)
+  [112] AIRPLANE(5,5,5,9,9,9,10,10,2,2)
+  [113] AIRPLANE(5,5,5,9,9,9,A,A,2,2)
+  [114] AIRPLANE(5,5,5,10,10,10,4,4,6,6)
+  [115] AIRPLANE(5,5,5,10,10,10,4,4,9,9)
+  [116] AIRPLANE(5,5,5,10,10,10,4,4,A,A)
+  [117] AIRPLANE(5,5,5,10,10,10,4,4,2,2)
+  [118] AIRPLANE(5,5,5,10,10,10,6,6,9,9)
+  [119] AIRPLANE(5,5,5,10,10,10,6,6,A,A)
+  [120] AIRPLANE(5,5,5,10,10,10,6,6,2,2)
+  [121] AIRPLANE(5,5,5,10,10,10,9,9,A,A)
+  [122] AIRPLANE(5,5,5,10,10,10,9,9,2,2)
+  [123] AIRPLANE(5,5,5,10,10,10,A,A,2,2)
+  [124] AIRPLANE(6,6,6,9,9,9,4,4,5,5)
+  [125] AIRPLANE(6,6,6,9,9,9,4,4,10,10)
+  [126] AIRPLANE(6,6,6,9,9,9,4,4,A,A)
+  [127] AIRPLANE(6,6,6,9,9,9,4,4,2,2)
+  [128] AIRPLANE(6,6,6,9,9,9,5,5,10,10)
+  [129] AIRPLANE(6,6,6,9,9,9,5,5,A,A)
+  [130] AIRPLANE(6,6,6,9,9,9,5,5,2,2)
+  [131] AIRPLANE(6,6,6,9,9,9,10,10,A,A)
+  [132] AIRPLANE(6,6,6,9,9,9,10,10,2,2)
+  [133] AIRPLANE(6,6,6,9,9,9,A,A,2,2)
+  [134] AIRPLANE(6,6,6,10,10,10,4,4,5,5)
+  [135] AIRPLANE(6,6,6,10,10,10,4,4,9,9)
+  [136] AIRPLANE(6,6,6,10,10,10,4,4,A,A)
+  [137] AIRPLANE(6,6,6,10,10,10,4,4,2,2)
+  [138] AIRPLANE(6,6,6,10,10,10,5,5,9,9)
+  [139] AIRPLANE(6,6,6,10,10,10,5,5,A,A)
+  [140] AIRPLANE(6,6,6,10,10,10,5,5,2,2)
+  [141] AIRPLANE(6,6,6,10,10,10,9,9,A,A)
+  [142] AIRPLANE(6,6,6,10,10,10,9,9,2,2)
+  [143] AIRPLANE(6,6,6,10,10,10,A,A,2,2)
+  [144] AIRPLANE(9,9,9,10,10,10,4,4,5,5)
+  [145] AIRPLANE(9,9,9,10,10,10,4,4,6,6)
+  [146] AIRPLANE(9,9,9,10,10,10,4,4,A,A)
+  [147] AIRPLANE(9,9,9,10,10,10,4,4,2,2)
+  [148] AIRPLANE(9,9,9,10,10,10,5,5,6,6)
+  [149] AIRPLANE(9,9,9,10,10,10,5,5,A,A)
+  [150] AIRPLANE(9,9,9,10,10,10,5,5,2,2)
+  [151] AIRPLANE(9,9,9,10,10,10,6,6,A,A)
+  [152] AIRPLANE(9,9,9,10,10,10,6,6,2,2)
+  [153] AIRPLANE(9,9,9,10,10,10,A,A,2,2)
+  [154] CONSEC_TRIPLES(4,4,4,5,5,5)
+  [155] CONSEC_TRIPLES(5,5,5,6,6,6)
+  [156] CONSEC_TRIPLES(4,4,4,5,5,5,6,6,6)
+  [157] CONSEC_TRIPLES(9,9,9,10,10,10)
+  [158] CONSEC_PAIRS(4,4,5,5,6,6)
+  [159] STRAIGHT(4,5,6,7,8)
+  [160] STRAIGHT(5,6,7,8,9)
+  [161] STRAIGHT(6,7,8,9,10)
+  [162] STRAIGHT(7,8,9,10,J)
+  [163] STRAIGHT(4,5,6,7,8,9)
+  [164] STRAIGHT(5,6,7,8,9,10)
+  [165] STRAIGHT(6,7,8,9,10,J)
+  [166] STRAIGHT(4,5,6,7,8,9,10)
+  [167] STRAIGHT(5,6,7,8,9,10,J)
+  [168] STRAIGHT(4,5,6,7,8,9,10,J)
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays SINGLE(K)  (hand: 24)
+P3 plays SINGLE(A)  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 5 5 5 5 6 6 6 7 8 9 9 9 10 10 10 10 J A A 2 2
+Table: SINGLE(A) (led by P3)
+Legal moves:
+  [0] SINGLE(2)
+  [1] BOMB(5,5,5,5)
+  [2] BOMB(10,10,10,10)
+  [3] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays BOMB(7,7,7,7)  (hand: 20)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 5 5 5 5 6 6 6 7 8 9 9 9 10 10 10 10 J A A 2
+Table: BOMB(7,7,7,7) (led by P2)
+Legal moves:
+  [0] BOMB(10,10,10,10)
+  [1] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays BOMB(J,J,J,J)  (hand: 16)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 5 5 5 5 6 6 6 7 8 9 9 9 J A A 2
+Table: BOMB(J,J,J,J) (led by P2)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays FULL_HOUSE(Q,Q,Q,3,3)  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 5 5 5 5 6 6 6 7 8 9 9 9 J A A 2
+Table: FULL_HOUSE(Q,Q,Q,3,3) (led by P2)
+Legal moves:
+  [0] BOMB(5,5,5,5)
+  [1] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 27)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 4 6 6 6 7 8 9 9 9 J A A 2
+Table: (you are leading)
+Legal moves:
+  [0] SINGLE(4)
+  [1] SINGLE(6)
+  [2] SINGLE(7)
+  [3] SINGLE(8)
+  [4] SINGLE(9)
+  [5] SINGLE(J)
+  [6] SINGLE(A)
+  [7] SINGLE(2)
+  [8] PAIR(4,4)
+  [9] PAIR(6,6)
+  [10] PAIR(9,9)
+  [11] PAIR(A,A)
+  [12] TRIPLE(6,6,6)
+  [13] TRIPLE(9,9,9)
+  [14] FULL_HOUSE(6,6,6,4,4)
+  [15] FULL_HOUSE(6,6,6,9,9)
+  [16] FULL_HOUSE(6,6,6,A,A)
+  [17] FULL_HOUSE(9,9,9,4,4)
+  [18] FULL_HOUSE(9,9,9,6,6)
+  [19] FULL_HOUSE(9,9,9,A,A)
+  [20] AIRPLANE(6,6,6,9,9,9,4,4,A,A)
+Choose # (or 'p' to pass): P1 plays SINGLE(5)  (hand: 26)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 6 6 6 7 8 9 9 9 J A A 2
+Table: SINGLE(5) (led by P1)
+Legal moves:
+  [0] SINGLE(6)
+  [1] SINGLE(7)
+  [2] SINGLE(8)
+  [3] SINGLE(9)
+  [4] SINGLE(J)
+  [5] SINGLE(A)
+  [6] SINGLE(2)
+  [7] PASS
+Choose # (or 'p' to pass): P1 plays SINGLE(9)  (hand: 25)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 6 6 7 8 9 9 9 J A A 2
+Table: SINGLE(9) (led by P1)
+Legal moves:
+  [0] SINGLE(J)
+  [1] SINGLE(A)
+  [2] SINGLE(2)
+  [3] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 25)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 4 6 6 7 8 9 9 9 A A 2
+Table: (you are leading)
+Legal moves:
+  [0] SINGLE(4)
+  [1] SINGLE(6)
+  [2] SINGLE(7)
+  [3] SINGLE(8)
+  [4] SINGLE(9)
+  [5] SINGLE(A)
+  [6] SINGLE(2)
+  [7] PAIR(6,6)
+  [8] PAIR(9,9)
+  [9] PAIR(A,A)
+  [10] TRIPLE(9,9,9)
+  [11] FULL_HOUSE(9,9,9,6,6)
+  [12] FULL_HOUSE(9,9,9,A,A)
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 25)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 6 6 7 8 9 9 9 A A 2
+Table: (you are leading)
+Legal moves:
+  [0] SINGLE(6)
+  [1] SINGLE(7)
+  [2] SINGLE(8)
+  [3] SINGLE(9)
+  [4] SINGLE(A)
+  [5] SINGLE(2)
+  [6] PAIR(6,6)
+  [7] PAIR(9,9)
+  [8] PAIR(A,A)
+  [9] TRIPLE(9,9,9)
+  [10] FULL_HOUSE(9,9,9,6,6)
+  [11] FULL_HOUSE(9,9,9,A,A)
+Choose # (or 'p' to pass): P1 plays BOMB(Q,Q,Q,Q)  (hand: 21)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 6 7 8 9 9 9 A A 2
+Table: BOMB(Q,Q,Q,Q) (led by P1)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays SINGLE(8)  (hand: 20)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 6 7 8 9 9 9 A A 2
+Table: SINGLE(8) (led by P1)
+Legal moves:
+  [0] SINGLE(9)
+  [1] SINGLE(A)
+  [2] SINGLE(2)
+  [3] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 20)
+P2 plays PASS  (hand: 11)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 6 7 8 9 9 A A 2
+Table: (you are leading)
+Legal moves:
+  [0] SINGLE(6)
+  [1] SINGLE(7)
+  [2] SINGLE(8)
+  [3] SINGLE(9)
+  [4] SINGLE(A)
+  [5] SINGLE(2)
+  [6] PAIR(9,9)
+  [7] PAIR(A,A)
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 20)
+P2 plays SINGLE(RJ)  (hand: 10)
+P3 plays PASS  (hand: 25)
+
+--- Your turn (seat 0) ---
+Your hand: 7 8 9 9 A A 2
+Table: SINGLE(RJ) (led by P2)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 20)
+P2 plays SINGLE(3)  (hand: 9)
+P3 plays SINGLE(4)  (hand: 24)
+
+--- Your turn (seat 0) ---
+Your hand: 7 8 9 9 A A 2
+Table: SINGLE(4) (led by P3)
+Legal moves:
+  [0] SINGLE(7)
+  [1] SINGLE(8)
+  [2] SINGLE(9)
+  [3] SINGLE(A)
+  [4] SINGLE(2)
+  [5] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 20)
+P2 plays BOMB(A,A,A,A)  (hand: 5)
+P3 plays PASS  (hand: 24)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: BOMB(A,A,A,A) (led by P2)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 20)
+P2 plays FULL_HOUSE(8,8,8,2,2)  (hand: 0)
+P3 plays FULL_HOUSE(9,9,9,8,8)  (hand: 19)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: FULL_HOUSE(9,9,9,8,8) (led by P3)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 20)
+P3 plays AIRPLANE(6,6,6,10,10,10,3,3,7,7)  (hand: 9)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: AIRPLANE(6,6,6,10,10,10,3,3,7,7) (led by P3)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays BOMB(4,4,4,4)  (hand: 16)
+P3 plays PASS  (hand: 9)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: BOMB(4,4,4,4) (led by P1)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays STRAIGHT(5,6,7,8,9,10,J)  (hand: 9)
+P3 plays PASS  (hand: 9)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: STRAIGHT(5,6,7,8,9,10,J) (led by P1)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays FULL_HOUSE(K,K,K,3,3)  (hand: 4)
+P3 plays PASS  (hand: 9)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: FULL_HOUSE(K,K,K,3,3) (led by P1)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays SINGLE(BJ)  (hand: 3)
+P3 plays PASS  (hand: 9)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: SINGLE(BJ) (led by P1)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays SINGLE(BJ)  (hand: 2)
+P3 plays PASS  (hand: 9)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: SINGLE(BJ) (led by P1)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays SINGLE(A)  (hand: 1)
+P3 plays SINGLE(2)  (hand: 8)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: SINGLE(2) (led by P3)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 1)
+P3 plays FULL_HOUSE(K,K,K,5,5)  (hand: 3)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: FULL_HOUSE(K,K,K,5,5) (led by P3)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 1)
+P3 plays PAIR(J,J)  (hand: 1)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 A A 2
+Table: PAIR(J,J) (led by P3)
+Legal moves:
+  [0] PAIR(A,A)
+  [1] PASS
+Choose # (or 'p' to pass): P1 plays PASS  (hand: 1)
+P3 plays PASS  (hand: 1)
+
+--- Your turn (seat 0) ---
+Your hand: 8 9 9 2
+Table: (you are leading)
+Legal moves:
+  [0] SINGLE(8)
+  [1] SINGLE(9)
+  [2] SINGLE(2)
+  [3] PAIR(9,9)
+Choose # (or 'p' to pass): P1 plays SINGLE(2)  (hand: 0)
+P3 plays PASS  (hand: 1)
+
+--- Your turn (seat 0) ---
+Your hand: 9 9 2
+Table: SINGLE(2) (led by P1)
+Legal moves:
+  [0] PASS
+Choose # (or 'p' to pass): P3 plays SINGLE(2)  (hand: 0)
+
+=== Game over ===
+Finish order: [2, 1, 3, 0]
+You finished 4th of 4.

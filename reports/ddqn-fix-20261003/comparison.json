@@ -1,0 +1,46 @@
+{
+  "games_per_policy_per_opponent": 500,
+  "evaluation_seed": 920261003,
+  "results": {
+    "reports/ddqn-fix-20261003/baseline-0.best.pt": {
+      "greedy": 0.214,
+      "random": 0.792
+    },
+    "reports/ddqn-fix-20261003/baseline-1.best.pt": {
+      "greedy": 0.226,
+      "random": 0.888
+    },
+    "greedy": {
+      "greedy": 0.258,
+      "random": 0.864
+    },
+    "random": {
+      "greedy": 0.002,
+      "random": 0.224
+    },
+    "reports/ddqn-fix-20261003/baseline-2.best.pt": {
+      "greedy": 0.184,
+      "random": 0.79
+    },
+    "reports/ddqn-fix-20261003/partition-0.best.pt": {
+      "greedy": 0.31,
+      "random": 0.886
+    },
+    "reports/ddqn-fix-20261003/partition-1.best.pt": {
+      "greedy": 0.212,
+      "random": 0.8
+    },
+    "reports/ddqn-fix-20261003/partition-2.best.pt": {
+      "greedy": 0.248,
+      "random": 0.888
+    }
+  },
+  "baseline_mean": {
+    "greedy": 0.208,
+    "random": 0.8233333333333334
+  },
+  "partition_mean": {
+    "greedy": 0.25666666666666665,
+    "random": 0.858
+  }
+}

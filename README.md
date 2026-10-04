@@ -19,10 +19,10 @@ python3.12 -m pip install -r requirements.txt
 python3.12 scripts/play.py --greedy
 
 # You vs three copies of a trained DDQN bot
-python3.12 scripts/play.py --ddqn-checkpoint checkpoints/ddqn_v3_agent.best.pt
+python3.12 scripts/play.py --ddqn-checkpoint checkpoints/ddqn_v4_agent.best.pt
 
 # You vs DDQN, Greedy and Random
-python3.12 scripts/play.py --ddqn-checkpoint checkpoints/ddqn_v3_agent.best.pt --greedy --random
+python3.12 scripts/play.py --ddqn-checkpoint checkpoints/ddqn_v4_agent.best.pt --greedy --random
 ```
 
 You are **P0**. Enter a displayed move number, or `p` to pass when allowed.
@@ -36,12 +36,12 @@ If a checkpoint fails to load, play prints a warning and substitutes Greedy.
 Choose a bot; **each command starts fresh**, not from an existing checkpoint.
 
 ```bash
-python3.12 -m training.train --agent ddqn --episodes 2500 --save-path checkpoints/ddqn_v3_agent.pt
+python3.12 -m training.train --agent ddqn --episodes 2500 --save-path checkpoints/ddqn_v4_agent.pt
 python3.12 -m training.train --agent dqn --episodes 5000 --save-path checkpoints/dqn_win_agent.pt
 python3.12 -m training.train --agent qlearning --episodes 5000 --save-path checkpoints/qlearning_win_agent.npy
 ```
 
-- DDQN learns without demonstrations, using remaining-hand features and a random → mixed → greedy opponent curriculum.
+- DDQN learns without demonstrations, using remaining-hand partition features and a random → mixed → greedy opponent curriculum.
 - DQN and Q-learning default to greedy opponents and 200 greedy demonstration games; disable demonstrations with `--demo-games 0`.
 - Evaluation runs against greedy every 500 episodes. The ordinary checkpoint holds the latest weights; **`.best.pt` / `.best.npy`** holds the best validation model. Prefer the latter for play and evaluation.
 - Useful options: `--seed 42`, `--opponent greedy`, `--eval-every 500`, `--eval-games 100`. CPU with one Torch thread is the default.
@@ -49,6 +49,8 @@ python3.12 -m training.train --agent qlearning --episodes 5000 --save-path check
 For alternative placement/trick rewards, use `--agent shaped` (`.pt`) or
 `--agent shaped-ql` (`.npy`). All training options: `python3.12 -m training.train --help`.
 Old checkpoints retain their old architecture; retrain to use the new DDQN features.
+Partition features estimate how many plays each move leaves; `--no-partition-features`
+restores the previous representation. They add CPU work during training and play.
 
 ## Evaluate
 
@@ -57,7 +59,7 @@ matched deals. Missing or incompatible checkpoints are skipped.
 
 ```bash
 python3.12 evaluate.py --games 400 \
-  --ddqn-path checkpoints/ddqn_v3_agent.best.pt \
+  --ddqn-path checkpoints/ddqn_v4_agent.best.pt \
   --dqn-path checkpoints/dqn_win_agent.best.pt \
   --q-path checkpoints/qlearning_win_agent.best.npy \
   --json reports/tournament.json
@@ -72,7 +74,7 @@ random bots. Pass multiple checkpoint paths to compare models on identical deals
 This evaluator uses four players and two decks.
 
 ```bash
-python3.12 scripts/evaluate_ddqn.py checkpoints/ddqn_v3_agent.best.pt \
+python3.12 scripts/evaluate_ddqn.py checkpoints/ddqn_v4_agent.best.pt \
   --games 500 --include-baselines --output reports/ddqn_eval.json
 ```
 
@@ -86,7 +88,7 @@ Watch a chosen bot in P0 against greedy opponents. With multiple games, only the
 first prints every move; the final summary shows win rate and placements.
 
 ```bash
-python3.12 scripts/watch.py --agent ddqn --checkpoint checkpoints/ddqn_v3_agent.best.pt --games 20
+python3.12 scripts/watch.py --agent ddqn --checkpoint checkpoints/ddqn_v4_agent.best.pt --games 20
 python3.12 scripts/watch.py --agent random --games 20
 python3.12 scripts/demo.py  # one full greedy-bot game
 ```
@@ -112,5 +114,5 @@ python3.12 -B scripts/test_rules.py
 
 `game/` contains the rules, `env/` the RL environment/features, `agents/` the
 learners, `bots/` the heuristic/reward bots, and `training/` the training loop.
-See the [DDQN experiment report](reports/ddqn-v3-20261003/REPORT.md) for architecture,
+See the [DDQN experiment report](reports/ddqn-fix-20261003/REPORT.md) for architecture,
 measured results and limitations.

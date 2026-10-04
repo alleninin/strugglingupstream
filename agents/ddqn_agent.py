@@ -33,7 +33,7 @@ class DDQNAgent(BaseAgent):
                  target_update: int = 200, alpha: float = 0.6, beta: float = 0.4,
                  beta_anneal_steps: int = 100000, seed: int = None, device="auto",
                  dueling=False, n_step=1, learning_starts=64, train_every=1,
-                 planning_features=None):
+                 planning_features=None, partition_features=False):
         if n_step < 1 or train_every < 1 or learning_starts < 0:
             raise ValueError("invalid replay update schedule")
         self.input_dim = state_dim + action_dim
@@ -42,6 +42,9 @@ class DDQNAgent(BaseAgent):
         if planning_features is None:
             planning_features = not dueling and min(state_dim, action_dim) >= 15
         self.planning_features = planning_features
+        self.partition_features = partition_features
+        if partition_features and not planning_features:
+            raise ValueError("partition features require hand features")
         if planning_features and (dueling or min(state_dim, action_dim) < 15):
             raise ValueError("hand features require scalar Q and rank-count observations")
         self.n_step, self.learning_starts, self.train_every = n_step, learning_starts, train_every
@@ -69,7 +72,7 @@ class DDQNAgent(BaseAgent):
 
     def _network(self):
         if self.planning_features:
-            return HandQNetwork(self.state_dim, self.action_dim)
+            return HandQNetwork(self.state_dim, self.action_dim, self.partition_features)
         return (DuelingQNetwork(self.state_dim, self.action_dim) if self.dueling
                 else QNetwork(self.state_dim + self.action_dim))
 
@@ -229,6 +232,10 @@ class DDQNAgent(BaseAgent):
         weights = torch.load(path, map_location=self.device, weights_only=True)
         self.dueling = 'common.0.weight' in weights
         self.planning_features = 'feature_schema' in weights
+        schema = weights.get('feature_schema')
+        self.partition_features = schema is not None and len(schema) == 3
+        if self.partition_features and int(schema[2]) != 2:
+            raise ValueError('unsupported hand feature schema')
         if self.planning_features and int(weights['feature_schema'][1]) != self.action_dim:
             raise ValueError("checkpoint has incompatible action features")
         saved_dim = (int(weights['feature_schema'][0]) if self.planning_features else

@@ -1,6 +1,6 @@
 """Scalar Q network with explicit, public after-move hand features.
 
-These are counts, not an action policy or a search through opponents' hands.
+These are own-hand counts/partitions, not an action policy or opponent search.
 They expose combo preservation to the learner without requiring it to discover
 integer subtraction, counting thresholds and runs from sparse game outcomes.
 """
@@ -10,11 +10,13 @@ from .dqn_agent import QNetwork
 
 
 class HandQNetwork(nn.Module):
-    def __init__(self, state_dim, action_dim):
+    def __init__(self, state_dim, action_dim, partition_features=False):
         super().__init__()
         self.state_dim = state_dim
-        self.register_buffer('feature_schema', torch.tensor([state_dim, action_dim]))
-        self.q = QNetwork(state_dim + action_dim + 26)
+        self.partition_features = partition_features
+        schema = [state_dim, action_dim, 2] if partition_features else [state_dim, action_dim]
+        self.register_buffer('feature_schema', torch.tensor(schema))
+        self.q = QNetwork(state_dim + action_dim + 26 + (5 if partition_features else 0))
 
     def encode(self, x):
         state, action = x[:, :self.state_dim], x[:, self.state_dim:]
@@ -37,7 +39,19 @@ class HandQNetwork(nn.Module):
         ), dim=1)
         normalized_state = torch.cat((before / 4, state[:, 15:]), dim=1)
         normalized_action = torch.cat((played / 4, action[:, 15:]), dim=1)
-        return torch.cat((normalized_state, normalized_action, after / 4, stats), dim=1)
+        parts = [normalized_state, normalized_action, after / 4, stats]
+        if self.partition_features:
+            from env.hand_structure import hand_structure
+            # Counts are observations, not differentiable model parameters.
+            # Cache partitions across inference, replay and target-network calls.
+            counts = torch.cat((before, after), dim=0).detach().to('cpu').numpy().round().astype('int16')
+            structures = [hand_structure(tuple(row.tolist())) for row in counts]
+            structure = x.new_tensor(structures)
+            old, new = structure[:len(x)], structure[len(x):]
+            parts.append(torch.stack((old[:, 0] / 15, new[:, 0] / 15,
+                (old[:, 0] - new[:, 0]) / 4, new[:, 1] / 15,
+                (old[:, 1] - new[:, 1]) / 4), dim=1))
+        return torch.cat(parts, dim=1)
 
     def forward(self, x):
         return self.q(self.encode(x))

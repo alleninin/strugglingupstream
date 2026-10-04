@@ -1,0 +1,44 @@
+{
+  "games": 300,
+  "seed": 731926,
+  "checkpoints": {
+    "dqn_best": {
+      "source": "checkpoints/dqn_win_agent.best.pt",
+      "sha256": "5f718369a19ad53a4b4637397cfbd490fa46b92ac37cb2089d9b3b57b8f21472"
+    },
+    "dqn_latest": {
+      "source": "checkpoints/dqn_win_agent.pt",
+      "sha256": "cc2b0f85ce836d13de72fa3d86453acd7bed271023b44ac5f67c4cea175b1ccd"
+    },
+    "ddqn_best": {
+      "source": "checkpoints/ddqn_v3_agent.best.pt",
+      "sha256": "9eb43627d49a991829a0a0d03c0ce7043d91d6786f5e1b916887a6aa470bb9f7"
+    }
+  },
+  "rates": {
+    "dqn_best": {
+      "greedy": 0.11666666666666667,
+      "random": 0.7366666666666667
+    },
+    "dqn_latest": {
+      "greedy": 0.08333333333333333,
+      "random": 0.7366666666666667
+    },
+    "ddqn_best": {
+      "greedy": 0.17,
+      "random": 0.8233333333333334
+    },
+    "greedy": {
+      "greedy": 0.25666666666666665,
+      "random": 0.8733333333333333
+    },
+    "random": {
+      "greedy": 0.0033333333333333335,
+      "random": 0.26
+    },
+    "dqn_warmup_seed0": {
+      "greedy": 0.11333333333333333,
+      "random": 0.8
+    }
+  }
+}

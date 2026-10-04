@@ -1,0 +1,4 @@
+reports/ddqn-fix-20261003/baseline-0.best.pt {"greedy": 0.214, "random": 0.792}
+reports/ddqn-fix-20261003/baseline-1.best.pt {"greedy": 0.226, "random": 0.888}
+greedy {"greedy": 0.258, "random": 0.864}
+random {"greedy": 0.002, "random": 0.224}

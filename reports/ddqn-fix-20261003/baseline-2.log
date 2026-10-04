@@ -1,0 +1,34 @@
+[training] agent=ddqn reward=win device=cpu torch_threads=1
+[DDQN] network=HandQNetwork state_dim=67 partition_features=False n_step=3 learning_starts=1000 train_every=4
+[ddqn 100/2500] epsilon=0.478 opponent=random training_win_rate=0.400 last 100 episodes=3.3s total_train=3.3s total_eval=0.0s
+[ddqn 200/2500] epsilon=0.455 opponent=random training_win_rate=0.580 last 100 episodes=3.6s total_train=6.9s total_eval=0.0s
+[ddqn 300/2500] epsilon=0.433 opponent=random training_win_rate=0.690 last 100 episodes=3.7s total_train=10.6s total_eval=0.0s
+[ddqn 400/2500] epsilon=0.410 opponent=random training_win_rate=0.730 last 100 episodes=3.7s total_train=14.3s total_eval=0.0s
+[ep  500] win_rate_vs_greedy = 0.030 (100 evaluation games in 6.7s)
+[ddqn 500/2500] epsilon=0.388 opponent=random training_win_rate=0.710 last 100 episodes=4.6s total_train=19.0s total_eval=6.7s
+[ddqn 600/2500] epsilon=0.365 opponent=mixed training_win_rate=0.140 last 100 episodes=5.3s total_train=24.3s total_eval=6.7s
+[ddqn 700/2500] epsilon=0.343 opponent=mixed training_win_rate=0.190 last 100 episodes=5.2s total_train=29.5s total_eval=6.7s
+[ddqn 800/2500] epsilon=0.320 opponent=mixed training_win_rate=0.260 last 100 episodes=5.2s total_train=34.7s total_eval=6.7s
+[ddqn 900/2500] epsilon=0.298 opponent=mixed training_win_rate=0.190 last 100 episodes=5.0s total_train=39.7s total_eval=6.7s
+[ep 1000] win_rate_vs_greedy = 0.130 (100 evaluation games in 6.5s)
+[ddqn 1000/2500] epsilon=0.275 opponent=mixed training_win_rate=0.160 last 100 episodes=5.2s total_train=44.9s total_eval=13.1s
+[ddqn 1100/2500] epsilon=0.253 opponent=mixed training_win_rate=0.210 last 100 episodes=5.5s total_train=50.4s total_eval=13.1s
+[ddqn 1200/2500] epsilon=0.230 opponent=mixed training_win_rate=0.240 last 100 episodes=5.4s total_train=55.8s total_eval=13.1s
+[ddqn 1300/2500] epsilon=0.208 opponent=greedy training_win_rate=0.070 last 100 episodes=6.0s total_train=61.7s total_eval=13.1s
+[ddqn 1400/2500] epsilon=0.185 opponent=greedy training_win_rate=0.050 last 100 episodes=6.9s total_train=68.6s total_eval=13.1s
+[ep 1500] win_rate_vs_greedy = 0.140 (100 evaluation games in 6.1s)
+[ddqn 1500/2500] epsilon=0.163 opponent=greedy training_win_rate=0.090 last 100 episodes=6.9s total_train=75.5s total_eval=19.2s
+[ddqn 1600/2500] epsilon=0.140 opponent=greedy training_win_rate=0.060 last 100 episodes=6.8s total_train=82.3s total_eval=19.2s
+[ddqn 1700/2500] epsilon=0.118 opponent=greedy training_win_rate=0.160 last 100 episodes=7.1s total_train=89.5s total_eval=19.2s
+[ddqn 1800/2500] epsilon=0.095 opponent=greedy training_win_rate=0.110 last 100 episodes=7.0s total_train=96.4s total_eval=19.2s
+[ddqn 1900/2500] epsilon=0.073 opponent=greedy training_win_rate=0.120 last 100 episodes=7.1s total_train=103.5s total_eval=19.2s
+[ep 2000] win_rate_vs_greedy = 0.160 (100 evaluation games in 6.4s)
+[ddqn 2000/2500] epsilon=0.050 opponent=greedy training_win_rate=0.130 last 100 episodes=6.9s total_train=110.3s total_eval=25.7s
+[ddqn 2100/2500] epsilon=0.050 opponent=greedy training_win_rate=0.150 last 100 episodes=6.8s total_train=117.1s total_eval=25.7s
+[ddqn 2200/2500] epsilon=0.050 opponent=greedy training_win_rate=0.140 last 100 episodes=6.8s total_train=123.9s total_eval=25.7s
+[ddqn 2300/2500] epsilon=0.050 opponent=greedy training_win_rate=0.220 last 100 episodes=6.9s total_train=130.8s total_eval=25.7s
+[ddqn 2400/2500] epsilon=0.050 opponent=greedy training_win_rate=0.160 last 100 episodes=7.1s total_train=137.9s total_eval=25.7s
+[ep 2500] win_rate_vs_greedy = 0.220 (100 evaluation games in 6.2s)
+[ddqn 2500/2500] epsilon=0.050 opponent=greedy training_win_rate=0.160 last 100 episodes=6.8s total_train=144.7s total_eval=31.9s
+Saved ddqn agent -> reports/ddqn-fix-20261003/baseline-2.pt
+Best validation win rate=0.220 -> reports/ddqn-fix-20261003/baseline-2.best.pt

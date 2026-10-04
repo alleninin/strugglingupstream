@@ -1,0 +1,71 @@
+usage: train.py [-h] [--agent {qlearning,dqn,ddqn,shaped,shaped-ql}]
+                [--episodes EPISODES] [--num-players NUM_PLAYERS]
+                [--num-decks NUM_DECKS] [--seed SEED] [--save-path SAVE_PATH]
+                [--eval-every EVAL_EVERY] [--eval-games EVAL_GAMES]
+                [--progress-every PROGRESS_EVERY]
+                [--device {cpu,mps,cuda,auto}] [--torch-threads TORCH_THREADS]
+                [--demo-games DEMO_GAMES] [--n-step N_STEP]
+                [--learning-starts LEARNING_STARTS]
+                [--train-every TRAIN_EVERY] [--gamma GAMMA]
+                [--planning-features | --no-planning-features]
+                [--partition-features | --no-partition-features]
+                [--demo-updates DEMO_UPDATES] [--demo-weight DEMO_WEIGHT]
+                [--lambda1 LAMBDA1] [--lambda2 LAMBDA2]
+                [--potential-scale POTENTIAL_SCALE]
+                [--trick-scale TRICK_SCALE]
+                [--opponent {greedy,random,mixed,curriculum}]
+                [--eval-opponent {greedy,random,mixed}]
+                [--reward {win,default,basic}]
+
+options:
+  -h, --help            show this help message and exit
+  --agent {qlearning,dqn,ddqn,shaped,shaped-ql}
+  --episodes EPISODES
+  --num-players NUM_PLAYERS
+  --num-decks NUM_DECKS
+  --seed SEED
+  --save-path SAVE_PATH
+                        checkpoint path (defaults to
+                        checkpoints/<agent>_agent.pt/.npy)
+  --eval-every EVAL_EVERY
+  --eval-games EVAL_GAMES
+  --progress-every PROGRESS_EVERY
+  --device {cpu,mps,cuda,auto}
+                        training device; CPU is the default for these small
+                        networks
+  --torch-threads TORCH_THREADS
+                        CPU threads for neural-network operations
+  --demo-games DEMO_GAMES
+                        greedy warm-up games: 200 for dqn/qlearning, 0 for
+                        ddqn/shaped
+  --n-step N_STEP       DDQN return horizon
+  --learning-starts LEARNING_STARTS
+                        DDQN replay warm-up transitions
+  --train-every TRAIN_EVERY
+                        DDQN transitions per gradient update
+  --gamma GAMMA         discount; defaults to 1 for win reward, .95 otherwise
+  --planning-features, --no-planning-features
+                        DDQN: expose remaining-hand counts and combo structure
+                        to the Q network
+  --partition-features, --no-partition-features
+                        DDQN: disjoint hand-partition estimates; enabled with
+                        planning features by default
+  --demo-updates DEMO_UPDATES
+                        warm-up minibatches (32 examples each)
+  --demo-weight DEMO_WEIGHT
+                        demonstration rehearsal weight during reinforcement
+                        learning
+  --lambda1 LAMBDA1
+  --lambda2 LAMBDA2
+  --potential-scale POTENTIAL_SCALE
+  --trick-scale TRICK_SCALE
+  --opponent {greedy,random,mixed,curriculum}
+                        opponent policy used for the other seats during
+                        training
+  --eval-opponent {greedy,random,mixed}
+                        opponent policy used for the periodic win-rate
+                        evaluation
+  --reward {win,default,basic}
+                        defaults to win (first-place outcome with potential
+                        shaping), except shaped agents; default uses per-card
+                        plus placement; basic uses per-card plus win

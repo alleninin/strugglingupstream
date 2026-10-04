@@ -73,9 +73,13 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
           progress_every=0, eval_games=100, device="cpu", torch_threads=1,
           demo_games=None, demo_updates=1000, demo_weight=0.1,
           n_step=3, learning_starts=1000, train_every=4, gamma=None,
-          planning_features=True):
+          planning_features=True, partition_features=None):
     if gamma is not None and not 0 < gamma <= 1:
         raise ValueError("gamma must be in (0, 1]")
+    if partition_features is None:
+        partition_features = agent_kind == "ddqn" and planning_features
+    if partition_features and agent_kind != "ddqn":
+        raise ValueError("partition features are supported only for DDQN")
     if demo_games is None:
         demo_games = 200 if agent_kind in ("dqn", "qlearning") else 0
     if opponent is None:
@@ -122,7 +126,7 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
                           epsilon=0.5, epsilon_decay=1.0, min_epsilon=0.05,
                           seed=seed, device=device, n_step=n_step,
                           learning_starts=learning_starts, train_every=train_every,
-                          planning_features=planning_features)
+                          planning_features=planning_features, partition_features=partition_features)
     else:
         raise ValueError(f"unknown agent: {agent_kind}")
 
@@ -146,7 +150,8 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
               f"torch_threads={torch.get_num_threads()}", flush=True)
         if agent_kind == "ddqn":
             print(f"[DDQN] network={type(inner.policy_net).__name__} state_dim={inner.state_dim} "
-                  f"n_step={inner.n_step} learning_starts={inner.learning_starts} "
+                  f"partition_features={inner.partition_features} n_step={inner.n_step} "
+                  f"learning_starts={inner.learning_starts} "
                   f"train_every={inner.train_every}", flush=True)
 
     stem, extension = os.path.splitext(save_path)
@@ -276,6 +281,8 @@ def main():
                     help="discount; defaults to 1 for win reward, .95 otherwise")
     ap.add_argument("--planning-features", action=argparse.BooleanOptionalAction, default=True,
                     help="DDQN: expose remaining-hand counts and combo structure to the Q network")
+    ap.add_argument("--partition-features", action=argparse.BooleanOptionalAction, default=None,
+                    help="DDQN: disjoint hand-partition estimates; enabled with planning features by default")
     ap.add_argument("--demo-updates", type=int, default=1000,
                     help="warm-up minibatches (32 examples each)")
     ap.add_argument("--demo-weight", type=float, default=0.1,
@@ -309,7 +316,8 @@ def main():
           eval_games=args.eval_games, device=args.device, torch_threads=args.torch_threads,
           demo_games=args.demo_games, demo_updates=args.demo_updates, demo_weight=args.demo_weight,
           n_step=args.n_step, learning_starts=args.learning_starts, train_every=args.train_every,
-          gamma=args.gamma, planning_features=args.planning_features)
+          gamma=args.gamma, planning_features=args.planning_features,
+          partition_features=args.partition_features)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,245 @@
+diff --git a/agents/ddqn_agent.py b/agents/ddqn_agent.py
+index 90b8f79..fe3e018 100644
+--- a/agents/ddqn_agent.py
++++ b/agents/ddqn_agent.py
+@@ -33,7 +33,7 @@ class DDQNAgent(BaseAgent):
+                  target_update: int = 200, alpha: float = 0.6, beta: float = 0.4,
+                  beta_anneal_steps: int = 100000, seed: int = None, device="auto",
+                  dueling=False, n_step=1, learning_starts=64, train_every=1,
+-                 planning_features=None):
++                 planning_features=None, partition_features=False, win_value=False, trace_correction=False):
+         if n_step < 1 or train_every < 1 or learning_starts < 0:
+             raise ValueError("invalid replay update schedule")
+         self.input_dim = state_dim + action_dim
+@@ -42,10 +42,18 @@ class DDQNAgent(BaseAgent):
+         if planning_features is None:
+             planning_features = not dueling and min(state_dim, action_dim) >= 15
+         self.planning_features = planning_features
++        self.partition_features = partition_features
++        self.win_value = win_value
++        if win_value and not planning_features:
++            raise ValueError("bounded win values require hand features")
++        if partition_features and not planning_features:
++            raise ValueError("partition features require hand features")
+         if planning_features and (dueling or min(state_dim, action_dim) < 15):
+             raise ValueError("hand features require scalar Q and rank-count observations")
+         self.n_step, self.learning_starts, self.train_every = n_step, learning_starts, train_every
+         self.pending = deque()
++        self.trace_correction = trace_correction
++        self._exploratory_action = False
+         self.learning_updates = 0
+         self.gamma = gamma
+         self.epsilon = epsilon
+@@ -69,7 +77,7 @@ class DDQNAgent(BaseAgent):
+ 
+     def _network(self):
+         if self.planning_features:
+-            return HandQNetwork(self.state_dim, self.action_dim)
++            return HandQNetwork(self.state_dim, self.action_dim, self.partition_features, self.win_value)
+         return (DuelingQNetwork(self.state_dim, self.action_dim) if self.dueling
+                 else QNetwork(self.state_dim + self.action_dim))
+ 
+@@ -120,7 +128,8 @@ class DDQNAgent(BaseAgent):
+     def act(self, obs, legal_moves: List[Move]) -> Move:
+         if not legal_moves:
+             return None
+-        if self.rng.random() < self.epsilon:
++        self._exploratory_action = self.rng.random() < self.epsilon
++        if self._exploratory_action:
+             return legal_moves[int(self.rng.integers(len(legal_moves)))]
+         with torch.no_grad():
+             scores = self._scores(self.policy_net,
+@@ -133,6 +142,14 @@ class DDQNAgent(BaseAgent):
+         state, action, reward, next_state, done, next_legal, cur_legal = transition
+         if not cur_legal:
+             raise ValueError("DDQN requires the current legal moves for dueling advantages")
++        # A sampled exploratory continuation is not a greedy-policy return.
++        # Bootstrap earlier transitions at this state, before its exploratory
++        # reward enters their multi-step targets. The exploratory action itself
++        # still becomes a valid off-policy Q-learning transition.
++        if self.trace_correction and self._exploratory_action:
++            while self.pending:
++                self._store_pending()
++        self._exploratory_action = False
+         chosen = cur_legal.index(action)
+         current_moves = self._move_vectors(cur_legal if self.dueling else [action])
+         if not self.dueling:
+@@ -167,6 +184,7 @@ class DDQNAgent(BaseAgent):
+         # Normal terminal transitions flush the queue. An abandoned deal must
+         # not leak unfinished returns into a different deal.
+         self.pending.clear()
++        self._exploratory_action = False
+ 
+     def _targets(self, data):
+         targets = self._t([item.reward for item in data])
+@@ -229,6 +247,13 @@ class DDQNAgent(BaseAgent):
+         weights = torch.load(path, map_location=self.device, weights_only=True)
+         self.dueling = 'common.0.weight' in weights
+         self.planning_features = 'feature_schema' in weights
++        self.win_value = 'win_value_schema' in weights
++        if self.win_value and int(weights['win_value_schema']) != 1:
++            raise ValueError('unsupported win value schema')
++        schema = weights.get('feature_schema')
++        self.partition_features = schema is not None and len(schema) == 3
++        if self.partition_features and int(schema[2]) != 2:
++            raise ValueError('unsupported hand feature schema')
+         if self.planning_features and int(weights['feature_schema'][1]) != self.action_dim:
+             raise ValueError("checkpoint has incompatible action features")
+         saved_dim = (int(weights['feature_schema'][0]) if self.planning_features else
+diff --git a/agents/hand_q_network.py b/agents/hand_q_network.py
+index a932861..f909248 100644
+--- a/agents/hand_q_network.py
++++ b/agents/hand_q_network.py
+@@ -10,11 +10,16 @@ from .dqn_agent import QNetwork
+ 
+ 
+ class HandQNetwork(nn.Module):
+-    def __init__(self, state_dim, action_dim):
++    def __init__(self, state_dim, action_dim, partition_features=False, win_value=False):
+         super().__init__()
+         self.state_dim = state_dim
+-        self.register_buffer('feature_schema', torch.tensor([state_dim, action_dim]))
+-        self.q = QNetwork(state_dim + action_dim + 26)
++        self.partition_features = partition_features
++        self.win_value = win_value
++        if win_value:
++            self.register_buffer("win_value_schema", torch.tensor(1))
++        schema = [state_dim, action_dim, 2] if partition_features else [state_dim, action_dim]
++        self.register_buffer('feature_schema', torch.tensor(schema))
++        self.q = QNetwork(state_dim + action_dim + 26 + (5 if partition_features else 0))
+ 
+     def encode(self, x):
+         state, action = x[:, :self.state_dim], x[:, self.state_dim:]
+@@ -37,7 +42,27 @@ class HandQNetwork(nn.Module):
+         ), dim=1)
+         normalized_state = torch.cat((before / 4, state[:, 15:]), dim=1)
+         normalized_action = torch.cat((played / 4, action[:, 15:]), dim=1)
+-        return torch.cat((normalized_state, normalized_action, after / 4, stats), dim=1)
++        parts = [normalized_state, normalized_action, after / 4, stats]
++        if self.partition_features:
++            from env.hand_structure import hand_structure
++            # Counts are observations, not differentiable model parameters.
++            # Cache partitions across inference, replay and target-network calls.
++            counts = torch.cat((before, after), dim=0).detach().to('cpu').numpy().round().astype('int16')
++            structures = [hand_structure(tuple(row.tolist())) for row in counts]
++            structure = x.new_tensor(structures)
++            old, new = structure[:len(x)], structure[len(x):]
++            parts.append(torch.stack((old[:, 0] / 15, new[:, 0] / 15,
++                (old[:, 0] - new[:, 0]) / 4, new[:, 1] / 15,
++                (old[:, 1] - new[:, 1]) / 4), dim=1))
++        return torch.cat(parts, dim=1)
+ 
+     def forward(self, x):
+-        return self.q(self.encode(x))
++        value = self.q(self.encode(x))
++        if self.win_value:
++            from env.features import NUM_RANKS, TYPE_DIM
++            # With undiscounted win shaping, Q = remaining hand fraction +
++            # expected terminal +/-1 outcome. Bound the learned outcome, not
++            # the reward or targets; action ordering within a state is preserved.
++            fraction = x[:, NUM_RANKS + TYPE_DIM + 3:NUM_RANKS + TYPE_DIM + 4]
++            value = fraction + value.tanh()
++        return value
+diff --git a/env/env.py b/env/env.py
+index 54d4b88..4837946 100644
+--- a/env/env.py
++++ b/env/env.py
+@@ -10,13 +10,17 @@ from bots.greedy_bot import GreedyBot
+ class ZhengShangYouEnv:
+     def __init__(self, num_players: int = 4, num_decks: int = 2,
+                  opponent_policies: Optional[List[Callable]] = None, seed=None,
+-                 reward_scheme: str = "default", reward_discount: float = 1.0):
++                 reward_scheme: str = "default", reward_discount: float = 1.0,
++                 win_potential: str = "cards"):
+         self.num_players = num_players
+         self.num_decks = num_decks
+         self.opponent_policies = opponent_policies
+         self.agent_seat = 0
+         self.seed = seed
+         self.reward_scheme = reward_scheme
++        if win_potential not in ("cards", "combos"):
++            raise ValueError("unknown win potential")
++        self.win_potential = win_potential
+         if not 0 < reward_discount <= 1:
+             raise ValueError("reward_discount must be in (0, 1]")
+         self.reward_discount = reward_discount
+@@ -37,6 +41,10 @@ class ZhengShangYouEnv:
+     def _potential(self):
+         # With the learner's matching discount, potential shaping telescopes to
+         # a fixed offset in discounted return, including terminal losses.
++        if self.win_potential == "combos":
++            from env.hand_structure import hand_structure
++            counts = tuple(int(x) for x in features._rank_vec(self.game.hands[self.agent_seat]))
++            return -3.0 * hand_structure(counts)[0] / self.game.initial_hand_size
+         return -len(self.game.hands[self.agent_seat]) / self.game.initial_hand_size
+ 
+     def _opponent_policy(self, seat: int) -> Callable:
+diff --git a/training/train.py b/training/train.py
+index ce03e6f..a9b2ba2 100644
+--- a/training/train.py
++++ b/training/train.py
+@@ -73,7 +73,7 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
+           progress_every=0, eval_games=100, device="cpu", torch_threads=1,
+           demo_games=None, demo_updates=1000, demo_weight=0.1,
+           n_step=3, learning_starts=1000, train_every=4, gamma=None,
+-          planning_features=True):
++          planning_features=True, partition_features=False, win_potential="cards", win_value=False, trace_correction=False):
+     if gamma is not None and not 0 < gamma <= 1:
+         raise ValueError("gamma must be in (0, 1]")
+     if demo_games is None:
+@@ -90,6 +90,9 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
+     if reward_scheme == "win" and agent_kind in ("shaped", "shaped-ql"):
+         raise ValueError("shaped agents replace rewards; use ddqn with --reward win")
+     win_objective = reward_scheme == "win"
++    if win_value and (agent_kind != "ddqn" or not win_objective or
++                      win_potential != "cards" or gamma not in (None, 1.0)):
++        raise ValueError("bounded win values require DDQN, win reward, card potential and gamma=1")
+     if agent_kind in ("dqn", "ddqn", "shaped"):
+         import torch
+         if torch_threads < 1:
+@@ -122,7 +125,8 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
+                           epsilon=0.5, epsilon_decay=1.0, min_epsilon=0.05,
+                           seed=seed, device=device, n_step=n_step,
+                           learning_starts=learning_starts, train_every=train_every,
+-                          planning_features=planning_features)
++                          planning_features=planning_features, partition_features=partition_features,
++                          win_value=win_value, trace_correction=trace_correction)
+     else:
+         raise ValueError(f"unknown agent: {agent_kind}")
+ 
+@@ -131,7 +135,8 @@ def train(agent_kind, episodes, num_players, num_decks, seed, save_path, eval_ev
+     env = ZhengShangYouEnv(num_players=num_players, num_decks=num_decks,
+                            opponent_policies=opp, seed=seed,
+                            reward_scheme=reward_scheme,
+-                           reward_discount=1.0 if gamma is None else gamma)
++                           reward_discount=1.0 if gamma is None else gamma,
++                           win_potential=win_potential)
+     if hasattr(agent, "set_env"):
+         agent.set_env(env)
+     os.makedirs(os.path.dirname(save_path) or ".", exist_ok=True)
+@@ -276,6 +281,14 @@ def main():
+                     help="discount; defaults to 1 for win reward, .95 otherwise")
+     ap.add_argument("--planning-features", action=argparse.BooleanOptionalAction, default=True,
+                     help="DDQN: expose remaining-hand counts and combo structure to the Q network")
++    ap.add_argument("--partition-features", action=argparse.BooleanOptionalAction, default=False,
++                    help="DDQN: add disjoint hand-partition estimates (CPU feature extraction)")
++    ap.add_argument("--trace-correction", action=argparse.BooleanOptionalAction, default=False,
++                    help="DDQN: bootstrap multi-step returns before exploratory continuations")
++    ap.add_argument("--win-value", action=argparse.BooleanOptionalAction, default=False,
++                    help="DDQN: bound the learned win outcome to its attainable range")
++    ap.add_argument("--win-potential", choices=["cards", "combos"], default="cards",
++                    help="potential for win reward; both preserve the terminal objective")
+     ap.add_argument("--demo-updates", type=int, default=1000,
+                     help="warm-up minibatches (32 examples each)")
+     ap.add_argument("--demo-weight", type=float, default=0.1,
+@@ -309,7 +322,9 @@ def main():
+           eval_games=args.eval_games, device=args.device, torch_threads=args.torch_threads,
+           demo_games=args.demo_games, demo_updates=args.demo_updates, demo_weight=args.demo_weight,
+           n_step=args.n_step, learning_starts=args.learning_starts, train_every=args.train_every,
+-          gamma=args.gamma, planning_features=args.planning_features)
++          gamma=args.gamma, planning_features=args.planning_features,
++          partition_features=args.partition_features, win_potential=args.win_potential,
++          win_value=args.win_value, trace_correction=args.trace_correction)
+ 
+ 
+ if __name__ == "__main__":

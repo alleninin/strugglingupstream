@@ -1,0 +1,44 @@
+{
+  "dqn_best": {
+    "decisions": 651,
+    "teacher_agreement": 0.47619047619047616,
+    "optional_pass_fraction": 0.27802690582959644,
+    "q_quantiles": [
+      -0.8040299415588379,
+      -0.17660494148731232,
+      1.0020768642425537,
+      3.6697463989257812,
+      7.429405689239502
+    ]
+  },
+  "dqn_latest": {
+    "decisions": 651,
+    "teacher_agreement": 0.45468509984639016,
+    "optional_pass_fraction": 0.33856502242152464,
+    "q_quantiles": [
+      -0.8677778840065002,
+      -0.2917071580886841,
+      0.6302507519721985,
+      2.8447670936584473,
+      13.583937644958496
+    ]
+  },
+  "ddqn_best": {
+    "decisions": 651,
+    "teacher_agreement": 0.3717357910906298,
+    "optional_pass_fraction": 0.3094170403587444
+  },
+  "dqn_warmup": {
+    "decisions": 651,
+    "teacher_agreement": 0.5683563748079877,
+    "optional_pass_fraction": 0.09865470852017937,
+    "q_quantiles": [
+      -8.491599082946777,
+      -4.207986354827881,
+      0.8536977171897888,
+      5.366433620452881,
+      10.368409156799316
+    ]
+  },
+  "note": "Common teacher-visited states, not on-policy games; disagreement is not necessarily an error."
+}

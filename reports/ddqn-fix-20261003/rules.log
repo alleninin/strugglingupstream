@@ -1,0 +1,12 @@
+OK  deck construction (54 / 108 cards)
+OK  move generation (21 moves from a 14-card hand)
+OK  beat relation (ranking, bombs, straight length)
+OK  50 random full games: all terminate, valid finish order, last holds leftover
+OK  pass & clear: table cleared after all others pass
+OK  Struggling-Upstream penalty transfers highest cards to winners
+OK  airplane: 2 triples + 2 pairs (10 cards), ranking, bomb > airplane
+OK  consecutive triples (2-in-a-row) and pairs (3-in-a-row) generate & rank
+OK  greedy-bot: triple 777 + tractor 88991010 claimed before singles; 6 is the sole orphan (not absorbed into a straight)
+OK  feature dims reflect AIRPLANE + new combo types (TYPE_DIM=10, move dim=29)
+
+ALL CHECKS PASSED

@@ -1,0 +1,6 @@
+[training] agent=ddqn reward=win device=cpu torch_threads=1
+[DDQN] network=HandQNetwork state_dim=63 partition_features=True n_step=3 learning_starts=1000 train_every=4
+[ep 2] win_rate_vs_greedy = 0.000 (2 evaluation games in 0.1s)
+[ep 4] win_rate_vs_greedy = 0.000 (2 evaluation games in 0.0s)
+Saved ddqn agent -> reports/ddqn-fix-20261003/smoke.pt
+Best validation win rate=0.000 -> reports/ddqn-fix-20261003/smoke.best.pt

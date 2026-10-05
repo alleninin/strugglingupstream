@@ -1,14 +1,23 @@
 import random
-from collections import Counter
+from collections import Counter, deque
 from typing import List, Optional
 
 from .cards import deal_hands
-from .moves import Move, generate_moves, beats, PASS_MOVE
+from .moves import PASS_MOVE, Move, beats, generate_moves
+
+HISTORY_LENGTH = 4
 
 
 class Game:
-    def __init__(self, num_players: int = 4, num_decks: int = 2,
-                 hands=None, starting_player: int = 0, rng=None, seed=None):
+    def __init__(
+        self,
+        num_players: int = 4,
+        num_decks: int = 2,
+        hands=None,
+        starting_player: int = 0,
+        rng=None,
+        seed=None,
+    ):
         self.num_players = num_players
         self.num_decks = num_decks
         self.rng = rng or random.Random(seed)
@@ -29,9 +38,10 @@ class Game:
         self.passes_in_a_row = 0
         self.finish_order: List[int] = []
         self.done = False
-        # Public information only; never reconstruct this from hidden hands.
+
         self.played_cards = []
-        # Most recently resolved trick, consumed by the environment after each turn.
+        self.action_history = deque(maxlen=HISTORY_LENGTH)
+
         self.last_trick_winner = None
 
     def _is_active(self, seat: int) -> bool:
@@ -64,9 +74,12 @@ class Game:
         if self.done:
             raise RuntimeError("game is over")
         if seat != self.current_player:
-            raise RuntimeError(f"not player {seat}'s turn (it is {self.current_player})")
+            raise RuntimeError(
+                f"not player {seat}'s turn (it is {self.current_player})"
+            )
 
         self._validate_move(seat, move)
+        self.action_history.append((seat, move))
         self.last_trick_winner = None
         if move.is_pass:
             self._apply_pass(seat)
@@ -91,6 +104,7 @@ class Game:
         self.current_player = self._next_active(seat)
 
     def _validate_move(self, seat: int, move: Move) -> None:
+        """Validate ownership and combination metadata before mutating game state."""
         if move.is_pass:
             if move != PASS_MOVE or self.table_move is None:
                 raise ValueError("cannot pass when leading or submit a malformed pass")
@@ -98,11 +112,15 @@ class Game:
         cards = Counter(move.cards)
         if not cards or cards - Counter(self.hands[seat]):
             raise ValueError("move contains cards not in the player's hand")
-        # Validate the selected cards, not every combination of the whole hand.
-        if not any(m.type == move.type and m.rank == move.rank
-                   and m.length == move.length and m.is_bomb == move.is_bomb
-                   and Counter(m.cards) == cards
-                   for m in generate_moves(list(move.cards))):
+
+        if not any(
+            m.type == move.type
+            and m.rank == move.rank
+            and m.length == move.length
+            and m.is_bomb == move.is_bomb
+            and Counter(m.cards) == cards
+            for m in generate_moves(list(move.cards))
+        ):
             raise ValueError("invalid card combination or move metadata")
         if self.table_move is not None and not beats(move, self.table_move):
             raise ValueError("move does not beat the table")

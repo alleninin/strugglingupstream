@@ -1,0 +1,330 @@
+{
+  "pilot": {
+    "games": 200,
+    "seed": 741021,
+    "num_players": 4,
+    "num_decks": 2,
+    "results": {
+      "baseline.best.pt": {
+        "greedy": 0.365,
+        "random": 0.92
+      },
+      "practice.best.pt": {
+        "greedy": 0.31,
+        "random": 0.855
+      },
+      "monte-carlo.best.pt": {
+        "greedy": 0.145,
+        "random": 0.775
+      },
+      "history.best.pt": {
+        "greedy": 0.335,
+        "random": 0.895
+      }
+    }
+  },
+  "previous": {
+    "games": 500,
+    "seed": 8100427,
+    "num_players": 4,
+    "num_decks": 2,
+    "results": {
+      "previous.best.pt": {
+        "greedy": 0.308,
+        "random": 0.926
+      },
+      "greedy": {
+        "greedy": 0.254,
+        "random": 0.862
+      },
+      "random": {
+        "greedy": 0.016,
+        "random": 0.254
+      }
+    }
+  },
+  "baseline_5000": {
+    "games": 500,
+    "seed": 8100427,
+    "num_players": 4,
+    "num_decks": 2,
+    "results": {
+      "baseline5000.best.pt": {
+        "greedy": 0.368,
+        "random": 0.91
+      }
+    }
+  },
+  "selfplay_5000": {
+    "games": 500,
+    "seed": 8100427,
+    "num_players": 4,
+    "num_decks": 2,
+    "results": {
+      "selfplay5000.best.pt": {
+        "greedy": 0.35,
+        "random": 0.896
+      }
+    }
+  },
+  "history_endgame_5000": {
+    "games": 500,
+    "seed": 8100427,
+    "num_players": 4,
+    "num_decks": 2,
+    "results": {
+      "full5000.best.pt": {
+        "greedy": 0.294,
+        "random": 0.912
+      }
+    }
+  },
+  "runs": {
+    "baseline": {
+      "validation": [
+        {
+          "episode": 500,
+          "win_rate": 0.25
+        },
+        {
+          "episode": 1000,
+          "win_rate": 0.27
+        },
+        {
+          "episode": 1500,
+          "win_rate": 0.26
+        },
+        {
+          "episode": 2000,
+          "win_rate": 0.29
+        }
+      ],
+      "best_episode": 2000,
+      "train_seconds": 157.9,
+      "evaluation_seconds": 27.8,
+      "practice_episodes": 0
+    },
+    "practice": {
+      "validation": [
+        {
+          "episode": 500,
+          "win_rate": 0.24
+        },
+        {
+          "episode": 1000,
+          "win_rate": 0.14
+        },
+        {
+          "episode": 1500,
+          "win_rate": 0.17
+        },
+        {
+          "episode": 2000,
+          "win_rate": 0.26
+        }
+      ],
+      "best_episode": 2000,
+      "train_seconds": 158.8,
+      "evaluation_seconds": 27.8,
+      "practice_episodes": 292
+    },
+    "monte-carlo": {
+      "validation": [
+        {
+          "episode": 500,
+          "win_rate": 0.03
+        },
+        {
+          "episode": 1000,
+          "win_rate": 0.08
+        },
+        {
+          "episode": 1500,
+          "win_rate": 0.1
+        },
+        {
+          "episode": 2000,
+          "win_rate": 0.17
+        }
+      ],
+      "best_episode": 2000,
+      "train_seconds": 119.6,
+      "evaluation_seconds": 26.8,
+      "practice_episodes": 0
+    },
+    "history": {
+      "validation": [
+        {
+          "episode": 500,
+          "win_rate": 0.11
+        },
+        {
+          "episode": 1000,
+          "win_rate": 0.18
+        },
+        {
+          "episode": 1500,
+          "win_rate": 0.17
+        },
+        {
+          "episode": 2000,
+          "win_rate": 0.24
+        }
+      ],
+      "best_episode": 2000,
+      "train_seconds": 154.2,
+      "evaluation_seconds": 28.2,
+      "practice_episodes": 0
+    },
+    "baseline5000": {
+      "validation": [
+        {
+          "episode": 500,
+          "win_rate": 0.01
+        },
+        {
+          "episode": 1000,
+          "win_rate": 0.07
+        },
+        {
+          "episode": 1500,
+          "win_rate": 0.2
+        },
+        {
+          "episode": 2000,
+          "win_rate": 0.24
+        },
+        {
+          "episode": 2500,
+          "win_rate": 0.25
+        },
+        {
+          "episode": 3000,
+          "win_rate": 0.24
+        },
+        {
+          "episode": 3500,
+          "win_rate": 0.28
+        },
+        {
+          "episode": 4000,
+          "win_rate": 0.26
+        },
+        {
+          "episode": 4500,
+          "win_rate": 0.3
+        },
+        {
+          "episode": 5000,
+          "win_rate": 0.32
+        }
+      ],
+      "best_episode": 5000,
+      "train_seconds": 436.7,
+      "evaluation_seconds": 67.6,
+      "practice_episodes": 0
+    },
+    "selfplay5000": {
+      "validation": [
+        {
+          "episode": 500,
+          "win_rate": 0.18
+        },
+        {
+          "episode": 1000,
+          "win_rate": 0.2
+        },
+        {
+          "episode": 1500,
+          "win_rate": 0.24
+        },
+        {
+          "episode": 2000,
+          "win_rate": 0.27
+        },
+        {
+          "episode": 2500,
+          "win_rate": 0.22
+        },
+        {
+          "episode": 3000,
+          "win_rate": 0.26
+        },
+        {
+          "episode": 3500,
+          "win_rate": 0.27
+        },
+        {
+          "episode": 4000,
+          "win_rate": 0.28
+        },
+        {
+          "episode": 4500,
+          "win_rate": 0.25
+        },
+        {
+          "episode": 5000,
+          "win_rate": 0.32
+        }
+      ],
+      "best_episode": 5000,
+      "train_seconds": 539.1,
+      "evaluation_seconds": 68.2,
+      "practice_episodes": 0
+    },
+    "full5000": {
+      "validation": [
+        {
+          "episode": 500,
+          "win_rate": 0.24
+        },
+        {
+          "episode": 1000,
+          "win_rate": 0.22
+        },
+        {
+          "episode": 1500,
+          "win_rate": 0.27
+        },
+        {
+          "episode": 2000,
+          "win_rate": 0.3
+        },
+        {
+          "episode": 2500,
+          "win_rate": 0.27
+        },
+        {
+          "episode": 3000,
+          "win_rate": 0.3
+        },
+        {
+          "episode": 3500,
+          "win_rate": 0.26
+        },
+        {
+          "episode": 4000,
+          "win_rate": 0.3
+        },
+        {
+          "episode": 4500,
+          "win_rate": 0.27
+        },
+        {
+          "episode": 5000,
+          "win_rate": 0.23
+        }
+      ],
+      "best_episode": 2000,
+      "train_seconds": 484.9,
+      "evaluation_seconds": 69.2,
+      "practice_episodes": 711
+    }
+  },
+  "checkpoint_sha256": {
+    "baseline.best.pt": "0f4633f15ecc038b08a89f2ddf6296e52ffea144b6f1930100de9accf5cd88f3",
+    "anchor.pt": "b373c5f213d2aa8dbdd95affa63096129ec4084598792f0a0c4945221c2c7e08",
+    "history-endgame.best.pt": "a4a9f4b78666a797064bb6059e6da10921dd0aeacba9d1a781d2320212327029",
+    "selfplay.best.pt": "cef86d8c2bbe27fc463b3e5817b48ce8554c4ccd178325ba8a57d03daa3d904d"
+  }
+}

@@ -1,22 +1,26 @@
-import unittest
-from unittest.mock import patch
 import contextlib
 import io
 import tempfile
+import unittest
+from collections import Counter
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import Mock, patch
 
-import torch
+import numpy as np
 
+from agents.ddqn_agent import DDQNAgent
+from bots.random_bot import RandomAgent
+from env import features
 from env.env import ZhengShangYouEnv
 from game.cards import build_deck
 from game.rules import Game
-from bots.random_bot import RandomAgent
-from training.train import exploration_epsilon, evaluate_vs_opponent, train
-from training.demonstrations import Demonstrations, Example
-from agents.ddqn_agent import DDQNAgent
-from agents.dqn_agent import DQNAgent
-from agents.qlearning import QLearningAgent
-from env import features
+from training.train import (
+    evaluate_vs_opponent,
+    exploration_epsilon,
+    train,
+    training_action,
+)
 
 
 def game(*ranks):
@@ -36,8 +40,10 @@ class WinTrainingTests(unittest.TestCase):
     def test_win_stops_without_rolling_remaining_players(self):
         def must_not_act(*args):
             self.fail("opponents acted after first place was decided")
-        env = ZhengShangYouEnv(num_players=3, reward_scheme="win",
-                              opponent_policies=[must_not_act] * 2)
+
+        env = ZhengShangYouEnv(
+            num_players=3, reward_scheme="win", opponent_policies=[must_not_act] * 2
+        )
         env.game = game([3], [4, 5], [6, 7])
         state, reward, done, info = env.step(env.get_legal_moves()[0])
         self.assertTrue(done)
@@ -51,20 +57,24 @@ class WinTrainingTests(unittest.TestCase):
             env.step(None)
 
     def test_loss_stops_at_first_opponent_finish(self):
-        env = ZhengShangYouEnv(num_players=3, reward_scheme="win",
-                              opponent_policies=[lambda obs, legal: legal[0]] * 2)
+        env = ZhengShangYouEnv(
+            num_players=3,
+            reward_scheme="win",
+            opponent_policies=[lambda obs, legal: legal[0]] * 2,
+        )
         env.game = game([3, 8], [4], [5, 6])
         state, reward, done, info = env.step(env.get_legal_moves()[0])
         self.assertTrue(done)
         self.assertEqual(env.game.finish_order, [1])
-        self.assertEqual(reward, 0.0)  # -1 outcome plus terminal potential correction.
+        self.assertEqual(reward, 0.0)
         self.assertIsNone(state)
         self.assertEqual(info["next_legal_moves"], [])
 
     def test_shaping_return_depends_on_outcome_not_cards_or_duration(self):
         for seed in range(10):
-            env = ZhengShangYouEnv(num_players=3, num_decks=1, seed=seed,
-                                  reward_scheme="win")
+            env = ZhengShangYouEnv(
+                num_players=3, num_decks=1, seed=seed, reward_scheme="win"
+            )
             state = env.reset()
             initial_potential = env._potential()
             bot = RandomAgent(seed=seed)
@@ -76,66 +86,82 @@ class WinTrainingTests(unittest.TestCase):
             self.assertAlmostEqual(total, outcome - initial_potential)
 
     def test_exploration_lasts_through_training(self):
-        self.assertEqual(exploration_epsilon(0, 2500), .5)
-        self.assertGreater(exploration_epsilon(500, 2500), .35)
-        self.assertGreater(exploration_epsilon(1500, 2500), .15)
-        self.assertAlmostEqual(exploration_epsilon(2500, 2500), .05)
-
-    def test_demonstrations_fit_all_three_agents_and_sync_neural_targets(self):
-        torch.set_num_threads(1)
-        current = game([3, 8], [4, 9])
-        state = features.state_vector(current, 0)
-        legal = current.legal_moves()
-        # Deliberately teach the last move, avoiding accidental argmax tie success.
-        examples = [Example(state, legal, len(legal) - 1)]
-        for factory in (DDQNAgent, DQNAgent, QLearningAgent):
-            agent = factory(*features.feature_dims(2), seed=42, epsilon=0)
-            demos = Demonstrations(examples, seed=1, batch_size=2)
-            demos.pretrain(agent, 30)
-            self.assertEqual(agent.act(state, legal), legal[-1])
-            if hasattr(agent, "target_net"):
-                for policy, target in zip(agent.policy_net.parameters(), agent.target_net.parameters()):
-                    torch.testing.assert_close(policy, target)
-
-    def test_rehearsal_learns_legal_labels_with_ragged_action_sets(self):
-        first = game([3, 8], [4, 9])
-        second = game([3, 3, 7], [4, 9])
-        examples = [Example(features.state_vector(g, 0), g.legal_moves(), 0)
-                    for g in (first, second)]
-        for factory in (DDQNAgent, DQNAgent):
-            agent = factory(*features.feature_dims(2), seed=3)
-            demos = Demonstrations(examples, seed=4)
-            loss = demos.loss(agent)
-            self.assertTrue(torch.isfinite(loss))
-            loss.backward()
-            self.assertTrue(any(p.grad is not None and p.grad.abs().sum() > 0
-                                for p in agent.policy_net.parameters()))
-
-    def test_empty_demonstrations_rejected(self):
-        with self.assertRaises(ValueError):
-            Demonstrations([])
+        self.assertEqual(exploration_epsilon(0, 2500), 0.5)
+        self.assertGreater(exploration_epsilon(500, 2500), 0.35)
+        self.assertGreater(exploration_epsilon(1500, 2500), 0.15)
+        self.assertAlmostEqual(exploration_epsilon(2500, 2500), 0.05)
 
     def test_evaluation_uses_separate_deals_and_restores_exploration(self):
-        agent = QLearningAgent(*features.feature_dims(2), epsilon=.37, seed=0)
+        agent = DDQNAgent(*features.feature_dims(2), epsilon=0.37, seed=0)
         with patch("training.train.ZhengShangYouEnv", wraps=ZhengShangYouEnv) as env:
             evaluate_vs_opponent(agent, 2, 1, seed=0, n=2, opponent="random")
         seeds = [call.kwargs["seed"] for call in env.call_args_list]
         self.assertEqual(len(set(seeds)), 2)
         self.assertTrue(all(seed >= (1 << 62) for seed in seeds))
-        self.assertEqual(agent.epsilon, .37)
+        self.assertEqual(agent.epsilon, 0.37)
+
+    def test_evaluation_stops_as_soon_as_first_place_is_decided(self):
+        environments = []
+
+        def make_env(*args, **kwargs):
+            env = ZhengShangYouEnv(*args, **kwargs)
+            environments.append(env)
+            return env
+
+        with patch("training.train.ZhengShangYouEnv", side_effect=make_env):
+            evaluate_vs_opponent(RandomAgent(seed=5), 3, 1, seed=9, n=2)
+        for env in environments:
+            self.assertEqual(len(env.game.finish_order), 1)
+            self.assertFalse(env.game.done)
+            self.assertTrue(env.done)
+
+    def test_expert_exploration_preserves_total_epsilon_budget(self):
+        rng = np.random.default_rng(91)
+        agent = SimpleNamespace(epsilon=0.4, rng=rng)
+        agent.act = lambda state, legal: (
+            "random" if rng.random() < agent.epsilon else "network"
+        )
+        teacher = SimpleNamespace(act=lambda state, legal: "teacher")
+        counts = Counter(
+            training_action(agent, None, None, teacher, 0.5) for _ in range(40000)
+        )
+        for action, expected in [("teacher", 0.2), ("random", 0.2), ("network", 0.6)]:
+            self.assertAlmostEqual(counts[action] / 40000, expected, delta=0.01)
+        self.assertEqual(agent.epsilon, 0.4)
+
+    def test_teacher_is_never_used_with_exploration_disabled(self):
+        teacher = Mock()
+        agent = SimpleNamespace(epsilon=0.0, act=Mock(return_value="network"))
+        self.assertEqual(training_action(agent, None, None, teacher, 0.5), "network")
+        teacher.act.assert_not_called()
+
+    def test_training_action_restores_epsilon_on_failure(self):
+        agent = SimpleNamespace(
+            epsilon=0.4,
+            rng=SimpleNamespace(random=lambda: 0.9),
+            act=Mock(side_effect=RuntimeError("test")),
+        )
+        with self.assertRaises(RuntimeError):
+            training_action(agent, None, None, Mock(), 0.5)
+        self.assertEqual(agent.epsilon, 0.4)
 
     def test_best_checkpoint_survives_later_regression(self):
         saved = []
-        original = QLearningAgent.save
+        original = DDQNAgent.save
+
         def save(agent, path):
             saved.append(path)
             original(agent, path)
+
         with tempfile.TemporaryDirectory() as directory:
-            path = str(Path(directory) / "q.npy")
-            best = str(Path(directory) / "q.best.npy")
-            with patch("training.train.evaluate_vs_opponent", side_effect=[.8, .1]), \
-                 patch.object(QLearningAgent, "save", save), contextlib.redirect_stdout(io.StringIO()):
-                train("qlearning", 2, 2, 1, 0, path, 1, demo_games=0)
+            path = str(Path(directory) / "ddqn.pt")
+            best = str(Path(directory) / "ddqn.best.pt")
+            with (
+                patch("training.train.evaluate_vs_opponent", side_effect=[0.8, 0.1]),
+                patch.object(DDQNAgent, "save", save),
+                contextlib.redirect_stdout(io.StringIO()),
+            ):
+                train("ddqn", 2, 2, 1, 0, path, 1)
             self.assertTrue(Path(best).exists())
             self.assertEqual(saved.count(best), 1)
             self.assertEqual(saved[-1], path)

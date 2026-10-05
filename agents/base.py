@@ -1,20 +1,19 @@
 from abc import ABC, abstractmethod
-from typing import List, Any
+from typing import Any, List
 
-from game.moves import Move
 from env import features
+from game.moves import Move
 
 
 class BaseAgent(ABC):
     epsilon: float = 0.0
 
     def _phi(self, state, move):
-        state = state[:getattr(self, "state_dim", len(state))]
+        state = state[: getattr(self, "state_dim", len(state))]
         return features.combined_vector(state, features.move_vector(move))
 
     @abstractmethod
-    def act(self, obs, legal_moves: List[Move]) -> Move:
-        ...
+    def act(self, obs, legal_moves: List[Move]) -> Move: ...
 
     def observe(self, transition: Any) -> None:
         pass

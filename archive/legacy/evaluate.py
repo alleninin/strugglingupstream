@@ -28,7 +28,7 @@ def simulate_game(agents, num_players, num_decks, seed):
     while not game.done:
         seat = game.current_player
         legal = game.legal_moves(seat)
-        move = agents[seat].act(features.state_vector(game, seat), legal)
+        move = agents[seat].act(features.state_for(game, seat, agents[seat]), legal)
         # Invalid actions must fail visibly; replacing them would hide bot bugs.
         game.apply_move(seat, move)
     return game.finish_order

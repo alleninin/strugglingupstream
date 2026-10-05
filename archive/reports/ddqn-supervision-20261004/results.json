@@ -1,0 +1,253 @@
+{
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "held_out_seed": 920042,
+  "games_per_opponent": 500,
+  "validation_games": 100,
+  "validation_every": 500,
+  "runs": {
+    "baseline-0": {
+      "seed": 0,
+      "episodes": 2500,
+      "supervision_weight": 0,
+      "supervision_fraction": 0.6,
+      "best_episode": 2500,
+      "best_validation_win_rate": 0.33,
+      "validation_curve": [
+        [
+          500,
+          0.11
+        ],
+        [
+          1000,
+          0.24
+        ],
+        [
+          1500,
+          0.22
+        ],
+        [
+          2000,
+          0.26
+        ],
+        [
+          2500,
+          0.33
+        ]
+      ],
+      "training_seconds": 200.9,
+      "validation_seconds": 36.7,
+      "held_out": {
+        "greedy": 0.308,
+        "random": 0.918
+      },
+      "checkpoint": "baseline-0.best.pt",
+      "sha256": "7a2653f89b2f61a94e9f7ad81ae72478d0b1ca2177cd8dc5b57b4dca2b29bed9"
+    },
+    "baseline-1": {
+      "seed": 1,
+      "episodes": 2500,
+      "supervision_weight": 0,
+      "supervision_fraction": 0.6,
+      "best_episode": 2500,
+      "best_validation_win_rate": 0.32,
+      "validation_curve": [
+        [
+          500,
+          0.14
+        ],
+        [
+          1000,
+          0.25
+        ],
+        [
+          1500,
+          0.23
+        ],
+        [
+          2000,
+          0.28
+        ],
+        [
+          2500,
+          0.32
+        ]
+      ],
+      "training_seconds": 209.0,
+      "validation_seconds": 36.9,
+      "held_out": {
+        "greedy": 0.29,
+        "random": 0.894
+      },
+      "checkpoint": "baseline-1.best.pt",
+      "sha256": "07c98c6d6fb13dc86a7e3aa164bcebfdb7afc220a4b02e5c5ca49e2f9c02a426"
+    },
+    "baseline-2": {
+      "seed": 2,
+      "episodes": 2500,
+      "supervision_weight": 0,
+      "supervision_fraction": 0.6,
+      "best_episode": 2500,
+      "best_validation_win_rate": 0.32,
+      "validation_curve": [
+        [
+          500,
+          0.15
+        ],
+        [
+          1000,
+          0.21
+        ],
+        [
+          1500,
+          0.23
+        ],
+        [
+          2000,
+          0.25
+        ],
+        [
+          2500,
+          0.32
+        ]
+      ],
+      "training_seconds": 214.6,
+      "validation_seconds": 36.8,
+      "held_out": {
+        "greedy": 0.308,
+        "random": 0.902
+      },
+      "checkpoint": "baseline-2.best.pt",
+      "sha256": "f067a8a8ba4d4c432b663f37a14d984d472adb73d493601b0aa16ba9caab1237"
+    },
+    "supervised-0": {
+      "seed": 0,
+      "episodes": 2500,
+      "supervision_weight": 0.5,
+      "supervision_fraction": 0.6,
+      "best_episode": 2000,
+      "best_validation_win_rate": 0.28,
+      "validation_curve": [
+        [
+          500,
+          0.22
+        ],
+        [
+          1000,
+          0.2
+        ],
+        [
+          1500,
+          0.18
+        ],
+        [
+          2000,
+          0.28
+        ],
+        [
+          2500,
+          0.28
+        ]
+      ],
+      "training_seconds": 249.2,
+      "validation_seconds": 34.0,
+      "held_out": {
+        "greedy": 0.404,
+        "random": 0.914
+      },
+      "checkpoint": "supervised-0.best.pt",
+      "sha256": "bffba7b46681507ef3b61f541662f1085ea3120d89d2390744bfbb41fc926675"
+    },
+    "supervised-1": {
+      "seed": 1,
+      "episodes": 2500,
+      "supervision_weight": 0.5,
+      "supervision_fraction": 0.6,
+      "best_episode": 2000,
+      "best_validation_win_rate": 0.37,
+      "validation_curve": [
+        [
+          500,
+          0.33
+        ],
+        [
+          1000,
+          0.32
+        ],
+        [
+          1500,
+          0.35
+        ],
+        [
+          2000,
+          0.37
+        ],
+        [
+          2500,
+          0.37
+        ]
+      ],
+      "training_seconds": 250.6,
+      "validation_seconds": 35.7,
+      "held_out": {
+        "greedy": 0.368,
+        "random": 0.93
+      },
+      "checkpoint": "supervised-1.best.pt",
+      "sha256": "6836bcfce5188eb15491268af183e7ac24338356e32a3542a914bb80d647d7ce"
+    },
+    "supervised-2": {
+      "seed": 2,
+      "episodes": 2500,
+      "supervision_weight": 0.5,
+      "supervision_fraction": 0.6,
+      "best_episode": 2500,
+      "best_validation_win_rate": 0.41,
+      "validation_curve": [
+        [
+          500,
+          0.25
+        ],
+        [
+          1000,
+          0.26
+        ],
+        [
+          1500,
+          0.23
+        ],
+        [
+          2000,
+          0.26
+        ],
+        [
+          2500,
+          0.41
+        ]
+      ],
+      "training_seconds": 238.6,
+      "validation_seconds": 34.2,
+      "held_out": {
+        "greedy": 0.338,
+        "random": 0.922
+      },
+      "checkpoint": "supervised-2.best.pt",
+      "sha256": "06567901d1d7c51e7f9d7d70a6ca195037c33381527e1382e09f774eb557e9c0"
+    }
+  },
+  "controls": {
+    "greedy": {
+      "greedy": 0.254,
+      "random": 0.87
+    },
+    "random": {
+      "greedy": 0.002,
+      "random": 0.222
+    }
+  },
+  "shared_test_deals": true,
+  "supplied_checkpoint_sha256": "b373c5f213d2aa8dbdd95affa63096129ec4084598792f0a0c4945221c2c7e08"
+}

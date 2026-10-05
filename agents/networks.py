@@ -14,8 +14,9 @@ def _mlp(input_dim: int, hidden, out_dim: int) -> nn.Sequential:
 
 
 class DuelingQNetwork(nn.Module):
-    def __init__(self, state_dim: int, action_dim: int, hidden=(128, 64),
-                 move_hidden=(64,)):
+    def __init__(
+        self, state_dim: int, action_dim: int, hidden=(128, 64), move_hidden=(64,)
+    ):
         super().__init__()
         self.state_dim = state_dim
         self.action_dim = action_dim
@@ -30,8 +31,8 @@ class DuelingQNetwork(nn.Module):
         self.adv_stream = _mlp(h_dim + m_dim, hidden, 1)
 
     def forward(self, x):
-        s = x[:, :self.state_dim]
-        m = x[:, self.state_dim:]
+        s = x[:, : self.state_dim]
+        m = x[:, self.state_dim :]
         h = self.common(s)
         v = self.value_stream(h)
         me = self.move_enc(m)
@@ -47,13 +48,15 @@ class DuelingQNetwork(nn.Module):
         h = self.common(states)
         values = self.value_stream(h).squeeze(-1)
         encoded_moves = self.move_enc(moves)
-        advantages = self.adv_stream(torch.cat(
-            [h.index_select(0, owners), encoded_moves], dim=1)).squeeze(-1)
+        advantages = self.adv_stream(
+            torch.cat([h.index_select(0, owners), encoded_moves], dim=1)
+        ).squeeze(-1)
         return values, advantages
 
 
 class QNetwork(nn.Module):
     """Scalar action-value network shared by current DDQN representations."""
+
     def __init__(self, input_dim, hidden=(128, 64)):
         super().__init__()
         self.net = _mlp(input_dim, hidden, 1)

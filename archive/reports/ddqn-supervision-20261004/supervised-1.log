@@ -1,0 +1,33 @@
+[DDQN] device=cpu torch_threads=1 partition_features=True expert_exploration=0.5 n_step=3 learning_starts=1000 train_every=4 target_method=ddqn endgame_rate=0.0 history_features=False selfplay_checkpoint=None supervision_weight=0.5 supervision_fraction=0.6
+[ddqn 100/2500] epsilon=0.478 opponent=random training_win_rate=0.610 practice_episodes=0 supervision_weight=0.467 last 100 episodes=6.1s total_train=6.1s total_eval=0.0s
+[ddqn 200/2500] epsilon=0.455 opponent=random training_win_rate=0.770 practice_episodes=0 supervision_weight=0.434 last 100 episodes=6.5s total_train=12.5s total_eval=0.0s
+[ddqn 300/2500] epsilon=0.433 opponent=random training_win_rate=0.790 practice_episodes=0 supervision_weight=0.400 last 100 episodes=6.8s total_train=19.3s total_eval=0.0s
+[ddqn 400/2500] epsilon=0.410 opponent=random training_win_rate=0.760 practice_episodes=0 supervision_weight=0.367 last 100 episodes=6.5s total_train=25.9s total_eval=0.0s
+[ep  500] win_rate_vs_greedy = 0.330 (100 evaluation games in 6.5s)
+[ddqn 500/2500] epsilon=0.388 opponent=random training_win_rate=0.830 practice_episodes=0 supervision_weight=0.334 last 100 episodes=6.6s total_train=32.4s total_eval=6.5s
+[ddqn 600/2500] epsilon=0.365 opponent=mixed training_win_rate=0.300 practice_episodes=0 supervision_weight=0.300 last 100 episodes=11.2s total_train=43.6s total_eval=6.5s
+[ddqn 700/2500] epsilon=0.343 opponent=mixed training_win_rate=0.380 practice_episodes=0 supervision_weight=0.267 last 100 episodes=10.6s total_train=54.2s total_eval=6.5s
+[ddqn 800/2500] epsilon=0.320 opponent=mixed training_win_rate=0.370 practice_episodes=0 supervision_weight=0.234 last 100 episodes=10.9s total_train=65.2s total_eval=6.5s
+[ddqn 900/2500] epsilon=0.298 opponent=mixed training_win_rate=0.420 practice_episodes=0 supervision_weight=0.200 last 100 episodes=10.6s total_train=75.8s total_eval=6.5s
+[ep 1000] win_rate_vs_greedy = 0.320 (100 evaluation games in 6.8s)
+[ddqn 1000/2500] epsilon=0.275 opponent=mixed training_win_rate=0.310 practice_episodes=0 supervision_weight=0.167 last 100 episodes=11.2s total_train=87.0s total_eval=13.3s
+[ddqn 1100/2500] epsilon=0.253 opponent=mixed training_win_rate=0.420 practice_episodes=0 supervision_weight=0.134 last 100 episodes=12.9s total_train=100.0s total_eval=13.3s
+[ddqn 1200/2500] epsilon=0.230 opponent=mixed training_win_rate=0.480 practice_episodes=0 supervision_weight=0.100 last 100 episodes=12.0s total_train=112.0s total_eval=13.3s
+[ddqn 1300/2500] epsilon=0.208 opponent=greedy training_win_rate=0.430 practice_episodes=0 supervision_weight=0.067 last 100 episodes=13.0s total_train=125.0s total_eval=13.3s
+[ddqn 1400/2500] epsilon=0.185 opponent=greedy training_win_rate=0.260 practice_episodes=0 supervision_weight=0.033 last 100 episodes=14.2s total_train=139.3s total_eval=13.3s
+[ep 1500] win_rate_vs_greedy = 0.350 (100 evaluation games in 7.2s)
+[ddqn 1500/2500] epsilon=0.163 opponent=greedy training_win_rate=0.140 practice_episodes=0 supervision_weight=0.000 last 100 episodes=14.6s total_train=153.8s total_eval=20.6s
+[ddqn 1600/2500] epsilon=0.140 opponent=greedy training_win_rate=0.190 practice_episodes=0 supervision_weight=0.000 last 100 episodes=9.8s total_train=163.6s total_eval=20.6s
+[ddqn 1700/2500] epsilon=0.118 opponent=greedy training_win_rate=0.330 practice_episodes=0 supervision_weight=0.000 last 100 episodes=9.1s total_train=172.8s total_eval=20.6s
+[ddqn 1800/2500] epsilon=0.095 opponent=greedy training_win_rate=0.300 practice_episodes=0 supervision_weight=0.000 last 100 episodes=9.1s total_train=181.8s total_eval=20.6s
+[ddqn 1900/2500] epsilon=0.073 opponent=greedy training_win_rate=0.260 practice_episodes=0 supervision_weight=0.000 last 100 episodes=9.5s total_train=191.3s total_eval=20.6s
+[ep 2000] win_rate_vs_greedy = 0.370 (100 evaluation games in 7.9s)
+[ddqn 2000/2500] epsilon=0.050 opponent=greedy training_win_rate=0.320 practice_episodes=0 supervision_weight=0.000 last 100 episodes=10.5s total_train=201.8s total_eval=28.5s
+[ddqn 2100/2500] epsilon=0.050 opponent=greedy training_win_rate=0.260 practice_episodes=0 supervision_weight=0.000 last 100 episodes=10.3s total_train=212.1s total_eval=28.5s
+[ddqn 2200/2500] epsilon=0.050 opponent=greedy training_win_rate=0.420 practice_episodes=0 supervision_weight=0.000 last 100 episodes=9.8s total_train=221.9s total_eval=28.5s
+[ddqn 2300/2500] epsilon=0.050 opponent=greedy training_win_rate=0.310 practice_episodes=0 supervision_weight=0.000 last 100 episodes=9.1s total_train=231.0s total_eval=28.5s
+[ddqn 2400/2500] epsilon=0.050 opponent=greedy training_win_rate=0.240 practice_episodes=0 supervision_weight=0.000 last 100 episodes=9.4s total_train=240.5s total_eval=28.5s
+[ep 2500] win_rate_vs_greedy = 0.370 (100 evaluation games in 7.2s)
+[ddqn 2500/2500] epsilon=0.050 opponent=greedy training_win_rate=0.320 practice_episodes=0 supervision_weight=0.000 last 100 episodes=10.1s total_train=250.6s total_eval=35.7s
+Saved ddqn agent -> /tmp/zheng-supervision/supervised-1.pt
+Best validation win rate=0.370 -> /tmp/zheng-supervision/supervised-1.best.pt

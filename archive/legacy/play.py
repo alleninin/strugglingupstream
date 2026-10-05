@@ -139,7 +139,7 @@ def main():
         if seat == 0:
             move = human_choose(g, legal)
         else:
-            obs = features.state_vector(g, seat)
+            obs = features.state_for(g, seat, opps[seat - 1])
             move = opps[seat - 1].act(obs, legal)
             print(f"P{seat} plays {move}  (hand: {len(g.hands[seat]) - len(move.cards)})")
         g.apply_move(seat, move)

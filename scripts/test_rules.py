@@ -1,16 +1,15 @@
-import sys
 import os
-import numpy as np
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-from game.cards import Card, build_deck
-from game.moves import Move, MoveType, generate_moves, beats, PASS_MOVE
-from game.rules import Game
-from game.match import Match
-from env import features
 from bots.greedy_bot import GreedyBot
+from env import features
+from game.cards import Card, build_deck
+from game.match import Match
+from game.moves import PASS_MOVE, Move, MoveType, beats, generate_moves
+from game.rules import Game
 
 
 def card(rank, suit=0):
@@ -26,9 +25,22 @@ def test_deck():
 
 
 def test_generate_moves():
-    hand = [card(3), card(3), card(5), card(5), card(5),
-            card(7), card(8), card(9), card(10), card(11),
-            card(4, 1), card(4, 2), card(4, 3), card(4, 0)]
+    hand = [
+        card(3),
+        card(3),
+        card(5),
+        card(5),
+        card(5),
+        card(7),
+        card(8),
+        card(9),
+        card(10),
+        card(11),
+        card(4, 1),
+        card(4, 2),
+        card(4, 3),
+        card(4, 0),
+    ]
     moves = generate_moves(hand)
     types = [m.type for m in moves]
     assert MoveType.SINGLE in types
@@ -54,7 +66,9 @@ def test_beats():
     assert not beats(bj, rj)
 
     bomb = Move(MoveType.BOMB, tuple(card(4, i) for i in range(4)), 4, 4, is_bomb=True)
-    bomb_high = Move(MoveType.BOMB, tuple(card(7, i) for i in range(4)), 7, 4, is_bomb=True)
+    bomb_high = Move(
+        MoveType.BOMB, tuple(card(7, i) for i in range(4)), 7, 4, is_bomb=True
+    )
     assert beats(bomb, s9)
     assert beats(bomb_high, bomb)
     assert not beats(s9, bomb)
@@ -72,8 +86,9 @@ def test_full_game():
         g = Game(num_players=3, num_decks=1, seed=seed)
         total = sum(len(h) for h in g.hands)
         assert total == 54, total
-        agents = [GreedyBot(num_players=3, num_decks=1, seed=seed * 10 + i)
-                  for i in range(3)]
+        agents = [
+            GreedyBot(num_players=3, num_decks=1, seed=seed * 10 + i) for i in range(3)
+        ]
         steps = 0
         while not g.done:
             seat = g.current_player
@@ -90,7 +105,9 @@ def test_full_game():
             if seat != last:
                 assert len(g.hands[seat]) == 0, (seat, g.hands[seat])
         assert sum(len(h) for h in g.hands) >= 1
-    print("OK  50 random full games: all terminate, valid finish order, last holds leftover")
+    print(
+        "OK  50 random full games: all terminate, valid finish order, last holds leftover"
+    )
 
 
 def test_pass_and_clear():
@@ -126,25 +143,61 @@ def test_penalty():
 
 
 def test_airplane():
-    hand = [card(3, 0), card(3, 1), card(3, 2),
-            card(7, 0), card(7, 1), card(7, 2),
-            card(9, 0), card(9, 1),
-            card(11, 0), card(11, 1)]
+    hand = [
+        card(3, 0),
+        card(3, 1),
+        card(3, 2),
+        card(7, 0),
+        card(7, 1),
+        card(7, 2),
+        card(9, 0),
+        card(9, 1),
+        card(11, 0),
+        card(11, 1),
+    ]
     airplanes = [m for m in generate_moves(hand) if m.type == MoveType.AIRPLANE]
     assert airplanes, "expected an airplane move"
     assert all(len(m.cards) == 10 for m in airplanes)
     assert all(m.length == 10 for m in airplanes)
 
-    low_air = Move(MoveType.AIRPLANE, tuple(
-        [card(3, 0), card(3, 1), card(3, 2),
-         card(5, 0), card(5, 1), card(5, 2),
-         card(7, 0), card(7, 1),
-         card(9, 0), card(9, 1)]), 5, 10)
-    high_air = Move(MoveType.AIRPLANE, tuple(
-        [card(5, 0), card(5, 1), card(5, 2),
-         card(11, 0), card(11, 1), card(11, 2),
-         card(3, 0), card(3, 1),
-         card(7, 0), card(7, 1)]), 11, 10)
+    low_air = Move(
+        MoveType.AIRPLANE,
+        tuple(
+            [
+                card(3, 0),
+                card(3, 1),
+                card(3, 2),
+                card(5, 0),
+                card(5, 1),
+                card(5, 2),
+                card(7, 0),
+                card(7, 1),
+                card(9, 0),
+                card(9, 1),
+            ]
+        ),
+        5,
+        10,
+    )
+    high_air = Move(
+        MoveType.AIRPLANE,
+        tuple(
+            [
+                card(5, 0),
+                card(5, 1),
+                card(5, 2),
+                card(11, 0),
+                card(11, 1),
+                card(11, 2),
+                card(3, 0),
+                card(3, 1),
+                card(7, 0),
+                card(7, 1),
+            ]
+        ),
+        11,
+        10,
+    )
     assert beats(high_air, low_air)
     assert not beats(low_air, high_air)
 
@@ -152,9 +205,12 @@ def test_airplane():
     assert beats(bomb, high_air)
     assert not beats(high_air, bomb)
 
-    fh = Move(MoveType.FULL_HOUSE,
-              tuple(card(6, 0) for _ in range(3)) + tuple(card(8, 0) for _ in range(2)),
-              6, 5)
+    fh = Move(
+        MoveType.FULL_HOUSE,
+        tuple(card(6, 0) for _ in range(3)) + tuple(card(8, 0) for _ in range(2)),
+        6,
+        5,
+    )
     assert not beats(high_air, fh)
     print("OK  airplane: 2 triples + 2 pairs (10 cards), ranking, bomb > airplane")
 
@@ -162,8 +218,6 @@ def test_airplane():
 def test_greedy_bot():
     from bots.greedy_bot import GreedyBot, M
 
-    # Critical edge case from the spec:
-    # hand 6,7,7,7,8,8,9,9,10,10 -> triple 777 + tractor 88991010 + orphan 6.
     hand = [0] * 15
     for r, k in [(6, 1), (7, 3), (8, 2), (9, 2), (10, 2)]:
         hand[r - 3] = k
@@ -171,33 +225,54 @@ def test_greedy_bot():
 
     groups = GreedyBot().partition_strategy(hand)
     assert any(g.type == "TRIPLE" and g.rank == 7 for g in groups), groups
-    assert any(g.type == "CONSEC_PAIRS" and g.ranks == [8, 9, 10]
-               for g in groups), groups
+    assert any(g.type == "CONSEC_PAIRS" and g.ranks == [8, 9, 10] for g in groups), (
+        groups
+    )
     orphans = [g for g in groups if g.type == "SINGLE"]
     assert len(orphans) == 1 and orphans[0].rank == 6, groups
-    print("OK  greedy-bot: triple 777 + tractor 88991010 claimed before singles; "
-          "6 is the sole orphan (not absorbed into a straight)")
+    print(
+        "OK  greedy-bot: triple 777 + tractor 88991010 claimed before singles; "
+        "6 is the sole orphan (not absorbed into a straight)"
+    )
 
 
 def test_feature_dims_update():
     assert features.TYPE_DIM == 10, features.TYPE_DIM
     s_dim, a_dim = features.feature_dims(4, 2)
-    hand = [card(3, 0), card(3, 1), card(3, 2),
-            card(7, 0), card(7, 1), card(7, 2),
-            card(9, 0), card(9, 1),
-            card(11, 0), card(11, 1)]
+    hand = [
+        card(3, 0),
+        card(3, 1),
+        card(3, 2),
+        card(7, 0),
+        card(7, 1),
+        card(7, 2),
+        card(9, 0),
+        card(9, 1),
+        card(11, 0),
+        card(11, 1),
+    ]
     ap = [m for m in generate_moves(hand) if m.type == MoveType.AIRPLANE][0]
     mv = features.move_vector(ap)
     assert len(mv) == a_dim, (len(mv), a_dim)
     assert mv[features.NUM_RANKS + MoveType.AIRPLANE] == 1.0
-    print(f"OK  feature dims reflect AIRPLANE + new combo types (TYPE_DIM=10, move dim={a_dim})")
+    print(
+        f"OK  feature dims reflect AIRPLANE + new combo types (TYPE_DIM=10, move dim={a_dim})"
+    )
 
 
 def test_consecutive_moves():
-    # 3-3-3 / 4-4-4-4 / 5-5-5  -> two consecutive triples (3,4) and a non-consecutive 5
-    hand = [card(3, 0), card(3, 1), card(3, 2),
-            card(4, 0), card(4, 1), card(4, 2),
-            card(5, 0), card(5, 1), card(5, 2)]
+
+    hand = [
+        card(3, 0),
+        card(3, 1),
+        card(3, 2),
+        card(4, 0),
+        card(4, 1),
+        card(4, 2),
+        card(5, 0),
+        card(5, 1),
+        card(5, 2),
+    ]
     ct = [m for m in generate_moves(hand) if m.type == MoveType.CONSEC_TRIPLES]
     assert ct, "expected a consecutive-triples move"
     two = [m for m in ct if m.length == 2]
@@ -205,10 +280,7 @@ def test_consecutive_moves():
     assert all(len(m.cards) == 6 for m in two)
     assert any(m.rank == 4 for m in two), [m.rank for m in two]
 
-    # 3-3 / 4-4 / 5-5  -> three consecutive pairs
-    hand2 = [card(3, 0), card(3, 1),
-             card(4, 0), card(4, 1),
-             card(5, 0), card(5, 1)]
+    hand2 = [card(3, 0), card(3, 1), card(4, 0), card(4, 1), card(5, 0), card(5, 1)]
     cp = [m for m in generate_moves(hand2) if m.type == MoveType.CONSEC_PAIRS]
     assert cp, "expected a consecutive-pairs move"
     three = [m for m in cp if m.length == 3]
@@ -216,33 +288,52 @@ def test_consecutive_moves():
     assert all(len(m.cards) == 6 for m in three)
     assert three[0].rank == 5
 
-    # beating: higher top rank wins, same structure/length required
-    low_ct = Move(MoveType.CONSEC_TRIPLES,
-                  tuple(card(3, i) for i in range(3)) + tuple(card(4, i) for i in range(3)),
-                  4, 2)
-    high_ct = Move(MoveType.CONSEC_TRIPLES,
-                   tuple(card(4, i) for i in range(3)) + tuple(card(5, i) for i in range(3)),
-                   5, 2)
+    low_ct = Move(
+        MoveType.CONSEC_TRIPLES,
+        tuple(card(3, i) for i in range(3)) + tuple(card(4, i) for i in range(3)),
+        4,
+        2,
+    )
+    high_ct = Move(
+        MoveType.CONSEC_TRIPLES,
+        tuple(card(4, i) for i in range(3)) + tuple(card(5, i) for i in range(3)),
+        5,
+        2,
+    )
     assert beats(high_ct, low_ct)
     assert not beats(low_ct, high_ct)
 
-    low_cp = Move(MoveType.CONSEC_PAIRS,
-                  tuple(card(3, i) for i in range(2)) + tuple(card(4, i) for i in range(2))
-                  + tuple(card(5, i) for i in range(2)), 5, 3)
-    high_cp = Move(MoveType.CONSEC_PAIRS,
-                   tuple(card(4, i) for i in range(2)) + tuple(card(5, i) for i in range(2))
-                   + tuple(card(6, i) for i in range(2)), 6, 3)
+    low_cp = Move(
+        MoveType.CONSEC_PAIRS,
+        tuple(card(3, i) for i in range(2))
+        + tuple(card(4, i) for i in range(2))
+        + tuple(card(5, i) for i in range(2)),
+        5,
+        3,
+    )
+    high_cp = Move(
+        MoveType.CONSEC_PAIRS,
+        tuple(card(4, i) for i in range(2))
+        + tuple(card(5, i) for i in range(2))
+        + tuple(card(6, i) for i in range(2)),
+        6,
+        3,
+    )
     assert beats(high_cp, low_cp)
 
-    # a bomb beats a consecutive combo; a combo does not beat a bomb
     bomb = Move(MoveType.BOMB, tuple(card(9, i) for i in range(4)), 9, 4, is_bomb=True)
     assert beats(bomb, high_ct)
     assert not beats(high_ct, bomb)
-    # different structure does not beat (pure 2-triple vs winged airplane)
-    air = Move(MoveType.AIRPLANE, tuple(
-        card(3, i) for i in range(3)) + tuple(card(4, i) for i in range(3))
-        + tuple(card(7, i) for i in range(2)) + tuple(card(9, i) for i in range(2)),
-        4, 10)
+
+    air = Move(
+        MoveType.AIRPLANE,
+        tuple(card(3, i) for i in range(3))
+        + tuple(card(4, i) for i in range(3))
+        + tuple(card(7, i) for i in range(2))
+        + tuple(card(9, i) for i in range(2)),
+        4,
+        10,
+    )
     assert not beats(high_ct, air)
     print("OK  consecutive triples (2-in-a-row) and pairs (3-in-a-row) generate & rank")
 

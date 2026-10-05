@@ -50,8 +50,15 @@ class SumTree:
 
 
 class PrioritizedReplayBuffer:
-    def __init__(self, capacity: int = 20000, alpha: float = 0.6, beta: float = 0.4,
-                 beta_anneal_steps: int = 100000, epsilon: float = 1e-6, rng=None):
+    def __init__(
+        self,
+        capacity: int = 20000,
+        alpha: float = 0.6,
+        beta: float = 0.4,
+        beta_anneal_steps: int = 100000,
+        epsilon: float = 1e-6,
+        rng=None,
+    ):
         self.alpha = float(alpha)
         self.beta = float(beta)
         self.beta_start = float(beta)

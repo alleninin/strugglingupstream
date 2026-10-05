@@ -1,0 +1,173 @@
+{
+  "previous": {
+    "partition-0.best.pt": {
+      "greedy": 0.274,
+      "random": 0.888
+    },
+    "partition-1.best.pt": {
+      "greedy": 0.218,
+      "random": 0.79
+    },
+    "partition-2.best.pt": {
+      "greedy": 0.272,
+      "random": 0.864
+    },
+    "greedy": {
+      "greedy": 0.262,
+      "random": 0.864
+    },
+    "random": {
+      "greedy": 0.002,
+      "random": 0.262
+    }
+  },
+  "control_features_rejected": {
+    "control0.best.pt": {
+      "greedy": 0.28,
+      "random": 0.872
+    },
+    "control1.best.pt": {
+      "greedy": 0.194,
+      "random": 0.842
+    },
+    "control2.best.pt": {
+      "greedy": 0.16,
+      "random": 0.874
+    }
+  },
+  "finish_guard_only": {
+    "guard0.best.pt": {
+      "greedy": 0.28,
+      "random": 0.902
+    },
+    "guard1.best.pt": {
+      "greedy": 0.272,
+      "random": 0.894
+    },
+    "guard2.best.pt": {
+      "greedy": 0.228,
+      "random": 0.868
+    }
+  },
+  "guided_exploration": {
+    "guided0.best.pt": {
+      "greedy": 0.362,
+      "random": 0.916
+    },
+    "guided1.best.pt": {
+      "greedy": 0.268,
+      "random": 0.884
+    },
+    "guided2.best.pt": {
+      "greedy": 0.316,
+      "random": 0.886
+    }
+  },
+  "evaluation": {
+    "games_per_opponent": 500,
+    "seed": 8100426,
+    "training_seeds": [
+      0,
+      1,
+      2
+    ],
+    "training_episodes": 2500,
+    "players": 4,
+    "decks": 2
+  },
+  "diagnostics": {
+    "before": {
+      "counts": {
+        "decisions": 2894,
+        "passes": 1695,
+        "pass_when_greedy_contests": 882,
+        "greedy_agreement": 1399,
+        "wins": 58,
+        "plays_without_partition_progress": 128,
+        "finish_available": 59,
+        "missed_finish": 1
+      },
+      "examples": [
+        {
+          "hand": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "choice": "TRIPLE(9,9,9)",
+          "finish": "FULL_HOUSE(9,9,9,2,2)"
+        }
+      ]
+    },
+    "finish_guard_only": {
+      "counts": {
+        "decisions": 2892,
+        "urgent_contest_available": 324,
+        "urgent_passes": 150,
+        "nonforced_decisions": 2095,
+        "passes": 1694,
+        "pass_when_greedy_contests": 882,
+        "greedy_agreement": 1398,
+        "wins": 58,
+        "plays_without_partition_progress": 127,
+        "finish_available": 58
+      },
+      "examples": []
+    },
+    "guided": {
+      "counts": {
+        "decisions": 2816,
+        "urgent_contest_available": 238,
+        "urgent_passes": 77,
+        "nonforced_decisions": 1831,
+        "greedy_agreement": 1720,
+        "passes": 1548,
+        "plays_without_partition_progress": 106,
+        "wins": 70,
+        "pass_when_greedy_contests": 518,
+        "finish_available": 70
+      },
+      "examples": []
+    }
+  },
+  "tournament": {
+    "num_games": 400,
+    "num_players": 4,
+    "num_decks": 2,
+    "seed": 100000,
+    "rounds": null,
+    "results": {
+      "DDQN": {
+        "appearances": 800,
+        "wins": 283,
+        "win_rate": 0.35375,
+        "mean_place": 1.99
+      },
+      "Greedy": {
+        "appearances": 400,
+        "wins": 116,
+        "win_rate": 0.29,
+        "mean_place": 2.19
+      },
+      "Random": {
+        "appearances": 400,
+        "wins": 1,
+        "win_rate": 0.0025,
+        "mean_place": 3.83
+      }
+    }
+  },
+  "checkpoint_sha256": "b373c5f213d2aa8dbdd95affa63096129ec4084598792f0a0c4945221c2c7e08"
+}

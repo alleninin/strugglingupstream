@@ -1,0 +1,3362 @@
+{
+  "seed": 920041,
+  "source_games": 100,
+  "position_limit": 1000,
+  "notes": "Constructed tactical checks are heuristic expectations, not optimality proofs. Shared-state agreement/pass counts are diagnostics, not win rates. Raw scores exclude the deployed immediate-finish safeguard.",
+  "results": {
+    "greedy": {
+      "tactical": {
+        "finish": {
+          "cases": 3,
+          "passed": 3,
+          "raw_passed": 3
+        },
+        "combination": {
+          "cases": 5,
+          "passed": 5,
+          "raw_passed": 5
+        },
+        "blocking": {
+          "cases": 2,
+          "passed": 2,
+          "raw_passed": 2
+        },
+        "contesting": {
+          "cases": 2,
+          "passed": 2,
+          "raw_passed": 2
+        },
+        "bomb": {
+          "cases": 2,
+          "passed": 2,
+          "raw_passed": 2
+        }
+      },
+      "cases": [
+        {
+          "name": "finish full house",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                9,
+                9,
+                9,
+                15,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish with bomb",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish airplane",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "AIRPLANE",
+              "ranks": [
+                3,
+                3,
+                3,
+                7,
+                7,
+                7,
+                9,
+                9,
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "raw_move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "expected": [
+            {
+              "type": "STRAIGHT",
+              "ranks": [
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead full house",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                7,
+                7,
+                7,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "preserve three pairs",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve two pairs",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "block last-card opponent",
+          "category": "blocking",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "avoid single-card gift",
+          "category": "blocking",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PAIR",
+            "ranks": [
+              7,
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "PAIR",
+            "ranks": [
+              7,
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PAIR",
+              "ranks": [
+                7,
+                7
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                9,
+                9
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "use control to set up pair",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contest with spare two",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "save bomb without pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "spend bomb under pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_states": {
+        "decisions": 691,
+        "teacher_agreement": 691,
+        "teacher_contests": 402,
+        "passes_when_teacher_contests": 0,
+        "urgent_responses": 78,
+        "urgent_passes": 0,
+        "finishes_available": 10,
+        "missed_finishes": 0,
+        "raw_missed_finishes": 0
+      }
+    },
+    "baseline-0": {
+      "tactical": {
+        "finish": {
+          "cases": 3,
+          "passed": 3,
+          "raw_passed": 3
+        },
+        "combination": {
+          "cases": 5,
+          "passed": 4,
+          "raw_passed": 4
+        },
+        "blocking": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        },
+        "contesting": {
+          "cases": 2,
+          "passed": 0,
+          "raw_passed": 0
+        },
+        "bomb": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        }
+      },
+      "cases": [
+        {
+          "name": "finish full house",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                9,
+                9,
+                9,
+                15,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish with bomb",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish airplane",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "AIRPLANE",
+              "ranks": [
+                3,
+                3,
+                3,
+                7,
+                7,
+                7,
+                9,
+                9,
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "raw_move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "expected": [
+            {
+              "type": "STRAIGHT",
+              "ranks": [
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead full house",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                7,
+                7,
+                7,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "preserve three pairs",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve two pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "block last-card opponent",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              8
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              8
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "avoid single-card gift",
+          "category": "blocking",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PAIR",
+            "ranks": [
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "PAIR",
+            "ranks": [
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "PAIR",
+              "ranks": [
+                7,
+                7
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                9,
+                9
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "use control to set up pair",
+          "category": "contesting",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contest with spare two",
+          "category": "contesting",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "save bomb without pressure",
+          "category": "bomb",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "spend bomb under pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_states": {
+        "decisions": 691,
+        "teacher_agreement": 322,
+        "teacher_contests": 402,
+        "passes_when_teacher_contests": 138,
+        "urgent_responses": 78,
+        "urgent_passes": 14,
+        "finishes_available": 10,
+        "missed_finishes": 0,
+        "raw_missed_finishes": 0
+      }
+    },
+    "supervised-0": {
+      "tactical": {
+        "finish": {
+          "cases": 3,
+          "passed": 3,
+          "raw_passed": 2
+        },
+        "combination": {
+          "cases": 5,
+          "passed": 1,
+          "raw_passed": 1
+        },
+        "blocking": {
+          "cases": 2,
+          "passed": 0,
+          "raw_passed": 0
+        },
+        "contesting": {
+          "cases": 2,
+          "passed": 2,
+          "raw_passed": 2
+        },
+        "bomb": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        }
+      },
+      "cases": [
+        {
+          "name": "finish full house",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": false,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "TRIPLE",
+            "ranks": [
+              9,
+              9,
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                9,
+                9,
+                9,
+                15,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish with bomb",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish airplane",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "AIRPLANE",
+              "ranks": [
+                3,
+                3,
+                3,
+                7,
+                7,
+                7,
+                9,
+                9,
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead straight",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "STRAIGHT",
+              "ranks": [
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead full house",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                7,
+                7,
+                7,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "preserve three pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve two pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "block last-card opponent",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "avoid single-card gift",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "PAIR",
+              "ranks": [
+                7,
+                7
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                9,
+                9
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "use control to set up pair",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contest with spare two",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "save bomb without pressure",
+          "category": "bomb",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "spend bomb under pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_states": {
+        "decisions": 691,
+        "teacher_agreement": 379,
+        "teacher_contests": 402,
+        "passes_when_teacher_contests": 112,
+        "urgent_responses": 78,
+        "urgent_passes": 11,
+        "finishes_available": 10,
+        "missed_finishes": 0,
+        "raw_missed_finishes": 0
+      }
+    },
+    "baseline-1": {
+      "tactical": {
+        "finish": {
+          "cases": 3,
+          "passed": 3,
+          "raw_passed": 2
+        },
+        "combination": {
+          "cases": 5,
+          "passed": 3,
+          "raw_passed": 3
+        },
+        "blocking": {
+          "cases": 2,
+          "passed": 0,
+          "raw_passed": 0
+        },
+        "contesting": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        },
+        "bomb": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        }
+      },
+      "cases": [
+        {
+          "name": "finish full house",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": false,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "TRIPLE",
+            "ranks": [
+              9,
+              9,
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                9,
+                9,
+                9,
+                15,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish with bomb",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish airplane",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "AIRPLANE",
+              "ranks": [
+                3,
+                3,
+                3,
+                7,
+                7,
+                7,
+                9,
+                9,
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "raw_move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "expected": [
+            {
+              "type": "STRAIGHT",
+              "ranks": [
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead full house",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                7,
+                7,
+                7,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "preserve three pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve two pairs",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve straight",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              6
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              6
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "block last-card opponent",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              8
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              8
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "avoid single-card gift",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "PAIR",
+              "ranks": [
+                7,
+                7
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                9,
+                9
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "use control to set up pair",
+          "category": "contesting",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contest with spare two",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "save bomb without pressure",
+          "category": "bomb",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "spend bomb under pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_states": {
+        "decisions": 691,
+        "teacher_agreement": 331,
+        "teacher_contests": 402,
+        "passes_when_teacher_contests": 100,
+        "urgent_responses": 78,
+        "urgent_passes": 18,
+        "finishes_available": 10,
+        "missed_finishes": 0,
+        "raw_missed_finishes": 0
+      }
+    },
+    "supervised-1": {
+      "tactical": {
+        "finish": {
+          "cases": 3,
+          "passed": 3,
+          "raw_passed": 3
+        },
+        "combination": {
+          "cases": 5,
+          "passed": 0,
+          "raw_passed": 0
+        },
+        "blocking": {
+          "cases": 2,
+          "passed": 0,
+          "raw_passed": 0
+        },
+        "contesting": {
+          "cases": 2,
+          "passed": 2,
+          "raw_passed": 2
+        },
+        "bomb": {
+          "cases": 2,
+          "passed": 2,
+          "raw_passed": 2
+        }
+      },
+      "cases": [
+        {
+          "name": "finish full house",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                9,
+                9,
+                9,
+                15,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish with bomb",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish airplane",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "AIRPLANE",
+              "ranks": [
+                3,
+                3,
+                3,
+                7,
+                7,
+                7,
+                9,
+                9,
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead straight",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "STRAIGHT",
+              "ranks": [
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead full house",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                7,
+                7,
+                7,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "preserve three pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              9
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve two pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve straight",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              13
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              13
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "block last-card opponent",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "avoid single-card gift",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              9
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "PAIR",
+              "ranks": [
+                7,
+                7
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                9,
+                9
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "use control to set up pair",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contest with spare two",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "save bomb without pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "spend bomb under pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_states": {
+        "decisions": 691,
+        "teacher_agreement": 398,
+        "teacher_contests": 402,
+        "passes_when_teacher_contests": 95,
+        "urgent_responses": 78,
+        "urgent_passes": 10,
+        "finishes_available": 10,
+        "missed_finishes": 0,
+        "raw_missed_finishes": 0
+      }
+    },
+    "baseline-2": {
+      "tactical": {
+        "finish": {
+          "cases": 3,
+          "passed": 3,
+          "raw_passed": 3
+        },
+        "combination": {
+          "cases": 5,
+          "passed": 3,
+          "raw_passed": 3
+        },
+        "blocking": {
+          "cases": 2,
+          "passed": 0,
+          "raw_passed": 0
+        },
+        "contesting": {
+          "cases": 2,
+          "passed": 0,
+          "raw_passed": 0
+        },
+        "bomb": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        }
+      },
+      "cases": [
+        {
+          "name": "finish full house",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                9,
+                9,
+                9,
+                15,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish with bomb",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish airplane",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "AIRPLANE",
+              "ranks": [
+                3,
+                3,
+                3,
+                7,
+                7,
+                7,
+                9,
+                9,
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "raw_move": {
+            "type": "STRAIGHT",
+            "ranks": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          "expected": [
+            {
+              "type": "STRAIGHT",
+              "ranks": [
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead full house",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                7,
+                7,
+                7,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "preserve three pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve two pairs",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "block last-card opponent",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "avoid single-card gift",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "PAIR",
+              "ranks": [
+                7,
+                7
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                9,
+                9
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "use control to set up pair",
+          "category": "contesting",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contest with spare two",
+          "category": "contesting",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "save bomb without pressure",
+          "category": "bomb",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "spend bomb under pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_states": {
+        "decisions": 691,
+        "teacher_agreement": 329,
+        "teacher_contests": 402,
+        "passes_when_teacher_contests": 110,
+        "urgent_responses": 78,
+        "urgent_passes": 14,
+        "finishes_available": 10,
+        "missed_finishes": 0,
+        "raw_missed_finishes": 0
+      }
+    },
+    "supervised-2": {
+      "tactical": {
+        "finish": {
+          "cases": 3,
+          "passed": 3,
+          "raw_passed": 3
+        },
+        "combination": {
+          "cases": 5,
+          "passed": 2,
+          "raw_passed": 2
+        },
+        "blocking": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        },
+        "contesting": {
+          "cases": 2,
+          "passed": 2,
+          "raw_passed": 2
+        },
+        "bomb": {
+          "cases": 2,
+          "passed": 1,
+          "raw_passed": 1
+        }
+      },
+      "cases": [
+        {
+          "name": "finish full house",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              9,
+              9,
+              9,
+              15,
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                9,
+                9,
+                9,
+                15,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish with bomb",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "BOMB",
+            "ranks": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "finish airplane",
+          "category": "finish",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "raw_move": {
+            "type": "AIRPLANE",
+            "ranks": [
+              3,
+              3,
+              3,
+              7,
+              7,
+              7,
+              9,
+              9,
+              11,
+              11
+            ]
+          },
+          "expected": [
+            {
+              "type": "AIRPLANE",
+              "ranks": [
+                3,
+                3,
+                3,
+                7,
+                7,
+                7,
+                9,
+                9,
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead straight",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              3
+            ]
+          },
+          "expected": [
+            {
+              "type": "STRAIGHT",
+              "ranks": [
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "lead full house",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "raw_move": {
+            "type": "FULL_HOUSE",
+            "ranks": [
+              7,
+              7,
+              7,
+              9,
+              9
+            ]
+          },
+          "expected": [
+            {
+              "type": "FULL_HOUSE",
+              "ranks": [
+                7,
+                7,
+                7,
+                9,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "preserve three pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve two pairs",
+          "category": "combination",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "preserve straight",
+          "category": "combination",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "block last-card opponent",
+          "category": "blocking",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              5
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "avoid single-card gift",
+          "category": "blocking",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PAIR",
+            "ranks": [
+              7,
+              7
+            ]
+          },
+          "raw_move": {
+            "type": "PAIR",
+            "ranks": [
+              7,
+              7
+            ]
+          },
+          "expected": [
+            {
+              "type": "PAIR",
+              "ranks": [
+                7,
+                7
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                9,
+                9
+              ]
+            },
+            {
+              "type": "PAIR",
+              "ranks": [
+                11,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "name": "use control to set up pair",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              17
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "name": "contest with spare two",
+          "category": "contesting",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "raw_move": {
+            "type": "SINGLE",
+            "ranks": [
+              15
+            ]
+          },
+          "expected": [
+            {
+              "type": "SINGLE",
+              "ranks": [
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "name": "save bomb without pressure",
+          "category": "bomb",
+          "passed": true,
+          "raw_passed": true,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "PASS",
+              "ranks": []
+            }
+          ]
+        },
+        {
+          "name": "spend bomb under pressure",
+          "category": "bomb",
+          "passed": false,
+          "raw_passed": false,
+          "move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "raw_move": {
+            "type": "PASS",
+            "ranks": []
+          },
+          "expected": [
+            {
+              "type": "BOMB",
+              "ranks": [
+                3,
+                3,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ],
+      "shared_states": {
+        "decisions": 691,
+        "teacher_agreement": 344,
+        "teacher_contests": 402,
+        "passes_when_teacher_contests": 105,
+        "urgent_responses": 78,
+        "urgent_passes": 9,
+        "finishes_available": 10,
+        "missed_finishes": 0,
+        "raw_missed_finishes": 0
+      }
+    }
+  }
+}

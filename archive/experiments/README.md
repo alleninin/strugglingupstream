@@ -16,6 +16,7 @@ experiment, and check its defaults before comparing results with current models.
 Historical source snapshots and results remain in `reports/`. Unless explicitly
 given a source snapshot, archived tools import the current engine and learners.
 
-Active learners remain in `agents/`. In particular, `dueling_dqn.py` is still
-required to load older DDQN checkpoints; it is not dead code. Greedy and Random
-remain useful fixed opponents and evaluation controls.
+
+`demo.py` is the old fixed greedy demonstration; use `scripts/watch.py --agent greedy` instead.
+Older learner implementations and multi-agent commands now live in `archive/legacy/`.
+The active project uses DDQN plus Greedy/Random. See [the archive index](../README.md).

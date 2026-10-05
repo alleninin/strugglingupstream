@@ -68,7 +68,7 @@ def play_one(seat0_agent, num_players, num_decks, seed, verbose=True):
     while not g.done:
         seat = g.current_player
         legal = g.legal_moves(seat)
-        obs = features.state_vector(g, seat)
+        obs = features.state_for(g, seat, agents[seat])
         move = agents[seat].act(obs, legal)
         lead = g.table_move is None
         tag = "leads " if lead else "follows"

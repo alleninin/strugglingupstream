@@ -5,6 +5,7 @@ from typing import List, Tuple
 
 from .cards import Card
 
+
 class MoveType(IntEnum):
     PASS = 0
     SINGLE = 1
@@ -14,8 +15,9 @@ class MoveType(IntEnum):
     STRAIGHT = 5
     BOMB = 6
     AIRPLANE = 7
-    CONSEC_PAIRS = 8      # 连对: 3+ consecutive pairs (no wings)
-    CONSEC_TRIPLES = 9    # 连飞机: 2+ consecutive triples (body, no wings)
+    CONSEC_PAIRS = 8
+    CONSEC_TRIPLES = 9
+
 
 STRAIGHT_MIN = 3
 STRAIGHT_MAX = 14
@@ -40,8 +42,9 @@ class Move:
         return self.__str__()
 
 
-PASS_MOVE = Move(type=MoveType.PASS, cards=(), rank=0, length=0,
-                 is_bomb=False, is_pass=True)
+PASS_MOVE = Move(
+    type=MoveType.PASS, cards=(), rank=0, length=0, is_bomb=False, is_pass=True
+)
 
 
 def _by_rank(hand: List[Card]):
@@ -70,11 +73,12 @@ def _consecutive_runs(ranks: List[int], min_len: int) -> List[List[int]]:
         L = len(seg)
         for length in range(min_len, L + 1):
             for start in range(0, L - length + 1):
-                runs.append(seg[start:start + length])
+                runs.append(seg[start : start + length])
     return runs
 
 
 def generate_moves(hand: List[Card]) -> List[Move]:
+    """Enumerate rank-distinct combinations using representative physical cards."""
     moves: List[Move] = []
     groups = _by_rank(hand)
     ranks = sorted(groups)
@@ -97,11 +101,14 @@ def generate_moves(hand: List[Card]) -> List[Move]:
         for p in pairs:
             if p == t:
                 continue
-            moves.append(Move(
-                MoveType.FULL_HOUSE,
-                tuple(groups[t][:3] + groups[p][:2]),
-                t, 5,
-            ))
+            moves.append(
+                Move(
+                    MoveType.FULL_HOUSE,
+                    tuple(groups[t][:3] + groups[p][:2]),
+                    t,
+                    5,
+                )
+            )
 
     triple_ranks = [r for r in triples if r <= 14]
     pair_ranks = [r for r in pairs if r <= 15]
@@ -110,24 +117,23 @@ def generate_moves(hand: List[Card]) -> List[Move]:
         wing_pool = [r for r in pair_ranks if r not in (r1, r2)]
         for p1, p2 in combinations(wing_pool, 2):
             cards = body + tuple(groups[p1][:2] + groups[p2][:2])
-            moves.append(Move(
-                MoveType.AIRPLANE,
-                cards,
-                max(r1, r2), 10,
-            ))
+            moves.append(
+                Move(
+                    MoveType.AIRPLANE,
+                    cards,
+                    max(r1, r2),
+                    10,
+                )
+            )
 
-    # 连飞机 (airplane body): 2+ consecutive triples, no wings.
     for run in _consecutive_runs(sorted(triple_ranks), 2):
         body = tuple(c for r in run for c in groups[r][:3])
-        moves.append(Move(
-            MoveType.CONSEC_TRIPLES, body, max(run), len(run)))
+        moves.append(Move(MoveType.CONSEC_TRIPLES, body, max(run), len(run)))
 
-    # 连对 (consecutive pairs): 3+ consecutive pairs, no wings.
     consec_pair_ranks = [r for r in pairs if r <= 14]
     for run in _consecutive_runs(sorted(consec_pair_ranks), 3):
         body = tuple(c for r in run for c in groups[r][:2])
-        moves.append(Move(
-            MoveType.CONSEC_PAIRS, body, max(run), len(run)))
+        moves.append(Move(MoveType.CONSEC_PAIRS, body, max(run), len(run)))
 
     straight_ranks = [r for r in ranks if STRAIGHT_MIN <= r <= STRAIGHT_MAX]
     for run in _consecutive_runs(straight_ranks, MIN_STRAIGHT_LEN):
@@ -146,6 +152,8 @@ def beats(candidate: Move, current: Move) -> bool:
         return False
     if candidate.is_bomb and current.is_bomb:
         return candidate.rank > current.rank
-    return (candidate.type == current.type
-            and candidate.length == current.length
-            and candidate.rank > current.rank)
+    return (
+        candidate.type == current.type
+        and candidate.length == current.length
+        and candidate.rank > current.rank
+    )

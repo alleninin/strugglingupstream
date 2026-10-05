@@ -1,18 +1,20 @@
 """Behavioral checks for combination preservation, closing, and blocking."""
+
 import unittest
+from collections import Counter
+from unittest.mock import patch
+
 import numpy as np
+from test_regressions import hands_for, histogram
 
 from bots.greedy_bot import GreedyBot, _exact_turns
-from env import features
-from game.cards import build_deck
-from game.moves import MoveType, PASS_MOVE, generate_moves
-from game.rules import Game
 from bots.random_bot import RandomAgent
+from env import features
 from evaluate import run_tournament
+from game.cards import build_deck
+from game.moves import PASS_MOVE, MoveType, generate_moves
+from game.rules import Game
 from training.train import make_opponent_policies
-from unittest.mock import patch
-from collections import Counter
-from test_regressions import hands_for, histogram
 
 
 def decision(ranks, table_rank=None, opponent_sizes=(20, 20, 20)):
@@ -99,29 +101,39 @@ class GreedyStrategyTests(unittest.TestCase):
         ranks = [3] * 4 + [4] * 4 + [11] * 2 + [13] * 2
         game = Game(hands=[hands_for(ranks)[0]] + [build_deck()[:10] for _ in range(3)])
         airplane = hands_for([5] * 3 + [7] * 3 + [9] * 2 + [12] * 2)[0]
-        game.table_move = next(move for move in generate_moves(airplane) if move.type == MoveType.AIRPLANE)
+        game.table_move = next(
+            move for move in generate_moves(airplane) if move.type == MoveType.AIRPLANE
+        )
         game.table_owner = 1
         move = GreedyBot().act(features.state_vector(game, 0), game.legal_moves())
         self.assertEqual((move.type, move.rank), (MoveType.BOMB, 4))
 
     def test_low_single_run_is_contested_on_first_play(self):
-        hands = hands_for(list(range(3, 11)) + [13] * 4 + [14] * 4,
-                          [11, 11, 12, 12, 15, 16, 17],
-                          [11, 11, 12, 12, 15, 16, 17],
-                          [9, 9, 10, 10, 15, 15, 14])
+        hands = hands_for(
+            list(range(3, 11)) + [13] * 4 + [14] * 4,
+            [11, 11, 12, 12, 15, 16, 17],
+            [11, 11, 12, 12, 15, 16, 17],
+            [9, 9, 10, 10, 15, 15, 14],
+        )
         game = Game(hands=hands)
-        lead = next(move for move in game.legal_moves() if move.type == MoveType.SINGLE and move.rank == 3)
+        lead = next(
+            move
+            for move in game.legal_moves()
+            if move.type == MoveType.SINGLE and move.rank == 3
+        )
         game.apply_move(0, lead)
         move = GreedyBot().act(features.state_vector(game, 1), game.legal_moves())
         self.assertFalse(move.is_pass)
         self.assertEqual(move.rank, 15)
         game.apply_move(1, move)
-        self.assertEqual(Counter(card.rank for card in game.hands[1]),
-                         Counter([11, 11, 12, 12, 16, 17]))
+        self.assertEqual(
+            Counter(card.rank for card in game.hands[1]),
+            Counter([11, 11, 12, 12, 16, 17]),
+        )
 
     def test_full_house_uses_wings_that_preserve_straight(self):
         move = decision([3, 3, 3, 5, 5, 6, 7, 8, 9, 11, 11])
-        # Playing 333 + JJ leaves a straight plus 5; using 55 destroys the run.
+
         if move.type == MoveType.FULL_HOUSE:
             self.assertEqual(sorted(c.rank for c in move.cards), [3, 3, 3, 11, 11])
         else:
@@ -133,9 +145,12 @@ class GreedyStrategyTests(unittest.TestCase):
 
     def test_search_agrees_with_exhaustive_partition_on_small_hands(self):
         from functools import lru_cache
+
         @lru_cache(None)
         def exhaustive(counts):
-            ranks = [rank + 3 for rank, count in enumerate(counts) for _ in range(count)]
+            ranks = [
+                rank + 3 for rank, count in enumerate(counts) for _ in range(count)
+            ]
             if not ranks:
                 return 0
             best = len(ranks)
@@ -145,6 +160,7 @@ class GreedyStrategyTests(unittest.TestCase):
                     remaining[card.rank - 3] -= 1
                 best = min(best, 1 + exhaustive(tuple(remaining)))
             return best
+
         rng = np.random.default_rng(6)
         for _ in range(20):
             ranks = rng.integers(3, 10, size=8).tolist()
@@ -154,47 +170,53 @@ class GreedyStrategyTests(unittest.TestCase):
 
 class TournamentTests(unittest.TestCase):
     def test_every_subset_and_every_seat_gets_matched_deals(self):
-        pool = {name: RandomAgent() for name in 'ABCDEF'}
-        with patch('evaluate.simulate_game', return_value=[0, 1, 2, 3]):
+        pool = {name: RandomAgent() for name in "ABCDEF"}
+        with patch("evaluate.simulate_game", return_value=[0, 1, 2, 3]):
             report = run_tournament(pool, rounds=2, seed=600)
-        self.assertEqual(report['num_games'], 120)  # 15 subsets × 4 seats × 2 rounds
+        self.assertEqual(report["num_games"], 120)
         subsets = Counter()
-        games = report['games']
+        games = report["games"]
         for offset in range(0, len(games), 4):
-            block = games[offset:offset + 4]
-            self.assertEqual(len({game['seed'] for game in block}), 1)
-            names = sorted(block[0]['seats'])
+            block = games[offset : offset + 4]
+            self.assertEqual(len({game["seed"] for game in block}), 1)
+            names = sorted(block[0]["seats"])
             subsets[tuple(names)] += 1
             for seat in range(4):
-                self.assertEqual(sorted(game['seats'][seat] for game in block), names)
+                self.assertEqual(sorted(game["seats"][seat] for game in block), names)
         self.assertEqual(len(subsets), 15)
         self.assertEqual(set(subsets.values()), {2})
 
     def test_evaluation_disables_exploration_and_restores_it(self):
-        pool = {name: RandomAgent() for name in 'ABCD'}
+        pool = {name: RandomAgent() for name in "ABCD"}
         for agent in pool.values():
-            agent.epsilon = .4
+            agent.epsilon = 0.4
+
         def simulate(agents, players, decks, seed):
             self.assertTrue(all(agent.epsilon == 0 for agent in agents))
             return [0, 1, 2, 3]
-        with patch('evaluate.simulate_game', side_effect=simulate):
+
+        with patch("evaluate.simulate_game", side_effect=simulate):
             first = run_tournament(pool, games=5, seed=600)
             second = run_tournament(pool, games=5, seed=600)
         self.assertEqual(first, second)
-        self.assertEqual(first['num_games'], 8)
-        self.assertTrue(all(agent.epsilon == .4 for agent in pool.values()))
+        self.assertEqual(first["num_games"], 8)
+        self.assertTrue(all(agent.epsilon == 0.4 for agent in pool.values()))
 
     def test_mixed_opponents_are_seeded_and_vary_across_episodes(self):
         choices = []
         for seed in range(10):
-            one = make_opponent_policies(4, seed, opponent='mixed')
-            two = make_opponent_policies(4, seed, opponent='mixed')
+            one = make_opponent_policies(4, seed, opponent="mixed")
+            two = make_opponent_policies(4, seed, opponent="mixed")
             kinds = tuple(type(policy.__self__).__name__ for policy in one)
-            self.assertEqual(kinds, tuple(type(policy.__self__).__name__ for policy in two))
+            self.assertEqual(
+                kinds, tuple(type(policy.__self__).__name__ for policy in two)
+            )
             choices.append(kinds)
         self.assertGreater(len(set(choices)), 1)
-        self.assertEqual({kind for kinds in choices for kind in kinds}, {'GreedyBot', 'RandomAgent'})
+        self.assertEqual(
+            {kind for kinds in choices for kind in kinds}, {"GreedyBot", "RandomAgent"}
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
